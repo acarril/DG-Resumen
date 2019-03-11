@@ -2,6 +2,8 @@ monos/*
 graficos/*
 DGR/*
 
+.dropbox
+
 
 ### Boilerplate TeX gitignore
 ## Core latex/pdflatex auxiliary files:
