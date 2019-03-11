@@ -1,0 +1,263 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\begin{document}
+\setcounter{section}{20}
+\section{La oferta agregada y la curva de Phillips}
+
+\subsection{De la curva de Phillips a la oferta agregada}
+
+Phillips (1958) postuló que existiría una relación negativa entre inflación y desempleo, hecho que se adaptaba notablemente a la teoría en esa época. Sin embargo, después de 1970 esta relación se quiebra. Este capítulo analiza la relación entre inflación y producto, aunque en rigor la curva de Phillips es la relación entre inflación y desempleo. Pasar de desempleo a producto es algo que se analiza a continuación. En su forma original, la curva es
+
+\begin{equation}
+	u = \overline u - \theta(p_t-p_{t-1}) = \overline u - \theta \pi_t
+	\label{eq:21-curva_phillips}
+\end{equation}
+donde $u$ es la tasa de desempleo, $\overline u$ la tasa de desempleo con inflación cero y $\pi_t=p_t-p_{t-1}$ es la tasa de inflación en el período $t$.
+
+Para describir la relación entre el producto $y$ y la inflación se utiliza la \textbf{ley de Okun}, que relaciona variaciones del desempleo y del producto:
+
+\begin{equation}
+	u_t - u_{t-1} = \mu - \phi (y_t - y_{t-1})
+\end{equation}
+donde $-\phi$ es el coeficiente de Okun y $\mu$ es la tasa de crecimiento del desempleo en ausencia de crecimiento. Se define al crecimiento potencial como aquel que mantiene la tasa de desempleo constante\footnote{Es decir, $u_t-u_{t-1}=0$.}, esto es, $\mu/\phi$.
+
+El coeficiente de Okun y el crecimiento potencial fueron estimados originalmente por Okun con valores de $0,3$. Sin embargo, estimaciones más recientes han entregado valores mayores para ambos parámetros, con $\mu/\phi > 1$ para países desarrollados.
+
+Asumiendo que en $t-1$ la economía está en pleno empleo\footnote{Es decir, $u_{t-1}=\overline u$ y $y_{t-1}=\overline y_{t-1}$.} y que el producto potencial crece a $\mu/\phi$, en términos logarítmicos se cumple que $\overline y_t = \overline y_{t-1} + \mu/\phi$. Uniendo esto con la curva de Phillips descrita en \eqref{eq:21-curva_phillips} se llega a:
+
+\begin{equation}
+	y_t = \overline y_t + \frac{\theta}{\phi}\pi_t
+	\label{eq:21-phillips_actividad_inflacion}
+\end{equation}
+
+Esta ecuación también describe la curva de Phillips, pero ahora en términos de actividad e inflación. Al término $y-\overline y$ se le llama \emph{brecha del producto} y representa el porcentaje de desviación del producto de su nivel de pleno empleo. Cuando la brecha es negativa el producto está bajo el pleno empleo, a lo que se le conoce como \emph{exceso de capacidad}.
+
+Friedman (1968) criticó este modelo argumentando que existiría una \textbf{tasa natural de desempleo} $\overline{\mu}$ a la que la economía debería converger (independiente de la tasa de inflación) a un nivel de actividad $\overline{y}$, es decir, que en el largo plazo el desempleo no es un fenómeno monetario. Según esta lógica, si hay inflación de salarios, los trabajadores la incorporarán eventualmente en sus contratos. La única forma de mantener la tasa de desempleo por debajo de su nivel natural debería ser aumentando permanentemente la inflación. Este proceso es iterativo, por lo que la única manera de que en el largo plazo exista un \textit{tradeoff} entre desempleo e inflación es que ésta última acelere (y eventualmente ``explote''), lo que se conoce como \textbf{hipótesis aceleracionista} de Friedman, quien fue el primero en enfatizar el rol de las expectativas en la formación de salarios y su impacto sobre la curva de Phillips.
+
+En términos de la ecuación descrita en \eqref{eq:21-phillips_actividad_inflacion} y usando que $\theta/\phi \equiv \alpha$, la hipótesis de Friedman se incorpora agregando un rezago de inflación:
+
+\begin{equation*}
+	y_t = \overline y + \alpha(\pi_t-\pi_{t-1})
+\end{equation*}
+
+Notar que la única forma de que $y_t>\overline y$ es que $\pi_t>\pi_{t-1}$, es decir, que la inflación vaya aumentando con el tiempo.
+
+Implícitamente, el análisis de Friedman asume que los trabajadores usan información de inflación presente ($\pi_{t-1}$) para formar sus expectativas sobre el futuro ($y_t$), lo que se conoce como hipótesis de\textbf{expectativas adaptativas}. Es decir que los trabajadores reemplazaran $\pi_{t-1}$ por una expectativa de inflación para el período $t$, la que se denota $\pi^e_t$:
+
+\begin{equation}
+	y_t=\overline y + \alpha(\pi_t-\pi^e_t)
+	\label{eq:21-phillips_expectativas_adaptativas}
+\end{equation}
+
+La hipótesis de expectativas adaptativas tuvo su mayor crítica de Lucas (1960), quien planteó que no se puede ``engañar'' a la gente todo el tiempo y en realidad la gente tendría \textbf{expectativas racionales}, donde las expectativas corresponden al valor esperado (esperanza matemática) de $\pi$ dada toda la información disponible en $t$. Matemáticamente, si $\Omega_t$ es el conjunto de información disponible en $t$, la expectativa racional de $z_\tau$ en un momento\footnote{Notar el cambio de subíndice de $t$ a $\tau$.} $\tau$ será $\E(z_\tau | \Omega_t)$. Para simplificar, se denotará dicha esperanza condicional\footnote{La esperanza no condicional sería simplemente $\E z_\tau$.} por $\E_tz_\tau$.
+
+\subsection{El modelo de Lucas: Información imperfecta y expectativas racionales}
+
+Lucas desarrolla un modelo donde existe \textit{tradeoff} entre inflación y desempleo debido a la información imperfecta que reciben los productores sobre los cambios en el nivel de precios vs cambios en sus precios relativos, sin necesidad de asumir precios rígidos. En este modelo, la curva de Phillips depende del ambiente inflacionario. Se consideran empresas indexadas por $i$ que tienen una curva de oferta de pendiente positiva en su precio relativo:
+
+\begin{equation}
+	y^s=s(r_i)
+\end{equation}
+donde el logaritmo de su precio relativo es $r_i=p_i-p$, con $p_i$ el logaritmo del precio nominal por su producto y $p$ el logaritmo del nivel general de precios.
+
+La información imperfecta consiste en que las empresas observan $p_i$ pero no $p$ (ni $r_i$). Por lo tanto al observar un cambio en $p_i$ deben determinar si es por un cambio en el nivel general de precios $p$ o en su precio relativo $r_i$. Si $p_i$ cambia pero el nivel general de precios es constante, quiere decir que los precios relativos han cambiado y por tanto la economía modificará la composición de su oferta.
+
+Las firmas son tomadoras de precio y enfrentan el problema de extracción de señales bajo el cual la expectativa sobre el nivel de precios ($p^e$) es una función lineal del precio del bien:
+
+\begin{equation}
+	p^e= \delta_0+\delta_1p_i %\qquad \text{con } 0\leq \delta_1 \leq 1
+	\label{eq:21-precio_esperado}
+\end{equation}
+
+De esta forma y recordando la composición de $ri$, la expectativa de precios relativos ($r^e_i$) es
+
+\begin{equation}
+	r^e_i = p_i(1-\delta_1)-\delta_0
+\end{equation}
+
+De la ecuación anterior sabemos que si $p_i$ aumenta entonces la empresa concluirá que $r_i$ ha aumentado. Sin embargo, pueden haber ocurrido dos cosas:
+
+\begin{itemize}
+	\item Si sube el nivel de precios general $p$ entonces $p>p^e$ todas las empresas aumentarán su producción.
+	\item Si un aumento de demanda sube exclusivamente $p_i$ para un bien mientras 	que $p$ permanece constante, las empresas al formar sus expectativas estiman que el precio relativo sube solo una parte de lo que subió $p_i$, de forma que $p^e>p$. Por tanto aumentarán su producción menos de lo que sube la demanda y por lo tanto dicha producción estará bajo la de pleno empleo.
+\end{itemize}
+
+Agregando el análisis anterior para todas las empresas se tiene que la economía enfrenta una curva de Phillips de la forma
+
+\begin{equation}
+	y=\overline y + \alpha (p-p^e),
+	\label{eq:21-phillips_lucas}
+\end{equation}
+la que equivalente a \eqref{eq:21-phillips_expectativas_adaptativas} pero expresada en nivel de precios. Recordar que $\overline y$ corresponde al producto de pleno empleo y, en este caso, sería la producción si no hubieran imperfecciones de información.
+
+\hrulefill
+
+Hasta ahora $\delta_0$ y $\delta_1$ han sido exógenos, pero si las expectativas se forman racionalmente entonces es necesario derivar el proceso de formación de expectativas. Se comienza asumiendo que la función de oferta de cada empresa tiene una forma lineal:
+
+\begin{equation*}
+	y_i=\gamma r^e_i
+\end{equation*}
+
+Como las empresas deben formar expectativas racionales sobre $r_i$, este corresponderá a su valor esperado condicional a toda la información disponible en el período relevante, esto es, 
+
+\begin{equation*}
+	r^e_i = \E(r_i|\Omega_t) \equiv E_t r_i
+\end{equation*}
+donde $\Omega_t$ incluye toda la información relevante del modelo. Con esto, asumiendo que $p_i$ es conocido, la oferta de cada empresa será
+
+\begin{equation}
+	y_i = \gamma \E(r_i|p_i)
+	\label{eq:21-ofta_empresas}
+\end{equation}
+
+Por otro lado, el operador de expectativas es lineal y recordando que $r_i=p_i-p$, tenemos que $\E(r_i|p_i)=p_i-\E_t(p|p_i)$. Usando la teoría de extracción de señales descrita arriba se tiene que
+
+\begin{equation}
+	\E_t(r_i|p_i) = \varepsilon(p_i-\E_t p) \qquad \text{con }\; \varepsilon = \frac{V_r}{V_r+V_p}
+	\label{eq:21-esperanza_ri}
+\end{equation}
+donde $\E_t p$ es la expectativa de $p$ dada la información disponible en $t$ antes de observar $p_i$ y $V_j$ es la varianza de la variable $j$.
+
+El parámetro $\varepsilon$ indica la varianza relativa de $r_i$ con respecto a $p$ y depende de la calidad de la señal:
+
+\begin{itemize}
+	\item Si $r_i$ es relativamente muy variable con respecto a $p$, lo más probable es que cuando $p$ aumente la empresa presuma que se debe a un cambio en los precios relativos y le de alta importancia a la señal, es decir, $\varepsilon$ es elevado.
+	\item Si $p$ tiene una varianza relativamente alta con respecto a $r_i$, la empresa supondrá que es $p$ lo que está cambiando y $\varepsilon$ será bajo.
+\end{itemize}
+
+Combinando \eqref{eq:21-ofta_empresas} y \eqref{eq:21-esperanza_ri} se llega a que la expectativa racional de $p$ es
+
+\begin{equation}
+	E_t (p|p_i) = \varepsilon \E_t p + (1-\varepsilon)p_i \;,
+	\label{eq:21-expectativa_racional_p}
+\end{equation}
+lo que es equivalente a la expresión definida en \eqref{eq:21-precio_esperado}, con $\delta_0=\varepsilon \E_t p$ y $\delta_1=1-\varepsilon$.
+
+Análogo al caso anterior, la curva de oferta de cada empresa será $y^s_i=\gamma\varepsilon(p_i-\E_t p)$ y por lo tanto al agregar todas las empresas la curva de Phillips es
+
+\begin{equation}
+	y = \overline y + \alpha(p-p^e) \qquad \text{con }\; \alpha = \gamma \frac{V_r}{V_r + V_p}
+\end{equation}
+donde $\alpha$ es la pendiente de la curva y $p_e$ corresponde a la expectativa racional de $p$ antes de observar $pi$, es decir, $\E_t p$.
+
+En consecuencia, la curva de oferta de Lucas indica que solo los shocks no anticipados al nivel de precios tienen efectos reales en la economía. Si la política monetaria es completamente previsible y los agentes incorporan eso a sus expectativas de precios, cualquier cambio anticipado de la política monetaria no tendría efectos sobre el nivel de actividad.
+
+La pendiente $\alpha$ de la curva de Phillips depende de las características de la economía:
+
+\begin{itemize}
+	\item Si hay mucha volatilidad monetaria $p$ fluctúa mucho, por lo que $\alpha \rightarrow 0$ y la curva de Phillips será casi vertical.
+	\item Si hay estabilidad monetaria, los cambios en $p_i$ serán percibidos como cambios en los precios relativos y por tanto la curva de oferta tenderá a ser horizontal.
+\end{itemize}
+
+Que la pendiente de la curva de Phillips dependa del régimen de política macroeconómica está en la base de lo que hoy se conoce como la \textbf{crítica de Lucas} (1976), donde plantea que usar modelos sin especificar la estructura de la economía es errado, como se acaba de exponer.
+
+Si bien la incorporación de expectativas racionales es algo básico hoy en economía, la evidencia muestra que las razones para que una curva de Phillips tenga mayor pendiente tienen más que ver con las rigideces de precios que con información imperfecta. Parece poco plausible el supuesto que los agentes no puedan observar qué ocurre con el nivel de precios. Además, resulta poco realista suponer que solo políticas no anticipadas tengan efectos reales. Sin embargo, la crítica de Lucas es una advertencia importante para estimar, interpretar y usar modelos en evaluación de políticas.
+
+\subsection{Rigideces de salarios nominales y expectativas}
+
+Considérese un mercado de trabajo competitivo, excepto por el hecho que los trabajadores fijan su oferta basados en sus expectativas de precios. Una vez conocido el precio, las empresas demandan trabajo. El equilibrio de este mercado del trabajo se representa en la \autoref{fig21_02-mercado_trabajo_rigidez_nominal_expectativas}, donde se considera el salario nominal $W$ en el eje vertical. Por lo tanto, la demanda por trabajo corresponde a la igualdad del salario nominal con valor de la productividad marginal:
+
+\begin{equation*}
+	W = P \cdot PMgL
+\end{equation*}
+
+Por otro lado, la oferta de trabajo es $L=L^s(W/P^e)$, por lo que, despejando $W$, se puede representar como
+
+\begin{equation*}
+	W = P^e \cdot \omega^s(L)
+\end{equation*}
+donde $\omega^s(L)$ es la función inversa de $L^s(W/P^e)$.
+
+Si los trabajadores tienen expectativas que son igual al nivel de precios, no hay sorpresas y el nivel de empleo de equilibrio en el punto $A$ corresponde al nivel de pleno empleo, $\overline L$.
+
+\input{monos/fig21_02-mercado_trabajo_rigidez_nominal_expectativas}
+
+Si ocurre un aumento inesperado del nivel de precios, entonces $P>P^e$. La demanda de trabajo se expande a la derecha, ya que el salario nominal que las empresas están dispuestas a pagar por cada unidad de trabajo sube proporcionalmente.  El salario real correspondiente a $B$ es el mismo que en $A$. Sin embargo, como se supuso que los trabajadores fijan su oferta usando expectativas de precio. La mayor demanda de trabajo llegará a un equilibrio en $C$, con más trabajo contratado y sueldos mayores. Sin embargo, tanto el salario real como la productividad marginal del trabajo caen. En el extremo, si el salario nominal $W$ es fijo, entonces el nuevo equilibrio se encontrará en $D$.
+
+Puede hacerse un análisis análogo cuando $P<P^e$, donde el salario cae y el empleo se contrae. Por lo tanto, las desviaciones del nivel de pleno empleo dependen de las desviaciones de las expectativas de precio de su valor efectivo:
+
+\begin{equation}
+	L-\overline L = f(P-P^e)
+\end{equation}
+donde $f'>0$. Usando la función de producción, linealizando, aproximando logarítmicamente para obtener $P-P^e \approx \pi-\pi^e$ y agregando el subíndice temporal se llega a la curva de Phillips descrita en \eqref{eq:21-phillips_expectativas_adaptativas}, de expectativas adaptativas.
+
+El problema de justificar una curva de Phillips usando rigideces de salarios nominales es que eso implica que el salario real es contracíclico, es decir, aumenta en períodos de recesión económica, lo que contradice la evidencia empírica. Para evitar esto habría que suponer que la demanda por trabajo se desplaza cíclicamente (supuesto razonable), es decir, que la productividad marginal del trabaho aumenta en expansiones. Esto podría lograrse por medio de shocks de productividad. Además, si las empresas tienen restricciones crediticias y una política monetaria expansiva aumenta los precios y el crédito, sería posible conciliar la evidencia de ciclicidad con modelos de salario (nominal) fijo. Por lo tanto no se pueden descartar las rigideces nominales, pero deben ser complementadas con otros elementos para que las predicciones del modelo sean coherentes con la evidencia.
+
+\subsection{Rigideces de precios e indexación}
+
+Aquí se deriva la curva de Phillips más general, la que supone que en los mercados de bienes hay precios rígidos. Para ello se asumen tres tipos de empresas:\footnote{En lo que sigue, todos las variables son expresadas en términos logarítmicos.}
+
+\begin{enumerate}
+	\item Empresas que tienen sus precios flexibles ($p_f$) y los fijan de acuerdo a las condiciones de demanda, que están representadas por la brecha del producto ($y-\overline y$). A mayor brecha, mayor presión de demanda y por tanto el precio relativo que fijan estas empresas en $t$ es
+	\begin{equation*}
+		p_{ft}-p_t = \kappa(y_t-\overline y) \qquad \text{con }\; \kappa>0
+	\end{equation*}
+	\item Empresas que tienen precios fijos $p_r$ al iniciar el período, el que es fijado igual que el de las empresas anteriores pero basados en el valor esperado de la demanda, es decir, 
+	\begin{equation*}
+		p_{rt}-p^e_t = \sigma(y^e_t-\overline y) \qquad \text{con }\; \sigma>0
+	\end{equation*}
+	Si se asume que en cada período el producto que prevalezca sea el de pleno empleo, se tiene que $y^e_t=\overline y$ y por tanto 
+	\begin{equation*}
+		p_{rt} = p^e_t
+	\end{equation*}
+	\item Empresas que tienen fijos sus precios desde el período anterior y este se reajusta en su totalidad según la inflación. Esto puede ocurrir por metas de precio de largo plazo o por regulación de algún tipo. De cualquier forma, el precio indexado ($p_i)$ está dado por
+	\begin{equation*}
+		p_{it} = p_{it-1}+\pi_{t-1}
+	\end{equation*}
+\end{enumerate}
+
+Si $\alpha_r$ es la participación en los precios del sector de precios fijos (2) y $\alpha_i$ es la del sector de precios indexados (3), entonces la participación del sector de precios flexibles es $1-\alpha_r-\alpha_i$ y por tanto en todo período debe cumplirse que
+
+\begin{equation*}
+	p_t = \alpha_r p_{rt} + \alpha_i p_{it} + (1-\alpha_r-\alpha_i)p_{ft}
+\end{equation*}
+
+Finalmente, usando las expresiones para $p_r$, $p_f$ y $p_i$ y definiendo $\lambda=\frac{\alpha_r}{\alpha_r+\alpha_i}$ y $\alpha = \frac{\alpha_r+\alpha_i}{(1-\alpha_r-\alpha_i)\kappa}$ se llega a la siguiente curva de Phillips:\footnote{Si bien aparece el término $(1-\lambda)(p_{t-1} - p_{it-1})$, se supone que $p_{t-1}$ es, en promedio, igual a $p_{it-1}$ y por tanto el término desaparece.}
+
+\begin{equation}
+	y_t = \overline y + \alpha[\pi_t - \lambda\pi^e_t - (1-\lambda)\pi_{t-1}]
+\end{equation}
+
+Al igual que en la derivación del modelo de Lucas, al derivar la curva de Phillips de esta forma se pueden asociar sus parámetros a la estructura de la economía:
+
+\begin{itemize}
+	\item La pendiente de la curva de Phillps es más vertical a medida cuando $\alpha \rightarrow 0$, es decir, cuando $\kappa$ es elevado, lo que significa que las empresas de precios flexibles reaccionan fuertemente frente a cambios en la demanda.
+	\item La pendiente también será más vertical mientras menor sea la participación relativa de los bienes de precios no flexibles ($\alpha_t+\alpha_i$ se aproxima a 0).
+	\item La inercia de la curva de Phillips, capturada por el término de inflación rezagada, es mayor mientras mayor sea $1-\lambda$, es decir, la importancia relativa de $\pi_{t-1}$. Mientras mayor sea la participación relativa de los precios indexados en el sector de precios rígidos, mayor será la inercia.
+\end{itemize}
+
+Por tanto, este modelo concluye que en economías de baja inflación el sector de precios rígidos predomina y en consecuencia la curva debiera ser más vertical. Esta conclusión es similar a la de Lucas, sin embargo, la lógica subyacente es distinta y existe más evidencia que apoya a ésta teoría. 
+
+\subsection{La nueva curva de Phillips}
+
+Se ha propuesto el desarrollo de una curva de Phillips basada en fundamentos microeconómicos tales como comportamiento optimizador e incertidumbre intertemporal, concentrándose en rigideces de precios de bienes. Esta teoría es ampliamente aceptada en la actualidad y usualmente se denomina \textbf{curva de Phillips neo keynesiana}.
+
+\subsubsection{Modelo de costos de ajuste cuadráticos}
+
+Rotemberg (1982) propone un modelo que usa costos de ajuste cuadráticos para justificar una acomodación gradual del nivel de precios por parte de las empresas. Cualquier empresa en $t$ elijirá un precio tal que minimice el valor presente de los costos de ajuste esperados, los que son descontados por un factor $\beta$. De esta forma, el problema a resolver es
+
+\begin{equation}
+	\min C_t = \E_t \sum_{\tau=t}^\infty \beta^{\tau-t}[(p_\tau - p^*_\tau)^2+\eta(p_\tau-p_{\tau-1})^2].
+\end{equation}
+
+\subsubsection{El modelo de Calvo}
+\subsection{La curva de Phillips en economías abiertas}
+\subsubsection{Bienes importados}
+\subsubsection{Insumos importados}
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

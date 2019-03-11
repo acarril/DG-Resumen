@@ -1,0 +1,79 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\begin{document}
+\section*{*Notación matemática}
+Si bien no existe una notación única para la diferenciación, De Gregorio tiende a usar \emph{muy} liberalmente varias de las existentes. Preferí no cambiar la notación que utiliza en los distintos capítulos, por diversa que sea, para mantener una alta correlación entre las fórmulas del libro y las de este resumen.
+
+\subsection*{Derivadas}
+\subsubsection*{Notación de Leibniz}
+
+Para una función $y=f(x)$ la derivada de  $y$ se con respecto de $x$ es
+\[
+\frac{dy}{dx} = \frac{\mathrm{d}y}{\mathrm{d}x},
+\]
+donde <<$d$>> o <<$\mathrm{d}$>> es el operador de derivada. Prefiero usar este último para diferenciar claramente el operador de las variables.\footnote{En estricto rigor, el operador matemático para la derivada debería ser una <<$\mathrm{d}$>> \emph{no} italizada, es decir, que la derivada se debería escribir $\frac{\mathrm{d}y}{\mathrm{d}x}$. Esto está definido como estándar ISO en \href{http://www.tug.org/TUGboat/Articles/tb18-1/tb54becc.pdf}{``Typesetting Mathematics for Science and Technology to ISO 31/XI''}.}
+
+Por otro lado, cualquier derivada de orden $n$ de la misma función se expresa como
+\[
+\deriv{^ny}{x^n}.
+\]
+
+Esta es la notación más usual del libro y la ventaja es que permite identificar claramente la variable con respecto a la cual se está diferenciando ($x$). Es importante no confundir esta notación con la de derivada \emph{parcial}, cuyo operador es el símbolo <<$\partial$>>, en lugar de <<$\diff$>> (ver abajo).
+
+Finalmente, con la notación de Leibniz el valor de la derivada de $y$ en un punto $x=a$ puede escribirse como
+
+\[
+\deriv{y}{x}\bigg|_{x=a}.
+\]
+
+\subsubsection*{Notación de Lagrange}
+
+Para una función $y=f(x)$ la derivada de  $y$ se con respecto de $x$ es
+\[
+f'(x) = \deriv{y}{x}.
+\]
+
+El concepto se extiende para la segunda y tercera derivada, las que se escriben respectivamente como
+\begin{align*}
+f''(x) &= \deriv{^2y}{x^2} \\ 
+f'''(x) &= \deriv{^3y}{x^3}.
+\end{align*}
+
+Luego de esto la notación de Lagrange para una derivada de orden $n$ toma la forma $f^{(n)}$, pero no es usual en el libro.
+
+\subsubsection*{Notación de Newton}
+Generalmente se usa en física, en especial cuando la variable independiente es el tiempo. Aquí se usa bastante en los capítulos de crecimiento económico. Para una función $y=f(t)$, la derivada de $y$ con respecto de $t$ es
+\[
+\dot y = \deriv{y}{t}.
+\]
+
+\subsection*{Derivadas parciales}
+
+Para una función $f(x,y)$, la derivada \emph{parcial} de $f$ con respecto a $x$ se denota generalmente con cualquiera de las dos siguientes formas:
+\[
+\pder{f}{x} = f_x.
+\]
+
+La segunda derivada parcial de $f$ con respecto a $x$ es
+\[
+\frac{\partial^2f}{\partial x^2} = f_{xx}.
+\]
+
+Análogamente, la derivada parcial mixta $f$ con respecto a $x$ es
+\[
+\frac{\partial^2f}{\partial xy} = f_{xy}.
+\]
+ 
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

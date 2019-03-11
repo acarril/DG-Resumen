@@ -1,0 +1,302 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{3}
+\begin{document}
+\section{Inversión}
+\label{cap_inversion}
+\subsection{La demanda de capital}
+
+Se analiza la demanda por capital de una firma, donde el precio del arriendo del capital es $R$, además de los usuales supuestos más simplificadores de teoría de la firma.\footnote{Ofertas de capital y trabajo perfectamente elásticas, ajuste de capital y trabajo sin costo, costo del trabajo $L$ es $w$ y mercado perfectamente competitivo que compra a un precio $P$.} Se supone que la empresa resuelve el siguiente problema y obtiene la condición de óptimo descrita en \eqref{eq:inversion_optima}:
+\begin{equation*}
+\max_{K,L}P\cdot F(K,L)-(wL+RK)
+\end{equation*}
+\begin{equation}
+\frac{R}{P}=\pder{F(K,L)}{K} \equiv PMg_K,
+\label{eq:inversion_optima}
+\end{equation}
+es decir que las firmas contratarán hasta que el costo de arriendo sea igual la productividad marginal.
+
+\input{monos/fig04_01-decision_inversion}
+
+En una función Cobb-Douglas de la forma $F=AK^\alpha L^{1-\alpha}\quad \alpha \in[0,1] $ se obtiene que $PMg_K=\alpha\cdot Y/K $, lo que resulta en que la cantidad óptima de capital demandado es
+\begin{align}
+K^* &= L\left(\frac{A\alpha}{R/P}\right)^{\frac{1}{1-\alpha}} \\
+&= K^*(\underset{(+)}{A}, 	\underset{(+)}{L}, \underset{(-)}{R/P}).
+\end{align}
+
+\subsection{Tasa de interés nominal y real}
+
+\begin{itemize}
+\item La tasa nominal $i$ expresa pagos en términos monetarios.
+\item La tasa real $r$ expresa el costo del presente respecto del futuro en términos de bienes.
+\item La inflación $\pi$ corresponde a la variación porcentual de los precios:
+\begin{equation}
+\pi=\frac{\bigtriangleup P}{P}=\frac{\sscript{P}{t+1}-P_t}{P_t}.
+\end{equation}
+\end{itemize}
+
+Si se tiene una deuda $D$, podemos decir que el pago en términos reales de la deuda es $D(1+i)/(1+\pi)$. Entonces, se define la tasa $r$ como
+\begin{equation*}
+D(1+r) \equiv D\left(\frac{1+i}{1+\pi}\right),
+\end{equation*}
+donde cabe destacar que la inflación reduce el valor de una deuda expresada nominalmente.
+
+Resolviendo para $i$ tenemos que\footnote{El término $r\pi$ se ignora por tener un valor casi 0. Más formalmente, se ignora por ser un efecto de segundo orden.}
+\begin{equation}
+i=r+\pi.
+\end{equation}
+
+Interesa conocer la tasa de interés real \textit{ex-ante} para tomar decisiones acerca del futuro, pero la inflación es desconocida, por lo que se define a dicha tasa como
+\begin{equation*}
+r=i-\pi^e,
+\end{equation*}
+donde $\pi^e$ es inflación esperada, la que no se conoce y en la práctica se estima de alguna u otra forma.
+
+\subsection{El precio del arriendo de capital (costo de uso)}
+
+En un mercado competitivo por arriendo de bienes de capital el precio al que se arrienda debiese ser igual al costo de usarlo. Se supone que el precio de compra de una unidad de capital es $P_k$ y este precio al final del período será $P_{k+1}$ (pudiendo subir o bajar) y el costo alternativo de esos recursos es $iP_k$. El bien de capital se deprecia a una tasa $\delta\% $ y el costo por depreciación es $\delta P_k$.
+
+Al definir la ganancia por unidad de capital como $\bigtriangleup P_k \equiv P_{k,t+1}-P_{k,t}$, el costo real de uso del capital será
+\begin{equation}
+R= P_k \left (i+\delta - \frac{\bigtriangleup P_k}{P_k} \right).
+\end{equation}
+
+Si $\bigtriangleup P_k/P_k=\pi=\pi^e$, entonces el costo real de uso del capital es simplemente $R=P_k(r+\delta)$. Ahora bien, si hay un cambio en precios relativos y se usa que $i=r+\pi$, entonces dicho costo será
+\begin{equation}
+R = P_k \left(r+\delta-\left [\frac{\bigtriangleup P_k}{P_k}-\pi\right]\right),
+\end{equation}
+es decir que si la inflación sube más rápidamente que el precio de los bienes de capital, la empresa tiene un costo adicional a $r$ y a $\delta$, ya que el bien de capital se vuelve relativamente más barato.
+
+Notar que la esta última derivación es independiente de la unidad en que se contrata el crédito. Si bien al comienzo se supuso que la empresa se endeuda a una tasa nominal $i$, puede probarse que en la medida que las tasas de interés estén debidamente arbitradas, dará lo mismo la unidad (sea $r$ u otra) e incluso con incertidumbre el costo de uso de capital será el mismo.
+
+\subsection{Del stock de capital deseado a la inversión}
+
+Se observa que las empresas no se ajustan inmediatamente al stock de capital óptimo, si no que están constantemente invirtiendo. Esto ocurre porque existen diversos costos que lo impiden:
+
+\begin{itemize}
+  \item \textbf{Costo de estar fuera del óptimo}, el cual se genera por las utilidades que se están dejando de ganar. Este costo aumenta más que linealmente mientras más alejado se esté del óptimo.
+  \item \textbf{Costo de ajustar el capital}, el cual se genera porque hay costos asociados a la inversión: capacitaciones, dejar de operar en una planta, etc. Este costo aumenta más que linealmente mientras más se invierte.
+\end{itemize}
+
+La convexidad de ambos costos es lo que asegura que el ajuste al capital óptimo sea gradual. En la \autoref{fig04_02-ajuste_capital} se muestran tres alternativas de ajuste del capital. En I no hay costos de ajuste y el capital se ajusta instantáneamente. En II el ajuste es gradual y en III lo es aún más. En general, mientras más gradual el ajuste, mayor será el costo de ajuste comparado con el costo de estar fuera del óptimo.
+
+\input{monos/fig04_02-ajuste_capital}
+
+Analíticamente se considera la función de costos
+\begin{equation}
+C= \epsilon ( K_{t+1}-K^*)^2+(K_{t+1}-K_t)^2,
+\end{equation}
+donde el primer término es el costo de estar fuera del óptimo y el segundo es el costo de ajuste. Una empresa que comienza con $K_t$ y conoce $K^*$ debe decidir $K_{t+1}$ de modo de minimizar costos. El resultado de dicha minimización indica que la inversión neta en $t$ es
+\begin{equation}
+I=K_{t+1}-K_t = \lambda(K^*-K_t),
+\end{equation}
+donde $\lambda=\frac{\epsilon}{1+\epsilon}$, es decir, la fracción de lo que se ajusta el capital con respecto al ajuste necesario para llegar al óptimo\footnote{Con $0\leq \lambda \leq 1$.}. Si $\lambda=0,5$ entonces en cada período se ajusta la mitad de la brecha. Para $\epsilon$ cercano a $0$, $\lambda$ será cercano a $0$, lo que se interpreta como que el costo de estar fuera del óptimo es muy bajo respecto del costo de ajuste, por lo que el ajuste de capital será muy gradual. Lo contrario ocurirá con $\lambda$ cercano a $1$. Notar además que el ajuste no solo depende de $\lambda$, sino también de cuán lejos se encuentre del óptimo ($K^*-K_t$) y, por lo tanto, de $K_t$.
+
+\subsection{Evaluación de proyectos y teoría $q$ de Tobin}
+
+Se argumenta que una manera más realista de modelar la inversión de las firmas es establecer que éstas toman sus decisiones de inversión evaluando proyectos. Una empresa decide si invertir o no en capital de precio $P_k$, el cual le reportará flujos $z_j$ para todo $j>t$ en adelante. No hay incertidumbre, por lo que el valor presente de las utilidades netas es
+\begin{equation*}
+VP=\frac{\sscript{z}{t+1}}{1+r_t}+\frac{\sscript{z}{t+2}}{(1+r_t)(1+r_t+1)}+\ldots \;,
+\end{equation*}
+donde la empresa solo invertirá si se cumple que $VP \geq P_k$, que es equivalente a decir que el proyecto tenga un VAN positivo.
+
+Al arrendar o comprar capital la empresa puede endeudarse y, si no hay costos de transacción y las tasas de interés a las que se presta o pide prestado son iguales, debería dar lo mismo arrendar o comprar, ya que $P_k$ debería ser igual al valor presente de arrendar capital más su valor residual.
+
+En el agregado puede pensarse que se tienen proyectos de la misma magnitud $k$, los cuales pueden ser ordenados descendentemente de acuerdo a sus $VP$ con $VP_1 $ es el proyecto más rentable. Habrá entonces un proyecto marginal $j$ que cumpla con $VP_j=P_k$. Luego, ése y todos los proyectos $i<j$ se realizarán, por lo que la inversión total será
+\begin{equation}
+I=j\cdot k.
+\label{eq:inversion}
+\end{equation}
+
+Obviamente, un alza en la tasa de interés reducirá el $VP$ de todos los proyectos, reduciendo el valor de $j$ que satisface $VP_j=P_k$, es decir, reduciendo la inversión.
+
+Si tenemos proyectos de distintas magnitudes, la inversión puede expresarse como
+\begin{equation*}
+I=\sum_{i=1}^{j}{k_i}.
+\end{equation*}
+
+Usando la idea del valor del capital que subyace a la ecuación \eqref{eq:inversion} surge la teoría de la ``$q$ de Tobin'', que formaliza la condición que debe cumplirse para que una firma invierta:
+\begin{equation}
+q=\frac{VP}{P_k}\geq 1.
+\label{eq:qtobin}
+\end{equation}
+
+Mientras $q$ sea alto convendrá comprar capital, hasta que $q=1$. Cabe considerar la existencia de costos de ajuste, lo que explicaría por qué no se llega a $q=1$ instantáneamente.
+
+Ahora, relacionando la teoría $q$ de Tobin con el análisis microeconómico de la demanda por capital, se considera que el capital se usa para producir una cantidad $Z$ de un bien que se vende a precio $P$. El capital se deprecia $\delta$ por período, el precio del bien aumenta con la inflación $\pi$ por período y existe una tasa nominal constante igual a $i$. Con esto se tiene que
+\begin{align*}
+VAN &= -P_k + \frac{PZ(1+\pi)}{1+i} + \frac{PZ(1+\pi)^2(1-\delta)}{(1+i)^2}+\ldots \\
+&= -P_k + \frac{PZ}{1+r} + \frac{PZ(1-\delta)}{(1+r)^2}+\ldots \\
+&= -P_k + \frac{PZ}{r+\delta}.
+\end{align*}
+
+Con esto se llega\footnote{Usando el hecho que $(1+\pi)/(1+i)=1/(1+r)$ y que $(1-\delta)/(1+r)\approx 1/(r+\delta)$.} a que el proyecto se hace si $P_k\leq PZ/(r+\delta)$ y la empresa invertirá hasta llegar a la igualdad. Si $Z$ es equivalente a la $PMg_K$ se llega a la clásica expresión capital deseado,
+
+\begin{equation}
+PMg_K=\frac{P_k}{P}(r+\delta),
+\end{equation}
+que es equivalente a la condición de optimalidad del problema genérico (recordar \eqref{eq:inversion_optima}).
+
+\subsection{Incertidumbre e inversión}
+
+Si bien uno pensaría que la incertidumbre disminuye la inversión, tanto Hartman (1972) como Abel (1983) predicen lo contrario. La razón es que las razones de utilidad se asumen convexas y por lo tanto mayor varianza es preferida a menos. Se explican aquí las respuestas que ha dado la teoría para explicar que efectivamente la incertidumbre genera \emph{menor} inversión, como muestran los datos.
+
+Bajo incertidumbre, la empresa invertirá si se cumple que
+\begin{equation*}
+P_k \leq \E_t[VP].
+\end{equation*}
+
+La incertidumbre genera un aumento de varianzas, pero se está asumiendo que no cambia los valores esperados. Ahora, usando el caso particular desarrollado al final de la sección anterior, un proyecto se realizará si
+\begin{equation}
+P_K \leq \E_t \left[\frac{P\cdot PMg_K}{r+\delta} \right].
+\label{eq:04-inversion_incert}
+\end{equation}
+
+Para ver qué pasa con la esperanza de \eqref{eq:04-inversion_incert} cuando hay incertidumbre, se considerará que $K$ es fijo y solo $L$ se ajusta. Además, se considera nuevamente una función de producción Cobb-Douglas. Luego, derivando la demanda marshalliana de $L$ y reemplazando en la función de producción se obtiene que
+\begin{equation*}
+Y = A^{\frac{1}{\alpha}} K(1-\alpha)^{\frac{1-\alpha}{\alpha}} \left(\frac{P}{W} \right)^{\frac{1-\alpha}{\alpha}}.
+\end{equation*}
+
+Usando que $PMg_K=\alpha Y/K$ se puede reemplazar ese valor en la ecuación \eqref{eq:04-inversion_incert} y obtener que la inversión se realizará si se cumple que
+\begin{equation}
+P_k \leq \alpha(1-\alpha)^{\frac{1-\alpha}{\alpha}} \E_t \left[\frac{(AP)^{\frac{1}{\alpha}}}{W^{\frac{1-\alpha}{\alpha}}(r+\delta)}\right].
+\end{equation}
+
+La pregunta interesante es qué pasa con el valor esperado de la expresión entre paréntesis cuando la incertidumbre aumenta. Considerando que $A$ y $P$ son estocásticos y que la función no es lineal en $A$ y $P$ (porque $\alpha<1$), su varianza afecta al valor esperado, ya que la covarianza entre ambas es distinta de cero. La desigualdad de Jensen (1906) nos dice que si la función es convexa, la incertidumbre aumenta el valor esperado, es decir, que $\E[f(x)] \geq f(\E[x])$. Este caso puede apreciarse gráficamente en la \autoref{fig04_03_a-volatilidad_convexa}, donde $F_i=\E[f(x)]$ y $F_c=f(\E[x])$.
+
+\input{monos/fig04_03-volatilidad}
+
+Intuitivamente, si no hay varianza entonces el valor ``cierto'' de $x$ será conocido e igual a $F_c$. Por otro lado, si existe varianza y $x$ fluctúa por los valores representados en la línea recta pero su valor esperado es el mismo, se tendrá que la utilidad asociada es $F_i$, mayor que sin varianza. Notar que ocurrirá exactamente lo contrario si analizamos una función cóncava, que es la razón por la que los individuos suavizan el consumo en el tiempo.
+
+Por lo tanto un aumento de la incertidumbre (volatilidad) de $A$ y $P$ aumentará la inversión, haciendo que todos los proyectos sean más rentables. Esto es contraintuitivo y se opone a la evidencia empírica, por lo que se han propuesto varias razones por las cuales la incertidumbre podría estar afectando negativamente a la inversión.
+
+\begin{itemize}
+\item \textbf{Empresarios aversos al riesgo}: si los inversionistas son aversos al riesgo su función de utilidad es cóncava y por lo tanto invertirán cuando $U(VP)>P_k$, revirtiendo la convexidad de la función de producción.
+\item \textbf{Irreversibilidad de la inversión}: la teoría asume que el costo de hacer y de deshacer inversión es el mismo, pero en realidad existe una gran asimetría entre ambos; en muchos casos, deshacerse del capital es imposible. 
+\item \textbf{Tecnología}: si la tecnología $A$ tiene retornos decrecientes a escala (no constantes), un aumento del uso de factores eleva la producción menos que proporcionalmente.
+\item \textbf{Competencia imperfecta}: en competencia perfecta una firma se beneficia del alza de precios tanto por el aumento del ingreso por unidad vendida como por un aumento en la cantidad ofrecida. Sin embargo, el aumento en cantidad ofrecida no será tan significativo cuando las empresas enfrenten una demanda de pendiente negativa (poder de mercado).
+\item \textbf{Restricciones de liquidez}: si existen restricciones al endeudamiento las firmas podrían no poder realizar planes de inversión de larga maduración.
+\end{itemize}
+
+\subsection{Irreversibilidad de la inversión e incertidumbre}
+
+Si un proyecto requiere una inversión $P_k$ y sus retornos se obtienen al período siguiente, la irreversibilidad de la inversión consiste en que en el período subsiguiente el bien de capital ya no vale nada, es decir, su valor de reventa es cero. El proyecto tiene un retorno $z$ incierto: puede ser $\bar{z}$ con probabilidad $p$ o $\tilde{z}$ con probabilidad $(1-p)$. El proyecto tiene $VP$ positivo con flujos $\bar{z}$ y negativo con $\tilde{z}$, es decir,
+\begin{align*}
+V(\bar{z}) &= -P_k + \frac{\bar{z}}{1+r} > 0 \\
+V(\tilde{z}) &= -P_k + \frac{\tilde{z}}{1+r} < 0,
+\end{align*}
+y su valor esperado $V_0$ en $t=0$ será positivo, es decir, es un proyecto rentable pero contiene un escenario de pérdida que se evita cuando
+\begin{equation}
+V_0 = pV(\bar{z})+(1-p)V(\tilde{z}) > 0.
+\label{eq:V0_irrevers}
+\end{equation}
+
+Si se tomara en cuenta la irreversibilidad, entonces el proyecto sería realizado si se cumple la condición anterior, ya que sus beneficios son positivos. Sin embargo, el inversionista puede esperar y en $t=1$ saber con certeza si se dará el escenario $\bar{z}$ o $\tilde{z}$. Ahora se puede calcular un valor esperado de posponer la inversión $V_1$,
+\begin{equation}
+V_1 = p\frac{V(\bar{z})}{1+r}
+\label{eq:V1_irrevers}
+\end{equation}
+
+Si se pospone la decisión hasta $t=1$ se pierde un período de beneficio de $V(\bar{z}) $, lo que explica que esté descontado por $(1+r)$. Sin embargo, en $t=1$ la inversión no estará hecha y se puede no invertir si se da el escenario de $V(\tilde{z})$, por lo que no se incluye ese beneficio (negativo).
+
+Entonces dependiendo de las magnitudes de $r$, $p$, $V(\bar{z})$ y $V(\tilde{z})$ es que se esperará o no. De hecho, el inversionista esperará si $V_1>V_0$, lo que puede expresarse como
+\begin{equation*}
+\frac{p}{1-p} \cdot \frac{r}{1+r} > \frac{V(\tilde{z})}{V(\bar{z})}.
+\end{equation*}
+
+De hecho, en $t=0$ el inversionista estaría dispuesto a pagar hasta $V_1(1+r)-V_0$ por saber qué valor tomará $z$. Lo importante es que para un mismo valor esperado la incertidumbre puede generar el incentivo de esperar para tener más información, retrasando proyectos de inversión.
+
+\subsection{Costos de ajuste y la teoría $q$}
+
+Se asume ahora que la empresa acumula capital (no lo arrienda) comprándolo a un precio $P_{K,t}$. Para invertir $I_t$ la empresa no solo debe comprar el capital sino que además incurre en un costo $C(I_t)$, con $C$ creciente, convexa y que satisface $C(0)=C'(0)=0$. La utilidad de cada período será
+\begin{equation*}
+P_t f(K_t)-P_{K,t}[I_t+C(I_t)]
+\end{equation*}
+y la evolución del capital está dada por
+\begin{equation*}
+\sscript{K}{t+1}=I_t+(1-\delta)K_t.
+\end{equation*}
+
+Despejando $I_t$, el problema de una empresa que maximiza el valor presente de las utilidades monetarias (descontadas a una tasa nominal $i$ constante) es
+\begin{equation*}
+\max_{K_t}\sum_{\tau=0}^{\infty}{\frac{1}{(1+i)^\tau} \{P_\tau f(K_\tau)-P_{K,\tau}[\sscript{K}{\tau+1}-(1-\delta)K_\tau + C(\sscript{K}{\tau+1}-(1-\delta)K_\tau)]\}}
+\end{equation*}
+
+Luego se asume que no hay depreciación ($\delta=0$) y que el precio relativo del capital respecto de los bienes no cambia en el tiempo ($P_{K,t}=P_t$). Finalmente la CPO para $K_t$ es\footnote{Ojo que se cambia de tasa nominal a real usando $1+i=(1+r)P_t/P_{t-1}$. Lo importante para desarrollar la sumatoria es sólo tomar en cuenta los sumandos que contienen $K_t$, es decir, cuando $\tau=t-1$ y $\tau=t$. Luego de eso se deriva con respecto a $K_t$.}
+\begin{equation}
+1+C'(\sscript{I}{t-1})=\frac{1}{1+r} \left[f'(K_t)+(1+C(I'_t))\right].
+\end{equation}
+
+Se define $q_t=1+C'(\sscript{I}{t-1})$ como el valor de instalar una unidad de capital $K_t$. Si no hubiese costos de ajuste el valor de $q$ sería 1, pues se asumió $P_{k,t}=P_t$ (recordar \eqref{eq:qtobin}). Usando esta definición se puede reescribir la CPO como
+\begin{equation*}
+r=\frac{f'(K_t)}{q_t} + \frac{\bigtriangleup q}{q_t},
+\end{equation*}
+donde $r$ es el costo de oportunidad de una unidad de capital (no hay $\delta$) y éste debe ser igual a la suma del aporte marginal sobre los ingresos más la ganancia de capital producto del aumento de su valor total.
+
+Por último, se puede despejar $q_t$ de la ecuación anterior\footnote{Usando que $\bigtriangleup q=q_{t+1}-q_t$.} y llegar a que
+\begin{equation*}
+q_t=\frac{f'(K_t)}{1+r} + \frac{\sscript{q}{t+1}}{1+r},
+\end{equation*}
+ecuación que se resuelve recursivamente, reemplazando primero $q_t+1$ hasta obtener\footnote{Asumiendo que $\underset{t \rightarrow \infty}{\lim}{\frac{q_{t+1}}{(1+r)^t}} = 0$.}
+\begin{equation}
+q_t=\sum_{s=0}^{\infty}{\frac{f'(K_{t+s})}{(1+r)^{s+1}}}
+\end{equation}
+donde, si $K$ es constante, tenemos que $q_t=f'(K)/r$. Lo importante es notar que en todas las ecuaciones anteriores  se tendrá que la empresa estará aumentando el capital mientras $q>1$ y se detendrá cuando $q=1$. En ese punto sucederá que $f'(K)=r$, que corresponde al caso estático sin costos de ajuste.
+
+\subsection{Restricciones de liquidez y teoría del acelerador}
+
+Se argumenta que si hay restricciones de liquidez la inversión de las empresas estará acotada por sus flujos de caja, los que tienen relación con la actividad económica agregada. Si la economía está en auge habrá mayores flujos de caja y se realizarán más proyectos rentables. Incluso proyectos para los que tal vez convendría esperar se pueden adelantar aprovechando los excedentes de caja. Lo opuesto pasaría en recesiones.
+
+Se puede relacionar a las restricciones de liquidez con la teoría del acelerador, la que plantea que cuando la actividad económica crece elevadamente las empresas invierten más y esto genera un proceso acelerador que hace que este aumento persista en el tiempo. La inversión entonces depende no solo del nivel de actividad sino también de la tasa de crecimiento:
+\begin{equation*}
+I_t=\sum_{\tau=t}^{t-n}{\alpha_\tau\bigtriangleup K_\tau},
+\end{equation*}
+es decir, la inversión en depende del crecimiento pasado del capital. Ahora, si $Y$ es lineal en $K$ tenemos que $Y=aK$ y por lo tanto
+\begin{equation}
+I_t= \frac{1}{a}\sum_{\tau=t}^{t-n}{\alpha_\tau\bigtriangleup Y_\tau}.
+\end{equation}
+
+Esto implica que cuando el crecimiento pasado del producto es elevado, la inversión se acelera. Sin embargo, la teoría del acelerador no incluye precios (como costo de uso o $q$). En la práctica, si bien la teoría del acelerador provee una justificación teórica para incluir el PIB como determinante de la inversión, en la actualidad hace más sentido para explicar el ajuste de inventarios, donde las empresas buscan tener una fracción constante de inventario sobre la producción y entonces cuando la economía crece las empresas acumulan inventarios.
+
+\subsection{Impuestos e inversión}
+
+Pensando en cómo afectan los impuestos al costo de uso del capital, se suponen empresas que son dueñas del capital y sus utilidades están asociadas a cuánto ganan de arrendar este capital (costo de arriendo $R$ por unidad). Dicha renta está sujeta a un impuesto $\tau$ y se debe cumplir que
+\begin{equation*}
+(1-\tau)R=\underbrace{P_k(r+\delta)}_{\text{costo de uso}}.
+\end{equation*}
+
+Las firmas deben aumentar precio de arriendo del capital $R$ a medida que los impuestos $\tau$ suban. Como muestra la \autoref{fig04_05-inversion_impuestos}, al agregar un impuesto para cada nivel de inversión se exige una mayor tasa de interés para poder pagar el impuesto.\footnote{De manera análoga, podría hacerse un análisis para un subsidio de tasa $s$ por peso gastado, usando que $(1-\tau)R= P_k(r+\delta)(1-s)$.}
+
+\input{monos/fig04_05-inversion_impuestos}
+
+Analizando el efecto de $\tau$ sobre el stock de capital, se puede decir \textit{a priori} que el impuesto no afecta al VAN de un proyecto, ya que $VAN/(1+\tau)>0 \iff VAN>0 $. Lo que puede ocurrir es que las utilidades económicas de las empresas difieren de sus utilidades contables, lo que genera distorsiones. Suponiendo una función de producción creciente con rendimientos decrecientes $f(K)$ donde el capital se deprecia completamente en un período, si la tasa de interés es $r$ y el precio del capital es 1, el costo del capital es $1+r$. Las utilidades económicas $\Pi_E$ de la empresa son
+\begin{equation*}
+\Pi_E = f(K) - (1+r)f(K)
+\end{equation*}
+y si se pusiera un impuesto $\tau$ a las utilidades económicas las empresas maximizarían $(1-\tau)\Pi_E$, que es lo mismo que maximizar $\Pi_E$ solo, donde el capital óptimo estaría dado por
+\begin{equation}
+f'(K)=1+r.
+\end{equation}
+ 
+Si bien a los ingresos se les descuenta el pago de intereses de la deuda, no se descuenta el costo de oportunidad cuando las empresas usan fondos propios para financiar inversión. Si la deuda de la empresa es una fracción $b$ del capital total, el costo imputable será $b\cdot rK$ ($0\leq b \leq 1 $). Por otro lado, a las firmas normalmente se les permite depreciar una fracción $d$ del capital invertido ($d>0$). Entonces el descuento por la depreciación y/o la compra del capital será $dK$ y las utilidades contables serán
+\begin{equation*}
+\Pi_C=f(K)-(rb+d)K.
+\end{equation*}
+
+Entonces, si a las utilidades económicas se le restan el pago de los impuestos contables $\tau\Pi_C $ se llega a los siguientes beneficios de una empresa, con su respectiva condición de óptimo:
+\begin{align*}
+\Pi &= f(K)(1-\tau) - K[(1+r)-\tau(rb+d)] \\
+f'(K) &= \frac{1+r-\tau(br+d)}{1-\tau}.
+\end{align*}
+
+Solo si el capital se financia completamente con deuda ($b=1$) y el capital se deprecia contablemente lo mismo que en realidad ($d=1$) es que los impuestos no afectarán a la decisión de capital óptima. Por otro lado, si se cumple que $d+br<1+\tau$ entonces el capital deseado con impuestos será menor que sin impuestos. Una manera de incentivar la inversión sería tener $d>1$, es decir, depreciación acelerada o un crédito tributario a la inversión.
+
+La inflación también reduce el capital deseado si es que los impuestos no están indexados, ya que al imputarse depreciación nominal para la depreciación contable, un aumento de la inflación reduce el valor real del capital que está siendo depreciado, reduciendo los descuentos por depreciación en términos reales.
+
+Por último, cabe destacar que se ha asumido que la decisión de $b$ es exógena, sin embargo, en la medida en que endeudarse signifique una ventaja sobre financiarse con capital propio, las empresas tenderán a favorecer la deuda. Sin embargo los bancos podrían no financiar completamente la inversión, por lo que $b$ será menor que 1, en especial para empresas pequeñas.
+
+Si bien se discutieron situaciones donde los impuestos podrían no afectar la inversión, hay que considerar que:
+\begin{itemize}
+\item Este análisis es de equilibrio parcial y no considera como cambian el ahorro ni la acumulación de capital cuando suben los impuestos. Los impuestos afectan todo el flujo de retorno del ahorro, lo que probablemente reduzca la inversión en equilibrio general.
+\item Altos impuestos podrían restringir los flujos de caja de una empresa, efectivamente creando una dificultad adicional a la inversión por medio de reducir su principal mecanismo para enfrentarse a restricciones de liquidez. $\blacksquare$
+\end{itemize}
+\end{document}

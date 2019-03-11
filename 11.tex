@@ -1,0 +1,287 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{10}
+\begin{document}
+\section{El modelo neoclásico de crecimiento}
+Aquí se expone el modelo de Solow (1956) sobre crecimiento económico. En este capítulo se trabaja con tiempo continuo en $t$ (\emph{no} discreto, como hasta ahora).
+
+\subsection{El modelo básico}
+Supuestos (luego se relajan los primeros):
+\begin{itemize}
+\item No hay crecimiento de la población
+\item No hay crecimiento de la productividad
+\item Economía cerrada y sin gobierno, con la siguiente función de producción:
+\end{itemize}
+
+\begin{equation}
+Y=AF(K,L)
+\end{equation}
+donde
+\begin{where}
+\item[Y] es PIB o ingreso, indistintamente (recordar que es economía cerrada)
+\item[A] es la productividad total de los factores, la que se asume constante y normaliza a 1 (por el momento)
+\item[K,L] son los \textit{stocks} de capital y trabajo, respectivamente
+\end{where}
+
+Se supone que $F(K,L)$ presenta retornos decrecientes a cada factor\footnote{$F_i(K,L)>0$ y $F_{ii}K(K,L)<0$, con $i=K,L$} pero constantes a escala\footnote{$F(\lambda K, \lambda L)=\lambda F(K,L)$.}. Se usa la siguiente función Cobb-Douglas\footnote{En adelante, C-D.} que cumple con los supuestos mencionados:
+
+\begin{equation*}
+F(K,L)=K^{1-\alpha}L^\alpha
+\end{equation*}
+
+Ahora, usualmente se hace el análisis per-cápita. Para esto, se divide la variable por $L$ y se denota con minúscula, de forma que
+
+\begin{equation}
+\frac{Y}{L} = y = F\left(\frac{K}{L}, 1\right) \equiv f(k)
+\label{eq:11_funcion_crecimiento}
+\end{equation}
+
+Por lo tanto la única forma de crecer en este modelo es acumular más capital, lo que se logra invirtiendo. En su forma C-D se tiene:
+
+\begin{equation*}
+f(k)=y=k^{1-\alpha}
+\end{equation*}
+
+Se busca definir el cambio en capital, esto es, $\dot{k}$. Como la acumulación de capital en un período equivale a lo que invierte el país menos la depreciación $\delta$ del capital acumulado, en tiempo continuo esto es:
+
+\begin{equation}
+\pder{k}{t} =\dot{k} = i-\delta k
+\label{eq:11_cambio_k}
+\end{equation}
+
+Se asume las personas ahorran una fracción $s$ de sus ingresos y que como la economía es cerrada y sin gobierno, el ingreso es igual al ahorro más la inversión. Ambos supuestos se expresan en las siguientes ecuaciones:
+
+\begin{equation*}
+c=(1-s)y
+\end{equation*}
+\begin{equation*}
+y=c+i
+\end{equation*}
+
+Igualando las dos ecuaciones en $c$, reemplazando $i$ en \eqref{eq:11_cambio_k} y tomando $y=f(k)$, se obtiene finalmente:
+
+\begin{equation}
+\dot{k}=s f(k) - \delta k
+\label{eq:11_cambio_k_2}
+\end{equation}
+
+\input{monos/fig11_01-solow}
+
+El punto $k^*$ es el \textbf{estado estacionario}, donde la inversión de nuevo capital $sf(k^*)$ es igual a la depreciación del capital $\delta k^*$ y por lo tanto el capital deja de acumularse. En el corto plazo el capital tenderá a un nivel $k^*$. Si $\dot{k}>0$ entonces se estará acumulando capital, pero si $\dot{k}<0$ el capital se estará desacumulando.
+
+Al imponer la condición de estado estacionario en la acumulación de capital, es decir, $\dot{k}=0$, se obtiene:
+
+\begin{equation}
+k^*=\frac{sf(k^*)}{\delta}
+\end{equation}
+
+Y en su forma C-D: $\displaystyle k^* = \left(\frac{s}{\delta}\right)^\frac{1}{\alpha}$. Hasta aquí se pueden sacar algunas conclusiones:
+
+\begin{itemize}
+\item No hay crecimiento de largo plazo si no hay crecimiento de la productividad ni de la población, ya que quedamos para siempre en $k^*$ y, en consecuencia, en $f(k^*)$.
+\item Los países que ahorran más tienen mayores niveles de capital de estado estacionario. 
+\end{itemize}
+
+\subsection{Modelo con crecimiento poblacional}
+Ahora $L$ no es estático si no que crece con $t$, ya que se asume $L=L_0\me^{nt}$, por lo que ahora tanto $L$ como $K$ estarán cambiando en el tiempo. Lo que se busca es una expresión para $\dot{K}/\dot{L}$, por lo que no basta simplemente con dividir por $L$ como antes (porque se obtendría $\dot{K}/L$).
+
+Usando la regla de derivación se tiene que, en términos genéricos, la expresión buscada es:\footnote{Recordar que $\displaystyle \dot{X}=\pder{X}{t}$.}
+
+\begin{equation}
+\frac{\dot{K}}{\dot{L}} = \dot{\left(\frac{K}{L}\right)} = \frac{\dot{K}L-K\dot{L}}{L^2} = \frac{\dot{K}}{L} - K\frac{\dot{L}}{L^2}
+\label{eq:11_kpunto_lpunto}
+\end{equation}
+
+Diferenciando el crecimiento poblacional con respecto a $t$ se tiene:
+
+\begin{equation*}
+\dot{L} = n\cdot L_0 \me^{nt} = n\cdot L
+\end{equation*}
+
+De esa ecuación es evidente que $\dot L / L=n$. Por otro lado, de \eqref{eq:11_cambio_k} se tiene el valor de $\dot K / L$. Reemplazando ambas ecuaciones en \eqref{eq:11_kpunto_lpunto} y definiendo $\dot k = \dot{K}/\dot L$, se tiene:
+
+\begin{equation*}
+\dot k = i-k(\delta + n)
+\end{equation*}
+
+Finalmente, recordando que $f(k)=y=(1-s)y+i$ se tiene que:
+
+\begin{equation}
+\dot k = sf(k) - (\delta + n)k
+\label{eq:11-k_pto_con_crecimiento}
+\end{equation}
+
+Notar como este resultado es casi igual al de sin crecimiento. Esta nueva ecuación para $\dot k$ puede interpretarse como que el capital se produce a la misma ``velocidad'' deprecia a una tasa $\delta + n$. El gráfico del estado estacionario con crecimiento poblacional será igual al de la \autoref{fig11_01-solow}, salvo que la recta tendrá mayor pendiente.
+
+\begin{itemize}
+\item Si no hay depreciación, el capital per cápita caería a una tasa $n$ sin inversión.
+\item Si la depreciación es la misma, al incluir crecimiento poblacional el estado estacionario será menor que sin crecimiento.
+\end{itemize}
+
+La cantidad de capital per cápita de estado estacionario estará definida por:
+
+\begin{equation}
+k^*=\frac{sf(k^*)}{\delta+n}
+\label{eq:11_k_ee_crecimiento_pob}
+\end{equation}
+
+En su forma C-D esto es $\displaystyle k^* = \left(\frac{s}{\delta + n}\right)^{\frac{1}{\alpha}}$. Es interesante dividir \eqref{eq:11_k_ee_crecimiento_pob} por $y^*$, ya que permite hacer predicciones de la razón capital/producto usando las tasas de ahorro, depreciación y crecimiento:
+
+\begin{equation}
+\frac{k^*}{y^*}= \frac{s}{\delta + n}
+\end{equation}
+
+Una forma alternativa de ver la dinámica y el estado estacionario de la acumulación de capital es dividir por $k$ en \eqref{eq:11-k_pto_con_crecimiento}, quedando:
+
+\begin{equation}
+\gamma_k = \frac{sf(k)}{k}-(\delta + n)
+\end{equation}
+donde $\gamma_k = \dot k/k$, que corresponde a la tasa de crecimiento del capital per cápita.\footnote{Esto es análogo a $\dot L/L = n$, donde no se había introducido esta notación pero podría haberse dicho que $n=\gamma_L$. En adelante se usa en general la notación $\gamma_z$ como la tasa de crecimiento de $z$.} Nuevamente se grafica indirectamente esta ecucación, en la \autoref{fig11_03-solow_crecimiento_k}.
+
+\input{monos/fig11_03-solow_crecimiento_k}
+
+Usando que $y=k^{1-\alpha}$ (C-D) puede probarse\footnote{Usando $\gamma_y=\dot y / y$ y que $\dot y = \pder{y}{t} = \pder{y}{k} \pder{k}{t} = \frac{(1-\alpha)\dot k}{k^\alpha} $.} que el PIB per cápita crece proporcionalmente al crecimiento del capital per cápita, es decir,
+
+\begin{equation}
+\gamma_y = (1-\alpha)\gamma_k
+\end{equation}
+
+\begin{itemize}
+\item En ausencia de crecimiento de la productividad los países no crecen en el largo plazo; solo lo hacen en su transición hacia el estado estacionario.
+\item La distancia entre la curva definida por $sf(k)/k$ y la recta definida por $\delta +n$ muestra inmediatamente la tasa de crecimiento del capital $\gamma_k$ e, indirectamente, la tasa de crecimiento.
+\item Los países más pobres crecen más rápidamente que los más ricos, respecto de un mismo nivel de capital de estado estacionario. Esto es lo que se denomina \textbf{convergencia}. Intuitivamente esto ocurriría porque una unidad extra de capital es más productiva en un país que prácticamente no tiene capital (más pobre), que uno que lo tiene en abundancia (más rico).
+\end{itemize}
+
+\paragraph{Convergencia no condicional}
+La convergencia predice que los países relativamente más pobres crecen a mayores tasas que los relativamente más ricos, suponiendo que poseen el mismo estado estacionario y por lo tanto convergen al mismo nivel de capital óptimo (e ingreso per cápita).
+
+\paragraph{Convergencia condicional}
+La convergencia es condicional al estado estacionario, es decir, países más ricos respecto de su estado estacionario crecen más lentamente. En la \autoref{fig11_04-convergencia_condicional} el país pobre (denotado con el subíndice 1) se encuentra más cercano al estado estacionario y por lo tanto crecería más lentamente.
+
+\input{monos/fig11_04-convergencia_condicional}
+
+¿Por qué se produce esta diferencia entre países? Recordar que las curvas de ambos países corresponden a $sf(k)/k$:
+
+\begin{itemize}
+\item Países que ahorran más tienen mayor nivel de capital de estado estacionario.
+\item Países que tienen mayores tasas de crecimiento de la población (o de depreciación del capital) tienen un nivel de estado estacionario menor.
+\item Recordando que inicialmente se tomó que el parámetro de productividad $A$ era constante e igual a 1. Si relajamos este supuesto permitiendo que sea constante pero distinto entre países, puede pensarse que países con mayor $A$ tienen mayor estado estacionario.
+\end{itemize}
+
+\subsection{La regla dorada}
+
+Que un país tenga en estado estacionario un ingreso mayor no quiere decir necesariamente que su \emph{bienestar} sea mayor. Puede ser que se sacrificó mucho consumo para tener alto ingreso y se asume que el consumo es una mejor aproximación del bienestar que el ingreso.
+
+Se plantea entonces encontrar un nivel de $k$ que maximice el consumo del individuo en estado estacionario. Por lo tanto es necesario usar $\dot k$ en función de $c$ (\emph{no} de $s$, como se ha venido haciendo). Esto es, $\dot k = f(k)-c-(\delta +n)k$ y usando que $\dot k=0$,\footnote{Ver \eqref{eq:11-k_pto_con_crecimiento} recordando que $y=c+i=(1-s)y+i$.} el problema y su respectiva solución son:
+
+\begin{equation*}
+\max_{k^*}c^* = f(k^*)-(\delta + n)k^*
+\end{equation*}
+
+\begin{equation}
+f'(k^{RD})=\delta + n
+\end{equation}
+donde $k^{RD}$ es el capital de la regla dorada.
+
+Ahora, si se asume la misma C-D de siempre, la solución óptima es $\displaystyle k^{RD}=\left[\frac{1-\alpha}{\delta + n} \right]^{1/\alpha} $. Recordando que el capital de estado estacionario era $\displaystyle k^*=\left[\frac{s}{\delta + n} \right]^{1/\alpha} $, pueden sacarse las siguientes conclusiones de la comparación de $k^*$ y $k^{RD}$:
+
+\begin{itemize}
+\item Si $s=1-\alpha$ la economía en estado estacionario se encuentra en su nivel de regla dorada.
+\item Si $s>1-\alpha$ la tasa de ahorro y el nivel de capital de estado estacionario son demasiado altos.
+\item Si $s<1-\alpha$ la tasa de ahorro y el nivel de capital de estado estacionario son demasiado bajos.
+\end{itemize}
+
+\input{monos/fig11_05-regla_dorada}
+
+En la \autoref{fig11_05-regla_dorada} se tiene que $k^{RD}<k^*$, por lo que esta economía ahorra demasiado. Recordar que el consumo es $c=f(k)-(\delta +n)k$, que gráficamente corresponde a la distancia vertical entre ambas curvas que lo definen (marcadas en la figura). Si este es el caso, ``se podría hacer una fiesta'' consumiendo $k^*-k^{RD}$ y dejando una tasa de ahorro $s^{RD}<s^*$. O sea, ahorrar menos y consumir más. Esto es \textit{dinámicamente ineficiente}, ya que hay una estrategia con la cual, sin esfuerzo, todos mejoran.
+
+Que una economía tenga exceso de ahorro se explica con la productividad marginal decreciente y recordando que en el estado estacionario se cumple que $sf(k)/k=\delta +n$. Si el nivel de capital $k$ es muy elevado la productividad será baja, por lo que la única manera de encontrar un equilibrio será aumentar la tasa de ahorro.
+
+\subsection{Progreso técnico}
+La conclusión hasta ahora es que los países no crecen en el largo plazo (luego de alcanzar su estado estacionario). Esto no es lo que se observa en la realidad, por lo que se incorpora crecimiento tecnológico al modelo para dar cuenta del crecimiento de largo plazo.
+
+\begin{equation*}
+Y=AF(K,L)
+\end{equation*}
+donde $A$ es la productividad total de los factores, la que crece a una tasa exógena $x$ y está definida como $A_t=A_0\me^{xt}$. Se vuelve a asumir una producción C-D donde $Y=AK^{\alpha-1}L^\alpha$, se tiene:
+
+\begin{equation*}
+Y=A_0K^{1-\alpha} [L_0 \me^{(n+x/a)t}]^\alpha = A_0K^{1-\alpha}E^{\alpha}
+\end{equation*}
+donde $E$ corresponde a las \textbf{unidades de eficiencia de trabajo} y está definido como $E=L_0\me^{(n+x/a)t}$. Intuitivamente, son las horas de trabajo disponibles corregidas por calidad de la fuerza de trabajo. El factor $K$ se acumula con inversión, mientras que $E$ crece exógenamente a una tasa $n+x/a$.\footnote{En algunos ejercicios asumen $E=L_0\me^{(n+g)t}$, por lo que $E$ crece a una tasa $n+g$.}
+
+Se normaliza $A_0=1$ y se define una variable $\tilde z$ cualquiera como $\tilde z=Z/E$, es decir, Z por unidad de eficiencia. Entonces, la relación entre la variable medida por unidad de eficiencia y per cápita es $\tilde z = z/\me^{(x/\alpha)t}$.
+
+Notar que al definir $Y=K^{1-\alpha}E^\alpha$ se tiene básicamente la misma ecuación que en Solow con crecimiento poblacional, solo que ahora se trabajará con variables medidas en unidades de eficiencia. Por lo tanto lo que se busca es una expresión para $\dot K / \dot E$, análogo a lo que se hizo en \eqref{eq:11_kpunto_lpunto}:
+
+\begin{equation*}
+\dot{\tilde k} = \frac{\dot K}{\dot E} = \frac{\dot K E-\dot EK}{E^2} = \frac{\dot K}{E}-\frac{\dot E}{E}\frac{K}{E} = \frac{\dot K}{E}-(n+x/\alpha)\tilde k
+\end{equation*}
+donde $\dot K / E$ se obtiene dividiendo por $E$ la expresión de gasto-producto $Y=C+\dot K +\delta K$, lo que resulta en $\dot K / E=s\tilde y -\delta \tilde k$. Con eso, finalmente se tiene:\footnote{Recordar que $C=(1-s)Y$ y que $\tilde y = f(\tilde k)$.}
+
+\begin{equation}
+\dot{\tilde k} = sf(\tilde k)-\left(\delta + n + \frac{x}{a}\right)\tilde k
+\end{equation}
+
+\input{monos/fig11_06-progreso_tecnico}
+
+Ese equilibrio se representa en la \autoref{fig11_06-progreso_tecnico}, de donde puede verse que en el estado estacionario crecen a una misma tasa $n+x/\alpha$, mientras que los valores per cápita crecen a una tasa $x/\alpha$:
+
+\begin{align*}
+\gamma = \gamma_C = \gamma_Y = \gamma_K &= \frac{x}{\alpha} + n\\
+\gamma_y =\gamma_k &=\frac{x}{\alpha}
+\end{align*}
+
+\begin{itemize}
+\item En el largo plazo el progreso técnico hace crecer el producto per cápita de los países.
+\item El crecimiento del producto total es la suma del crecimiento de la población más el crecimiento de la productividad del trabajo.
+\end{itemize}
+
+
+Finalmente, si se calcula el capital de regla dorada con progreso técnico, la condición es:
+
+\begin{equation*}
+f'(\tilde k^{RD}) = \delta + n + \frac{x}{\alpha}
+\end{equation*}
+
+Del capítulo 4 (Inversión) se sabe que $r=f'(k)-\delta$, por lo que:
+
+\begin{equation}
+r = \gamma = n+\frac{x}{\alpha}
+\end{equation}
+
+\begin{itemize}
+\item La tasa de interés real de la regla dorada es igual a la tasa de crecimiento de la economía.
+\item Si la tasa real es mayor, entonces hay un exceso de capital. Por lo tanto, la tasa real \emph{de largo plazo} debería ser al menos igual a la tasa de crecimiento.
+\end{itemize}
+
+\subsection{Aplicaciones}
+
+\scenario{Reducción del stock de capital}
+Una reducción exógena del capital a un nivel $k'$ (ej. un terremoto) aumenta la productividad marginal del capital, por lo que a una misma tasa de inversión se generará mayor crecimiento. Por lo tanto, aumenta la tasa de crecimiento del capital y la tasa de crecimiento del PIB.
+
+Notar que este mayor crecimiento \emph{no} implica mayor bienestar, ya que la economía solo crece más rápido para recuperar el capital perdido.
+
+\scenario{Crecimiento de la población}
+Se supone que la tasa de crecimiento poblacional aumenta de $n_1$ a $n_2$ (sin tener ningún efecto sobre el progreso técnico). Para mantener el mismo nivel de capital per cápita $k$ ahora es necesario invertir más, pues este se deprecia más rápidamente en términos de unidad por trabajador. Es decir, se debe acumular más capital, lo que se logra con un capital marginalmente más productivo, o sea, reduciendo el stock de capital. Por lo tanto el nivel de capital de estado estacionario pasa de $\tilde k^*_1$ a $\tilde k^*_2$.
+
+\input{monos/fig11_07-progreso_tecnico_aumento_n.tex}
+
+En el largo plazo el consumo, el producto y el capital de esta economía seguirán creciendo a la misma tasa $x/\alpha$. Sin embargo, dada la tasa de ahorro y suponiendo que el nivel de capital era menor al de la regla dorada, la caída del stock de capital producirá una caída en el producto y el consumo de largo plazo y en la transición hacia el nuevo estado estacionario la economía experimentará una reducción en su tasa de crecimiento per cápita, como se muestra en la \autoref{fig11_07-progreso_tecnico_aumento_n}.
+
+\scenario{Aumento de la tasa de ahorro}
+
+Una economía que se encuentra en estado estacionario con una tasa de ahorro $s_1$, la cual aumenta exógenamente a $s_2$, como se muestra en la \autoref{fig11_08-aumento_s}. Esto hace que se llegue a un estado estacionario con mayor  capital, de $\tilde k^*_1$ a $\tilde k^*_2$, y consecuentemente un producto per cápita mayor. Durante la transición aumentará la tasa de crecimiento, pero a medida que el capital se vaya acumulando su retorno caerá y en el largo plazo la economía seguirá creciendo a la misma tasa $x/\alpha$.
+
+\input{monos/fig11_08-aumento_s.tex}
+
+\scenario{Aumento del progreso técnico}
+
+La tasa de crecimiento de la productividad aumenta de $x_1$ a $x_2$, lo que trae consecuencias similares al aumento del crecimiento poblacional (\autoref{fig11_07-progreso_tecnico_aumento_n}): el crecimiento por unidad de eficiencia cae de $\tilde k^*_1$ a $\tilde k^*_2$. Dada $s$, $\tilde c$ también cae. Sin embargo lo que interesa es el consumo per cápita (no por unidades de eficiencia). Para ver qué ocurre con el consumo, se puede demostrar que:
+
+\[
+\frac{x_1}{\alpha} < \frac{\dot y}{y	} = \frac{x_1}{\alpha} + (x_2-x_1) < \frac{x_2}{\alpha}
+\]
+
+Es decir, la tasa de crecimiento del producto aumenta discretamente en el momento del cambio de $x$, pero por debajo de $x_2/\alpha$, y luego su crecimiento se ajusta gradualmente a $x_2/\alpha$. Por otro lado $\dot k/k = -(x_2-x_1)/\alpha + x_2/\alpha $, lo que indica que al momento de aumentar la tasa de progreso técnico el nivel de capital per cápita sigue creciendo a la misma tasa $x_1/\alpha$ y luego aumenta gradualmente hasta llegar a $x_2/\alpha$. $\blacksquare$
+
+\end{document}

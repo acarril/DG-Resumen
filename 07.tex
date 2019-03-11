@@ -1,0 +1,139 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{6}
+\begin{document}
+\section{Economía abierta: La cuenta corriente}
+
+El análisis de éste capítulo (y en general, del libro) se centra en países con déficit en la cuenta corriente (como Chile). Esto significa que el país ``local'' está en deuda con ``el resto del mundo''.
+
+\subsection{Cuenta corriente de equilibrio}
+
+De las muchas formas de definir el balance de la $CC$, la que se prefiere es que la $CC$ es el cambio de la posición neta de los activos con respecto al resto del mundo. Esta definición abarca el componente intertemporal del comercio, donde $B_t$ son los activos de un país al comienzo de $t$. Si $B_t<0$, entonces la economía se ha endeudado con el mundo y por notación se denotarán a los pasivos netos (o simplificadamente, ``deuda externa'') como $D_t=-B_t$.
+
+El déficit se produce cuando la tasa de equilibrio en autarquía $r^A$ es mayor que la tasa internacional $r^*$, lo que genera que el ahorro nacional $S_N$ sea menor que la inversión. Este diferencial se financia con déficit en la cuenta corriente.
+
+\input{monos/fig07_01-deficit_CC}
+
+\subsection{Movilidad imperfecta de capitales}
+
+Hay evidencia de que la movilidad de capitales no es perfecta entre los países, lo que es especialmente válido para economías en desarrollo que no pueden endeudarse todo lo que quisieran a la tasa internacional. Se consideran dos casos generales de movilidad imperfecta de capitales.
+
+\subsubsection*{Riesgo soberano}
+Se produce porque hay un cierto riesgo de que un país no pague (``riesgo país''), por lo tanto, el exterior le exigirá una tasa mayor a su deuda. Si la tasa internacional $r^*$ es libre de riesgo y el país local pagará su deuda con una probabilidad $p$, entonces habrá una tasa $r$ que iguale los retornos de los prestamistas externos, cumpliéndose que $p\cdot r = r^*$. Es decir que la tasa $r$ a la que pedirá prestado un país con riesgo soberano será
+\begin{equation*}
+r = \frac{r^*}{p}.
+\end{equation*}
+
+Es razonable asumir que la probabilidad $1-p$ de no pago de un país dependerá del monto de la deuda. En particular, cabe esperar que la probabilidad de no pago aumente con el déficit: si el déficit es cero, la tasa interna es igual a la externa, pero a medida que el déficit aumenta, la tasa de interés $r$ a la que se enfrenta el país con riesgo soberano sube, hasta llegar a un nivel $r_{rs}$.
+
+\input{monos/fig07_02-riesgo_soberano}
+
+Matemáticamente, la curva $O$ está definida por
+\begin{equation*}
+r=r^*+\xi,
+\end{equation*}
+donde $\xi$ es la prima de riesgo del país con riesgo soberano.
+
+De la \autoref{fig07_02-riesgo_soberano} se observa que el equilibrio de una economía con riesgo soberano corresponde a $B_{rs}$, donde el ahorro $S_N^{rs}$ más el déficit con riesgo soberano $D^{rs}$ es igual a la inversión $I^{rs}$. Por lo tanto, cuando hay riesgo soberano la inversión es menor, el ahorro es mayor y el déficit se reduce. Notar que el riesgo soberano no tiene un costo para la economía porque se supuso que el producto se encuentra en pleno empleo.
+
+\subsubsection*{Controles de capital}
+
+Los capitales pueden no fluir libremente entre países si el propio gobierno no lo permite, normalmente porque la autoridad pretende proteger a la economía de cambios violentos en la dirección de los flujos de capital.
+
+El control se realiza poniendo un impuesto $\tau$ a las transacciones financieras al exterior, lo que significa que quien se endeuda debe pagar un interés recargado $r^*(1+\tau)$. Este aumento efectivo de la tasa tiene el mismo efecto que el analizado para el riesgo soberano, es decir, se reduce el déficit al subir el ahorro y bajar la inversión.
+
+Una forma de control de capital aplicada en Chile fue el \textbf{encaje}, el cual exige que una fracción $e$ de las entradas de capital debe ser depositada en el BC sin recibir intereses. De esta manera, solo una fracción $1-e$ del crédito recibe retornos a una tasa $r$. La igualdad de tasas cumple que
+\begin{equation*}
+r= \frac{r^*}{1-e}.
+\end{equation*}
+
+Nuevamente, es evidente que como $1-e<1$, entonces $r>r^*$ y se repiten los efectos analizados en la \autoref{fig07_02-riesgo_soberano}.
+
+\subsection{Estática comparativa}
+Estos casos consideran que existe perfecta movilidad de capitales. La clave para entender todos los casos es ver qué ocurre con el ahorro y la inversión, recordando que la diferencia entre ambos corresponde al déficit.
+
+\scenario{Caída de los términos de intercambio}
+
+Se definen a los términos de intercambio $TI$ como
+\begin{equation*}
+TI = \frac{P_X}{P_M}.
+\end{equation*}
+
+Si existe un deterioro permanente en los $TI$, esto se traduce en una baja de los ingresos. Ya se dijo que una baja permanente en el ingreso es compensada exactamente con una baja permanente en el consumo. Por otro lado, la inversión cae significativamente ya que hay una baja permanente en la rentabilidad, mientras que el ahorro debería permanecer constante. A una tasa internacional $r^*$ constante esto se traduce en una reducción del déficit (usar nuevamente la \autoref{fig07_02-riesgo_soberano}).
+
+Si existe un deterioro transitorio en los $TI$ los consumidores bajarán sus niveles de ahorro para intentar mantener consumo constante. Esto por si solo trae un aumento del déficit. Si se considera la inversión, es posible pensar que un deterioro de los términos de intercambio implica menor rentabilidad de la inversión, por lo que esta caería, reduciendo el déficit. Sin embargo, es mucho más probable que la caída en ahorro sea más significativa, por lo que el efecto neto sería un aumento del déficit.
+
+\scenario{Aumento del consumo autónomo}
+
+Si las expectativas de los consumidores respecto del futuro mejoran, entonces aumentará el consumo autónomo. Esto tiene como efecto directo una disminuición del ahorro nacional, lo que aumenta el déficit.
+
+\scenario{Aumento de la demanda por inversión}
+
+El efecto directo es una expansión de la inversión, lo que aumenta el déficit. Notar que el aumento de la demanda por inversión puede darse incluso por factores adversos, como reconstrucción del stock de capital después de un terremoto. En cualquier caso, los motivos son importantes porque dependiendo de ellos podría ocurrir un efecto paralelo en el consumo y, por lo tanto, en el ahorro. Es posible que la mayor demanda por inversión venga acompañada de un mayor consumo, lo que reduce el ahorro y aumenta aún más el déficit.
+
+\scenario{Política fiscal expansiva}
+
+El efecto de una política fiscal expansiva sobre el ahorro nacional es complejo y depende de una serie de factores. Sin embargo, en la mayoría de los casos cabría esperar que dicha política reduzca el ahorro nacional, lo que aumentaría el déficit.
+
+Esto podría llevar a los \emph{déficit gemelos} o \emph{twin deficit}, donde existe simultáneamente un déficit fiscal (producto del mayor gasto del gobierno) y un déficit de la cuenta corriente (producto del menor ahorro).
+
+\subsection{Ahorro e inversión en la economía abierta:\\ Puzzle de Feldstein-Horioka}
+
+Básicamente el problema o ``puzzle'' es que en economía cerrada (capítulo anterior) la teoría predice que la inversión y el ahorro estan estrechamente ligados: si sube la inversión, esto sube la tasa de interés, lo que aumenta el ahorro. En todo momento se cumple que $I^A=S^A$. Por otro lado, en este capítulo se ha visto que en economía abierta la inversión y el ahorro se definen por separado. Por ejemplo, si la demanda por inversión sube, las firmas invertirán más a la tasa internacional $r^*$ y esto no tiene consecuencias en las decisiones de ahorro.
+
+Sin embargo, Feldstein y Horioka (1980) encontraron que existe una alta correlación entre el ahorro y la inversión de los países, lo que en teoría no debería esperarse de una economía abierta. Se proponen varias explicaciones:
+
+\begin{enumdescript}
+\item [Imperfecta movilidad de capitales:] la explicación más plausible es que los países no pueden endeudarse todo lo que quieran a la tasa vigente. La curva $O$ de la \autoref{fig07_07-feldstein_horioka} representa la oferta de fondos externos, es decir, la tasa de interés a la que el mundo le quiere prestar a la economía local, la que aumenta con el déficit.
+\item [Controles de capital] como retirarse del mercado del trabajo es condición necesaria para recibir pensión, se plantea que ésta sería una manera ``más humana'' de retirar a aquellos con baja productividad.
+\item [\textit{Shocks} exógenos:] una fracción de la población sería miope y no planifica consumo y ahorro tal como predice la teoría.
+\end{enumdescript}
+
+\input{monos/fig07_07-feldstein_horioka}
+
+\subsection{Modelo de dos períodos}
+
+Se analiza un modelo de dos períodos en una economía sin producción con individuos idénticos (o un solo individuo representativo) que vive por dos períodos, recibiendo un ingreso $Y_t$ en cada período $t$. Es posible pedir prestado o prestar sin restricción a una tasa internacional $r^*$ y la función de utilidad es aditivamente separable, de tal manera que el problema a resolver es\footnote{Restricción equivalente a la planteada en economía cerrada, pero usando $B_2$ en lugar de $S$ y asumiendo $B_1=B_3=0$.}
+\begin{equation}
+	\max u(C_1) + \frac{1}{1+\rho}u'(C_2) \sa Y_1 + \frac{Y_2}{1+r^*} = C_1 + \frac{C_2}{1+r^*},
+\end{equation}
+donde $B_t$ es el stock de activos internacionales netos al comienzo de $t$.
+
+Si bien el problema a resolver es idéntico al caso de economía cerrada, la solución de equilibrio general será distinta ya que en dicho caso se requería ahorro neto cero, es decir, $B_2=0$. En este caso podrá haber déficit ($B_2<0$) o superávit ($B_2>0$) en la cuenta corriente. En este caso la tasa de interés está dada y el equilibrio está dado por el saldo en la cuenta corriente.
+
+El equilibrio se presenta gráficamente en la \autoref{fig07_08-eq_eco_abierta_sin_prod}, que es un poco sobrecargada y merece una explicación. El equilibrio en economía cerrada es $E$, donde la tasa de autarquía $r^A$ es tal que es óptimo consumir toda la dotación de bienes en cada período.
+
+Si la economía se abre y enfrenta una tasa $r_1^*>r^A$ habrá equilibrio en $E_1$. El individuo tendrá un menor consumo en el primer período, dado que será más atractivo ahorrar. La economía tendrá un superávit de la CC ($Y_1-C_1>0$), el que le permite aumentar su consumo en el período 2. Por otro lado $E_2$ representa el equilibrio con $r_2^*<r^A$ (déficit).
+
+\input{monos/fig07_08-eq_eco_abierta_sin_prod.tex}
+
+Como $r^A$ depende de la dotación relativa de bienes en ambos períodos, cabe esperar que una economía en desarrollo tendrá una tasa mayor que la internacional. En consecuencia, sería óptimo pedir prestado (déficit) para financiar consumo presente. Independiente de esto, la \autoref{fig07_08-eq_eco_abierta_sin_prod} muestra que el bienestar de la economía es mayor con apertura financiera, ya que ambos equilibrios son superiores al original. Esto se deduce fácilmente de preferencias reveladas, ya que el equilibrio general aún es alcanzable con apertura, y sin embargo no es el preferido.
+
+El modelo ahorro-inversión se grafica en la \autoref{fig07_09-eq_S_I_econ_abierta}, donde la curva de inversión coincide con el eje vertical. Al cruzarse esta con $S$ es donde se produce la tasa de equilibrio de economía cerrada, $r^A$. Si la tasa de interés internacional es menor que la de autarquía ($r_2^*<r^A$) el ahorro será menor, la inversión sigue siendo 0 y se produce un déficit. El caso contrario producirá un superávit.
+
+\input{monos/fig07_09-eq_S_I_econ_abierta}
+
+Finalmente, puede incorporarse la inversión al análisis. Para ello se vuelve a asumir que se comienza con un stock de capital dado, el cual puede usarse para producir o consumir. Una vez que la economía se abre es posible prestar o pedir prestado capital según la relación entre la productividad marginal del capital y $r^*$ y así ajustar la producción, además de suavizar el consumo vía la CC.
+
+El equilibrio de esta economía abierta con inversión se grafica en la \autoref{fig07_10-equilibrio_econ_abierta}. Este corresponde a la misma FPP del capítulo anterior, donde el equilibrio de autarquía es $A$ y la máxima producción que puede alcanzarse en autarquía corresponde a los extremos $C_1^M$ y $C_2^M$. Si la economía se abre y $r^*<r^A$ (déficit), el equilibrio de producción es $P$, donde la economía produce menos en el período 1 y más en el 2, ya que la productividad del capital de la economía doméstica es mayor que la extranjera. Por tanto se beneficia invirtiendo más, vía endeudamiento con el resto del mundo, y luego pagando esa deuda con el retorno de la inversión.
+
+Esta economía consumirá en $C$, de manera que incrementa su inversión en $C_1^A(Y_1-I_1)$ y el consumo en $C_1C_1^A$ respecto de la autarquía. El mayor consumo e inversión se financia con déficit de CC en el período 1, el que corresponde a $C_1+I_1-Y_1$ (efecto consumo más efecto inversión) y luego se paga en el siguiente período con el superávit de la balanza comercial $Y_2+(1-\delta)K_2-C_2$. Por restricción presupuestaria los déficit en la cuenta corriente deben sumar 0. $\blacksquare$
+
+\input{monos/fig07_10-equilibrio_econ_abierta}
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

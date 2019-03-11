@@ -1,0 +1,316 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\begin{document}
+\setcounter{section}{19}
+\section{El modelo de Mundell-Fleming: IS-LM en economías abiertas}
+
+\subsection{Tipo de cambio flexible}
+
+Un tipo de cambio (TC) flexible es uno donde no existe intervención por parte de la autoridad. Si bien en la práctica esto casi nunca se cumple, para el análisis se considera que sí. Se supone además que:
+
+\begin{enumerate}
+	\item Los precios de los bienes nacionales son $1$ e iguales a los precios extranjeros, por lo que el TC nominal es igual al real. Es decir, $P=P^*=1$ y $e=q=eP^*/P$.
+	\item La inflación y la inflación esperada son $0$, por lo que la tasa nominal es igual a la real. Es decir, $\pi=\pi^e=0$ y $i=r$.
+	\item Existe perfecta movilidad de capitales.
+	\item El TC se ajusta instantáneamente. 
+\end{enumerate}
+
+Los supuestos 3 y 4 aseguran que en todo momento se cumple que $i=i^*$. Esto ocurre porque la perfecta movilidad de capitales asegura que exista paridad (descubierta) de tasas:
+
+\begin{equation*}
+	i=i^* + \frac{\bigtriangleup e^e_{t+1}}{e_t}
+\end{equation*}
+
+Si el TC se ajusta instantáneamente entonces $\bigtriangleup e^e_{t+1}/e_t=0$ y por tanto $i=i^*$. Usando todo lo anterior se plantean las siguientes ecuaciones para los mercados de bienes y de dinero:
+
+\begin{align}
+	Y &= C(Y-T) + I(i^*) + G + XN(e, Y, Y^*) \\
+	\frac{\overline M}{P} &= L(i^*, Y)	
+\end{align}
+
+\input{monos/fig20_01-IS_LM_econ_abierta_perfecta_movilidad_K}
+
+A la izquierda de la \autoref{fig20_01-IS_LM_econ_abierta_perfecta_movilidad_K} se grafica el equilibrio IS-LM en su forma tradicional, mientras que a la derecha se grafica usando el plano $(Y, e)$. Las curvas tienen un asterisco para indicar que corresponden a equilibrios donde $i=i^*$. Como el equilibrio del mercado monetario no depende del TC $e$, la LM$^*$ es vertical. La IS$^*$ tiene pendiente positiva porque una depreciación del TC (aumento de $e$) aumenta las exportaciones netas, por lo que el producto aumenta.
+
+A continuación se analizan efectos de distintas políticas y shocks. La gran conclusión del análisis es que usando el modelo de Mundell-Fleming (con los supuestos vistos hasta ahora) la política monetaria sería la única con capacidad para alterar la demanda agregada.
+
+\scenario{Política fiscal}
+
+El gobierno aumenta su gasto en $\bigtriangleup G$. Tanto la IS como la IS$^*$ se desplazan a la derecha. En el plano $(Y, i)$ esto genera una presión al alza de la tasa de interés, pero sabemos que debe cumplirse siempre que $i=i^*$ ya que hay perfecta movilidad de capitales. Por lo tanto esta discrepancia entre tasas se ajustará instantáneamente con una entrada de capitales y la IS volverá a su posición inicial y el nivel de producto no cambiará.
+
+En el plano $(Y, e)$ la expansión de la IS$^*$ provoca una apreciación del TC, ya que el mayor gasto de gobierno reduce en igual cantidad las exportaciones netas (\textit{crowding out}): $\bigtriangleup G = -\bigtriangleup XN$.
+
+\scenario{Política monetaria}
+
+Se supone que el BC aumenta $M$ de alguna forma (ej. compra bonos), lo que desplaza a la LM y a la LM$^*$ a la derecha. En el plano $(Y, i)$ esto genera una presión a disminuir la tasa de interés. Como existe perfecta movilidad de capitales esta presión se traduce en una salida instantánea de capitales, lo que se materializa en una depreciación del TC (sube $e$) en el plano $(Y, e)$. Esta depreciación provoca un aumento de las exportaciones, lo que expande la IS hasta que la demanda por dinero suba lo suficiente para absorber el aumento de la oferta, asegurando que la tasa de interés no cambie. Por lo tanto el TC y el producto suben, mientras que la tasa de interés se mantiene constante.
+
+\scenario{Política comercial}
+
+Una herramienta que suelen usar los gobiernos es el arancel sobre las importaciones. Si se supone que el gobierno desea aumentar la competitividad entonces bajará los aranceles, lo que aumentará las importaciones. Esta reducción de las exportaciones netas contrae la IS$^*$, generando una presión a la baja de la tasa de interés. Esto induce una salida de capitales que deprecia el TC, por lo que el TC sube, lo que a su vez aumenta las exportaciones y por tanto compensa el efecto de la reducción arancelaria sobre la demanda de bienes, dejando la IS en su posición original.
+
+\scenario{Alza de la tasa de interés internacional}
+
+\input{monos/fig20_05-alza_tasa_internacional}
+
+Se considera un alza de la tasa de interés internacional de $i^*_1$ a $i^*_2$, como muestra la \autoref{fig20_05-alza_tasa_internacional}. Desde el punto de vista de la demanda agregada (sin considerar efectos sobre el TC) el aumento de $i^*$ provoca una caída de la inversión, por lo que la demanda se traslada de $A$ a $B$. El punto $B$ corresponde a uno donde hay exceso de oferta de dinero (recordar la \autoref{fig19_09-eq_dinamica_IS-LM_a}) y por lo tanto se genera una presión a bajar la tasa de interés. Esta presión, como antes, se materializa en una instantánea salida de capitales, lo que deprecia el TC y desplaza la IS a la derecha para alcanzar un nuevo equilibrio IS-LM en $C$.
+
+El alza de las tasas de interés local y extranjera reducen la demanda por dinero. Como la oferta de dinero no se acomoda, el producto debe aumentar para así equilibrar el mercado monetario.\footnote{Para entender esto conviene repasar la derivación de la LM graficada en la \autoref{fig19_06-derivacion_LM}.} Además se produce una contracción de la IS$^*$ como resultado de la caída de la inversión, lo que contribuye aún más a depreciar el TC.
+
+En definitiva, un aumento de las tasas de interés (local y extranjera) aumenta el producto, lo que se explica al considerar que el efecto contractivo de la disminución de inversión (movimiento a $B$) es más que compensado con el efecto expansivo de la depreciación del TC (movimiento a $C$).\footnote{Que el alza de la tasa de interés internacional sea expansiva es contrario a la evidencia y ocurre aquí porque el modelo no considera una caída de del producto internacional, porque pocos países cumplen con un TC perfectamente flexible y porque en la práctica un alza de la tasa internacional puede tener graves efectos sobre las finanzas públicas de un país, llevando a insolvencia y crisis de pagos.}
+
+\subsection{Tipo de cambio fijo}
+
+Fijar el TC implica que el BC debe comprar y vender todas las divisas necesarias para mantener el valor que ha fijado. Es decir, debe comprar los excesos de oferta y de demanda. Con respecto a esto se hacen dos supuestos, que más adelante son relajados:
+
+\begin{enumerate}
+	\item El BC dispone de todas las divisas necesarias para comprar los excesos de oferta y demanda (ej. líneas de crédito o grandes reservas).
+	\item La política de TC fijo es creíble y por tanto no hay especulación en el mercado cambiario. Si se permite que existan expectativas de depreciación, podría ocurrir que $i>i^*$.
+\end{enumerate}
+
+El BC puede crear dinero vía operaciones de cambio que involucran cambios de las reservas internacionales $R^*$ o por vía de crédito interno $CI$. Por simplicidad se asume que el multiplicador monetario es 1 y por tanto la emisión (base monetaria) es igual al dinero, es decir, $M = H = R^* + CI$. Entonces con perfecta movilidad ($i=i^*$) y denotando por $\overline e$ al TC fijo, el modelo IS-LM queda definido por las ecuaciones
+
+\begin{align}
+	Y  &= C(Y-T) + I(i^*) + G + XN(\overline e, Y, Y^*) \\
+	\frac{M}{P} &= L(i^*, Y) = \frac{R^*+CI}{P}
+\end{align}
+
+Además de estas ecuaciones, para analizar los siguientes casos conviene volver siempre a la \autoref{fig20_01-IS_LM_econ_abierta_perfecta_movilidad_K}, igual que en la subsección anterior.
+
+\scenario{Política monetaria expansiva}
+
+Antes que nada hay que notar que, dado $\overline e$, el nivel de producto $Y$ ya se encuentra completamente determinado en el mercado de bienes. Si el BC decide aumentar la cantidad de dinero por la vía de expandir el crédito interno $CI$ se produce un exceso de oferta de dinero. Dado que tanto $i$ como $Y$ están fijos, este mayor crédito interno será cambiado por moneda extranjera. Esta compra de divisas por parte del público hace que se neutralice la expansión del crédito con un movimiento igual en las reservas, dejando $M$ constante. Es decir, $\bigtriangleup^+CI = \bigtriangleup^-R^*$ y por tanto la LM no cambia.
+
+Este análisis implica que con TC fijo la política monetaria es inefectiva para afectar el producto o la tasa.
+
+\scenario{Política fiscal expansiva}
+
+Si el gobierno aumenta su gasto en $\bigtriangleup G$, la IS y la IS$^*$ se expanden, lo que presiona a un alza en la tasa de interés. Esto induce una entrada de capitales que el BC debe neutralizar para evitar que el TC se aprecie, por lo que deberá comprar reservas. Esto genera una expansión de la cantidad de dinero que desplaza a la LM y a la LM$^*$ en una cantidad tal que el TC y la tasa de interés no cambian, mientras que el producto aumenta.
+
+\scenario{Alza de la tasa de interés internacional}
+
+Con TC fijo un aumento de $i^*$ es equivalente a una política fiscal contractiva, ya que el efecto directo es una caída en la inversión, lo que provoca una contracción de la demanda agregada que no es compensada con un cambio en exportaciones netas. Además, el aumento de $i^*$ provoca una menor demanda de dinero, por lo que la LM también se contrae, lo que finalmente provoca una reducción del producto.
+
+\scenario{Devaluación nominal}
+
+Se considera el caso donde el BC decide devaluar el TC de $\overline e_1$ a $\overline e_2$, con $\overline e_1<\overline e_2$.\footnote{Se ignora aquí el posible efecto de una devaluación esperada.} Como se muestra en la \autoref{fig20_08-devaluacion_nominal}, el efecto inmediato es que las exportaciones netas aumentan, lo que expande a la IS en el plano $(Y, i)$ o, equivalentemente, corresponde a un movimiento hacia arriba por la IS$^*$ en el plano $(Y, e)$. Al igual que en la política fiscal expansiva, la demanda por dinero aumenta, lo que induce entrada de capitales, un aumento de las reservas, y consecuentemente una expansión de la oferta de dinero, tal como se refleja en el desplazamiento de la LM y la LM$^*$ hacia la derecha, aumentando el producto.
+
+\input{monos/fig20_08-devaluacion_nominal}
+
+Hay que considerar la valoración de exportaciones (cuyo precio es $P$) e importaciones (cuyo precio es $eP^*$). Usando que $P=P^*=1$, las exportaciones netas en términos de bienes nacionales son\footnote{Se denotan a las importaciones con $N$ en lugar de $M$ para no confundirlas con el dinero.}
+
+\begin{equation}
+	XN = X(\osvar{+}{e}, Y^*) - eN(\osvar{-}{e}, Y)
+	\label{eq:20-XN}
+\end{equation}
+donde $X_e$ y $N_e$ representan las derivadas parciales de $X$ y $N$ con respecto del TC real. Si bien la devaluación de $e$ reduce $N(\ldots)$, el efecto neto es que el valor del gasto en bienes importados $eN(\ldots)$ aumenta y por lo tanto tiene un efecto final contractivo sobre $XN$.
+
+Para que el efecto de la devaluación sea expansivo, puede demostrarse\footnote{Diferenciando \eqref{eq:20-XN} y usando precios unitarios y constantes (que implican que el cambio nominal es igual al real) se llega a que la condición para que la devaluación sea expansiva es que $X_e-N-eN_e>0$. Luego esta condición se evalúa en torno al equilibrio de la balanza comercial $N=X/e$, con lo que se llega a \eqref{eq:20-condicion_ML}} que debe cumplirse la \textbf{condición de Marshall-Lerner}:
+
+\begin{equation}
+	\frac{e}{X}X_e + \abs{\frac{e}{N}N_e} >1
+	\label{eq:20-condicion_ML}
+\end{equation}
+
+La condición de Marshall-Lerner es equivalente a decir que la suma de las elasticidades de las exportaciones y las importaciones (en valor absoluto) deben ser mayores que 1. Para entender la lógica detrás de la condición es necesario recordar que la devaluación del TC genera dos efectos contrarios en \eqref{eq:20-XN}. Por un lado encarece los bienes extranjeros, pero por otro lado aumenta la valoración de los bienes exportados.
+
+La condición de Marshall-Lerner asume que los componentes de $X$ son los mismos que los de $Y$ y por lo tanto tienen el mismo precio. En economías pequeñas o que exportan gran proporción de materias primas la depreciación del TC subiría tanto el valor de las exportaciones como de las importaciones en proporciones similares, lo que implica que basta que la suma de las elasticidades sea mayor o igual a 0 para que la devaluación sea expansiva.
+
+\subsection{Dinámica del tipo de cambio y \textit{overshooting} de Dornbusch}
+
+Como se discute en el capítulo 8, en presencia de perfecta movilidad de capitales las tasas doméstica y extranjera deberían cumplir
+
+\begin{equation*}
+	i_t = i_t^* + \frac{\tilde e - e_t}{e_t}
+\end{equation*}
+donde $\tilde e$ corresponde al TC de largo plazo y, por tanto, el último término de la ecuación corresponde a la expectativa de depreciación nominal. Si se ignora el subíndice temporal se tiene que
+
+\begin{equation}
+	e = \frac{\tilde e}{1+i-i^*}
+	\label{eq:20-TC_nominal}
+\end{equation}
+de donde se obtiene que existe una relación negativa entre el TC y la tasa de interés, resultado que es graficado a la derecha de la \autoref{fig20_09-equilibrio_tasas_tipo_cambio_producto}.
+
+\input{monos/fig20_09-equilibrio_tasas_tipo_cambio_producto}
+
+Hasta ahora se ha asumido que el TC se ajuste instantáneamente a su equilibrio de largo plazo, de modo que en todo momento $i=i^*$. Es intuitivo pensar que este supuesto no siempre se cumple, además que existe evidencia en su contra. Sin embargo, esto no significa que en el corto plazo no se produzca un equilibrio. Ambos elementos pueden combinarse en un análisis de dinámica de equilibrio del TC.
+
+Si se permite que la tasa $i$ sea distinta de $i^*$ y se usa \eqref{eq:20-TC_nominal}, se tiene un equilibrio IS-LM determinado por las ecuaciones
+
+\begin{align}
+	Y &= C(Y-T) + I(i) + G + XN\left(\frac{\tilde e}{1+i-i^*}, Y, Y^*\right) \label{eq:20-IS_e_LP} \\
+	\frac{\overline M}{P} &= L(i, Y),
+\label{eq:20-LM_e_LP}
+\end{align}
+el que se encuentra graficado a la izquierda de la \autoref{fig20_09-equilibrio_tasas_tipo_cambio_producto}.
+
+Ahora la tasa de interés tiene un efecto doble sobre la IS descrita en \eqref{eq:20-IS_e_LP}. Por un lado se tiene el tradicional efecto negativo sobre la inversión, pero además ahora tiene un efecto contractivo sobre la demanda agregada a través de una reducción de las exportaciones netas $XN$ como producto de la apreciación del TC.
+
+\scenario{Política monetaria expansiva}
+
+Si el BC aumenta la cantidad de dinero de $M_1$ a $M_2$, la tasa de interés debería bajar, generando una salida de flujos de capital que generan una depreciación del TC y un aumento del producto.\footnote{Este es el mismo efecto de política monetaria que se analizó con tipo de cambio flexible.} Este movimiento corresponde a la expansión de la LM que se observa en la \autoref{fig20_11-equilibrio_tasas_tipo_cambio_producto}.
+
+\input{monos/fig20_11-equilibrio_tasas_tipo_cambio_producto}
+
+Sin embargo, la expansión monetaria debe alterar la paridad de tasas, es decir, el tipo de cambio de largo plazo, ya que en el largo plazo los precios ya se han ajustado y es esperable que el tipo de cambio sea proporcional a la cantidad de dinero. Es decir, $\tilde e_2/\tilde e_1 = M_2/M_1$.
+
+El equilibrio inicial se da en el punto $A$ de la \autoref{fig20_11-equilibrio_tasas_tipo_cambio_producto}. La depreciación del TC de largo plazo desplaza la ecuación de paridad de 1 a 2 y el equilibrio monetario se expande de LM$_1$ a LM$_2$. Como $Y$ se ajusta lentamente, el exceso de oferta de dinero reducirá la tasa de interés hasta el nivel marcado en $B$. Este diferencial de tasas local y extranjera implica que el público esperará una apreciación (de corto plazo) de la moneda nacional para compensar por el mayor retorno de los activos extranjeros. Sin embargo, se espera una depreciación de $\tilde e_1$ a $\tilde e_2$ (en el largo plazo).
+
+Esta aparente contradicción entre una depreciación esperada de largo plazo con una apreciación en la trayectoria al equilibrio se explica con una depreciación de corto plazo que va más allá de su nivel de equilibrio de largo plazo, idea planteada por Dornbusch (1976). El \textbf{\textit{overshooting} de Dornbusch} se muestra gráficamente en la \autoref{fig20_12-expansion_monetaria_overshooting_dornbusch}.
+
+\input{monos/fig20_12-expansion_monetaria_overshooting_dornbusch}
+
+El \textit{overshooting} corresponde al salto de $\tilde e_1$ a $e_D$, el que provoca un aumento de la demanda agregada (IS$_1$ a IS$_2$). Volviendo a la \autoref{fig20_11-equilibrio_tasas_tipo_cambio_producto} se tiene que en la medida que el producto aumenta también lo hace la demanda por dinero y, consecuentemente, la tasa de interés local. El equilibrio final se da en $C$, donde $i=i^*$, el tipo de cambio se deprecia en el largo plazo ($\tilde e_2>\tilde e_1$) y el producto es mayor ($Y_2>Y_1$).
+
+La importancia de este análisis radica en que muestra que el tipo de cambio flexible puede generar un exceso de volatilidad. Esto no se genera por ninguna anomalía en el mercado financiero, si no que es simplemente el lento ajuste del sector real de la economía lo que provocaría este comportamiento.
+
+\scenario{Política fiscal expansiva}
+
+En este caso el efecto es idéntico al analizado anteriormente, ya que el tipo de cambio se ajustará instantáneamente al de largo plazo. De \eqref{eq:20-IS_e_LP} y \eqref{eq:20-LM_e_LP} un ajuste en el tipo de cambio de largo plazo a un valor más apreciado hace \textit{crowding out} total sobre el aumento del gasto de gobierno, lo que mantiene constante la tasa  internacional, sin necesidad de que la tasa local se desvíe.
+
+\subsection{Movilidad imperfecta de capitales}
+
+Se comienza asumiendo nuevamente que el TC se ajusta instantáneamente a su valor de largo plazo. Se modela una movilidad imperfecta de capitales suponiendo que el saldo en la cuenta financiera (o de capitales) de la balanza de pagos $F$ se ajusta a los diferenciales de tasas de interés siguiendo
+
+\begin{equation*}
+	F = F(i-i^*)
+\end{equation*}
+donde $F'>0$, es decir, cuando $i>i^*$ hay una entrada neta de capitales a la economía (y viceversa). Una perfecta movilidad de capitales ocurriría en el caso que $F' \rightarrow \infty$, de modo que siempre se cumpliría que $i=i^*$.
+
+Se supone un TC flexible, lo que asegura que el saldo de la balanza de pagos es 0, es decir, no hay cambio en las reservas internacionales $R^*$. Esto es:
+
+\begin{equation}
+	\bigtriangleup R^* = XN(e, Y, Y^*) + F(i-i^*)=0
+	\label{eq:20-BP_balanceada}
+\end{equation}
+
+Por lo tanto el modelo IS-LM para las variables endógenas $Y$ e $i$ queda determinado por\footnote{Para llegar a este sistema se toma un modelo IS-LM de variables endógenas $Y$, $i$ y $e$ 	que utiliza que el saldo de la balanza de pagos es 0. Usando las ecuaciones de IS y LM con tasa de interés local se puede despejar $XN$ de la ecuación de la balanza de pagos y reemplazar en la IS.}
+
+\begin{align}
+	Y &= C(Y-T) + I(i) + G - F(i-i^*) \\
+	\frac{\overline M}{P} &= L(i, Y)
+\end{align}
+
+Nuevamente el efecto de la tasa sobre el producto es doble. Además del efecto positivo de la tasa sobre la inversión, se tendrá el efecto sobre el flujo de capitales y, consecuentemente, en el TC. Diferenciando la IS se obtiene que
+
+\begin{equation*}
+	\deriv{i}{Y} \bigg |_{\text{IS}} = \frac{1-C'}{I'-F'}
+\end{equation*}
+
+La diferencia entre una IS con perfecta movilidad de capitales está en el término $F'$, que se resta en el denominador. Por lo tanto, la pendiente de una IS con imperfecta movilidad de capitales es mayor. En el caso de perfecta movilidad de capitales $F' \rightarrow \infty$ y por tanto la IS será horizontal en $i^*$. Esto ocurre porque con imperfecta movilidad de capitales una baja en la tasa de interés provoca una depreciación del tipo de cambio que aumenta las exportaciones netas, contribuyendo aún más al incremento del producto (además de su efecto sobre la inversión).
+
+Se considera ahora además la evolución del tipo de cambio (el ajuste ya no es instantáneo), por lo que ahora el saldo $F$ estará dado por
+
+\begin{equation*}
+	F = F(i-i^*-\bigtriangleup e^e/e)
+\end{equation*}
+donde $\bigtriangleup e^e/e$ corresponde a la depreciación esperada en el período relevante.
+
+Se sigue la lógica del capítulo 7 donde se modeló la imperfecta movilidad de capitales en términos de una prima de riesgo país $\xi$ que se agrega al retorno de los activos domésticos. Con fluctuaciones del tipo de cambio se tendría que\footnote{Para dar una forma funcional a $\xi$ se usa que, dado que el TC es flexible, los flujos netos de capital serán igual al déficit en la cuenta corriente, es decir, $F=-XN$.}
+
+\begin{equation}
+	i = i^* + \frac{\bigtriangleup e^e}{e} + \underbrace{F^{-1}(-XN)}_{\xi}
+	\label{eq:20-tasa_dinamicaTC_riesgo}
+\end{equation}
+
+Dado que $F$ es creciente, $F^{-1}$ también lo es, lo que implica que entre mayor sea el déficit $-XN$, mayor será el riesgo país $\xi$. Además, a menor movilidad de capitales ($F'$ disminuye) el riesgo país aumenta más rápidamente ($F^{-1'}$ es mayor).\footnote{Porque $F'=1/F^{-1'}$.}
+
+\scenario{Política monetaria expansiva}
+
+Igual que en economía cerrada, un aumento de la cantidad de dinero reducirá la tasa de interés y aumentará el producto. El efecto sobre el tipo de cambio puede analizarse diferenciando la ecuación \eqref{eq:20-BP_balanceada} de balanza de pagos balanceada, de donde se obtiene:
+
+\begin{equation*}
+	XN_e\diff e = - (XN_Y \diff Y + F' \diff i)
+\end{equation*}
+
+El primer término del paréntesis es negativo, ya que el producto aumenta ($\diff Y>0$) mientras que el déficit comercial se deteriora cuando aumentan las importaciones ($XN_Y<0$). El segundo término también es negativo, ya que $F'>0$ y $\diff i<0$. Por lo tanto el efecto total es una depreciación del tipo de cambio.
+
+\scenario{Política fiscal expansiva}
+
+Un aumento del gasto de gobierno expande la IS, lo cual aumenta la tasa de interés y el producto.
+
+Si bien el modelo estándar de Mundell-Fleming predice que una política fiscal expansiva llevará a una apreciación del tipo de cambio, ahora que hay movilidad imperfecta de capitales esto no siempre se cumple. Si nuevamente se diferencia la ecuación \eqref{eq:20-BP_balanceada} y ahora se usa la LM para reemplazar $\diff i$ por $\diff Y$ se tiene:
+
+\begin{equation*}
+	XN_e \deriv{e}{G} = \left [ F' \frac{L_Y}{L_i} - XN_Y \right] \deriv{Y}{G}
+\end{equation*}
+
+El efecto del alza del gasto sobre el tipo de cambio depende de la expresión dentro del paréntesis, donde $F' L_y/L_i$ es negativo, mientras que $-XN_Y$ es positivo.\footnote{Este modelo converge al de perfecta movilidad de capitales, ya que mientras mayor sea la movilidad, mayor será $F'$, aumentando la probabilidad de que el tipo de cambio se aprecie. Además, este modelo es consistente con la inefectividad de la política fiscal al existir perfecta movilidad de capitales, ya que a mayor $F'$ menor será el valor de $\diff Y / \diff G$.} Con imperfecta movilidad de capitales hay un efecto nuevo sobre el TC: en la medida que la política fiscal expansiva aumenta el producto, las importaciones aumentan, lo que requiere una depreciación del tipo de cambio. Esta depreciación tendrá más probabilidad de ocurrir mientras menor sea la movilidad de capitales, ya que el movimiento de tasas no es suficiente para inducir el financiamiento del déficit. De la ecuación anterior es claro que este efecto domina solamente cuando la movilidad de capitales $F$ (y por tanto $F'$) es baja.
+
+\scenario{\textsl{\textsc{Shocks}} a los flujos de capitales}
+
+Normalmente el shock a los flujos de capitales se interpreta como en cambio en el ``apetito por riesgo'' de los inversionistas extranjeros: deciden cambiar su portafolio a activos más riesgosos y más rentables. Esto produce una baja en el riesgo país debido a la mayor demanda por activos de dicho país. Es decir, se interpretará el fenómeno más bien como un shock negativo al riesgo país.
+
+Gráficamente, se vuelve a usar el modelo IS-LM en el plano $(Y, e)$ (IS$^*$ y LM$^*$), representado en la \autoref{fig20_14-disminucion_riesgo_pais_movilidad_imperfecta_capitales}. Analíticamente se vuelve a usar el hecho que el riesgo país se puede escribir como una función inversa de los flujos de capitales, esto es, $\xi=F^{-1}(-XN)$. Se asume que el TC se ajusta de inmediato al equilibrio de largo plazo. Dado que el riesgo país depende de las exportaciones netas, se puede escribir $\xi$ como función de $e$, $Y$ e $Y^*$ y la tasa doméstica es
+
+\begin{equation}
+	i = i^* + \xi(\osvar{-}{e}, \osvar{+}{Y}, \osvar{-}{Y^*}) + \overline\xi
+\end{equation}
+donde $\overline\xi$ representa un factor exógeno de riesgo país que se asocia al ``apetito por riesgo''. Su valor se reducirá cuando el apetito por riesgo de los inversionistas extranjeros aumente, es decir, cuando aumente su preferencia por invertir en la economía local.
+
+Dado que el riesgo país $\xi$ disminuye con las exportaciones netas y éstas aumentan con el TC y el producto internacional, los signos de las derivadas parciales serán los inversos que en $XN$.\footnote{Es decir, $\xi_e, \xi_{Y^*}<0$ y $\xi_Y>0$.} Por tanto, el sistema de ecuaciones IS-LM es:
+
+\begin{align*}
+	Y &= C(Y-T) + I(i^*+\xi(e, Y, Y^*) + \overline\xi) + G + XN(e, Y, Y^*) \\
+	\frac{\overline M}{P} &= L(i^* + \xi(e, Y, Y^*) + \overline\xi, Y)
+\end{align*}
+
+Ambas ecuaciones son función de $Y$ y $e$, graficadas en \autoref{fig20_14-disminucion_riesgo_pais_movilidad_imperfecta_capitales}. Una depreciación del TC es expansiva pues sube las exportaciones netas y además reduce el riesgo país, por lo que la pendiente de la IS$^*$ es positiva. Una reducción de $\overline\xi$ reduce el costo de financiamiento y para un $e$ dado aumentará la demanda agregada, expandiendo la IS$^*$. Respecto a la LM$^*$, se tiene que un aumento del TC reduce el riesgo país, lo que baja la tasa de interés y aumenta la demanda por dinero. La pendiente de la LM$^*$ es negativa porque dicho aumento de demanda de dinero requerirá una caída del producto para equilibrar el mercado del dinero. Dado el nivel de actividad, una reducciónn de $\overline\xi$ necesitará un aumento del riesgo por la vía de una apreciación del tipo de cambio, lo que corresponde a un movimiento a la izquierda de la LM$^*$. 
+
+\input{monos/fig20_14-disminucion_riesgo_pais_movilidad_imperfecta_capitales}
+
+Como se observa en la \autoref{fig20_14-disminucion_riesgo_pais_movilidad_imperfecta_capitales}, una caída del riesgo país genera una apreciación del TC y probablemente\footnote{El movimiento conjunto de la IS$^*$ y LM$^*$ es tal que podría darse una caída del producto si la demanda por dinero es muy sensible a la tasa de interés. Sin embargo, la evidencia muestra que la caída del riesgo país suele ser expansiva.} un aumento del producto. Si bien se ignora en el análisis, cabe pensar que los mayores flujos de capitales relajen las restricciones de liquidez de la economía local.
+
+Si la autoridad intenta defender el TC fijándolo en $e_1$, el efecto expansivo del shock (movimiento de la IS$^*$) será aún mayor. Análogamente, si se restringe más la movilidad de capital entonces el efecto contractivo (movimiento de la LM$^*$) será mayor. Es decir, el tipo de cambio actúa como amortiguador de la (restricción de) fluctuaciones.
+
+\subsection{Crisis cambiarias}
+
+Se analiza acá la explicación más ``clásica'' de las crisis cambiarias, aunque no existe consenso en la literatura. Esta es la de inconsistencia de política macroeconómica: tipo de cambio fijo con financiamiento público inflacionario.
+
+\subsubsection{Inconsistencia de políticas y desequilibrio fiscal}
+
+También llamados ``modelos de primera generación'', fueron utilizados originalmente para interpretar las crisis del precio del oro. La idea es que si el gobierno desea fijar el precio (o tipo de cambio) de un stock fijo de moneda extranjera. Para mantener dicho precio estará dispuesto a vender (comprar) todos los excesos de demanda (oferta) a ese precio. Si cada período hay un exceso de demanda que reduce gradualmente dicho stock, el precio no puede sostenerse para siempre, ya que no habrán reservas. Los especuladores se darán cuenta de esto y comprarán todas las reservas existentes, de manera que en ese minuto el precio de la moneda extranjera debe subir.
+
+Se asume una versión simplificada del modelo IS-LM con producto constante (por lo tanto $M/P=L(i)$) y precios fijos, iguales a 1 y que aumentan a la misma tasa que el TC. Hay perfecta movilidad de capitales. Si el BC fija el cambio en $\overline e$, por paridad la tasa local será igual a la internacional, por lo que $\overline M=PL(i^*)$. Entonces el equilibrio del mercado del dinero es:
+
+\begin{equation}
+	\overline M = L(i^*) = R^* + CI
+\end{equation}
+
+El gobierno se financia emitiendo dinero, es decir, aumentando $CI$ en una cantidad fija $\Omega$ por período. Dado que el público no quiere aumentar sus tenencias de dinero, el aumento de CI será compensado por una caída de las reservas internacionales $R^*$ en igual magnitud. En algún momento las reservas se agotarán y no se podrá sostener $\overline e$, que comenzará a subir, al igual que los precios.\footnote{En rigor el tipo de cambio podría dejarse flotar en cualquier momento; no es necesario esperar a que se agoten las reservas. Hacerlo entregaría el precio que equilibria el mercado monetario y, en consecuencia, el \textit{tipo de cambio sombra}.} En régimen flexible la demanda por dinero $M_f$ será menor que con tipo de cambio fijo $\overline M$:
+
+\begin{equation*}
+	M_f = L(i^* + \Omega) < \overline M = L(i^*)
+\end{equation*}
+
+Es importante que no se permita que el tipo de cambio ``salte'' discretamente, ya que esto teóricamente permitiría especular y tener ganancias infinitas, lo que claramente no puede ocurrir. El ataque especulativo debe ocurrir antes que las reservas se agoten, en un momento $T^*$ que cumpla con $\overline e = e_s(T^*)$. En dicho momento las reservas serán suficientes como para compensar la caída que habrá en la demanda por dinero ($\overline M - M_f(T^*))$.
+
+\subsubsection{Fragilidades y equilibrios múltiples}
+
+No obstante lo anterior, han existido muchas crisis cambiarias en países que no tenían déficit fiscales. Para explicar esto surgieron los modelos de segunda y tercera generación.
+
+\paragraph{Modelos de segunda generación} También llamados modelos de recesión, surgen a partir de la crisis del sistema cambiaro europeo de 1992. Sugieren que en países con rigideces cambiarias el TC real se puede apreciar, generando déficit en la cuenta corriente, lo que denominan \textit{atraso cambiario}. Cuando se produce esto, eventualmente se necesitará un ajuste cambiario en forma de una depreciación real. Para evitar el colapso cambiario debe haber un alza de la tasa de interés que evite que el público cambie sus activos en moneda local por otros en extranjera.
+
+\subsection{Tipo de cambio fijo vs. tipo de cambio flexible}
+
+Se analiza la conveniencia de cada régimen frente a shocks monetarios (LM) o shocks a la demanda (IS). Se utiliza el plano $(Y, e)$ con las curvas IS$^*$ y LM$^*$. Como los mecanismos ya fueron explicados, se incluyen los gráficos, que a esta altura deberían suficientes.
+
+\input{monos/fig20_16-shock_monetarios}
+
+\input{monos/fig20_17-shock_dda_agregada}
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

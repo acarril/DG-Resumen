@@ -1,0 +1,83 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{8}
+\begin{document}
+\section{Más sobre el tipo de cambio real y la cuenta corriente}
+
+La teoría del PPP parece cumplirse en el muy largo plazo, pero en el corto y mediano plazo parecen haber desviaciones significativas del tipo de cambio real predicho por la teoría. En este capítulo se exponen teorías alternativas para explicar estas fluctuaciones.
+
+\subsection{La teoría de Harrod-Balassa-Samuelson (HBS)}
+
+Esta teoría enfatiza el hecho de que existen bienes no transables (internacionalmente), por lo que sus precios están determinados por la oferta y demanda locales. Al suponer libre movilidad de capitales y precio único para los bienes transables, la teoría predice que las diferencias de productividad entre sectores expliquen las diferencias entre los niveles de precios entre países. En particular, se plantea que existen:
+
+\begin{enumdescript}
+\item [Bienes tipo A] Son transables y tienen precios comunes en todo el mundo, difiriendo solo en costos de transporte o aranceles.
+\item [Bienes tipo B] Son semi-transables y tienden a un nivel común mundial.
+\item [Bienes tipo C] No hay precio mundial para ellos y los precios nacionales solo están conectados a través de la relación de cada nivel de precio con otros grupos de bienes.
+\end{enumdescript}
+
+Una conclusión contraintuitiva de esta teoría es que los bienes de tipo C probablemente serán más caros en los países más eficientes.
+
+Analíticamente, se considera una economía ricardiana donde el único factor de producción es el trabajo y se requiere una fracción $1/a_T$ de él para producir una unidad de bienes transables, cuya producción total es $Y_T=a_T L_T$. Análogamente, para producir una unidad de bienes no transables se requiere una fracción $1/a_N$, con $Y_N=a_N L_N$. Existe competencia perfecta en los mercados de factores y de bienes. Existe además ley de un solo precio para los bienes transables. Si $W$ es salario, entonces las utilidades de una empresa en el sector $i=T, N$ son $P_iY_i-WL_i=L_i(P_ia_i-W)$ y por lo tanto los precios de los bienes serán
+\begin{equation}
+P_i = W/a_i.
+\label{eq:09-P_prod_salarios}
+\end{equation}
+
+No obstante, para $P_T$ se debe cumplir que $P_T=eP^*_T$ y por tanto los salarios quedan enteramente determinados por los precios de los transables, ya que $W=eP^*_Ta_T$. Por lo tanto el precio relativo de los bienes transables en términos de los no transables será
+\begin{equation}
+	p \equiv \frac{P_T}{P_N} = \frac{a_N}{a_T}.
+	\label{eq:09-p_TvsNT}
+\end{equation}
+
+Si se asume que los índices de precio en los dos países tienen la misma proporción de bienes transables $(1-\alpha)$ y como se asumió que se cumple la ley de un solo precio para los transables se tiene que
+\[
+	q = \left(\frac{P_T}{P_N}\right)^\alpha \left(\frac{P_N^*}{P_T^*}\right)^\alpha = \left(\frac{p}{p^*}\right)^\alpha,
+\]
+donde $p$ y $p^*$ son el precio de los bienes transables respecto de los no transables nacionales y extranjeros, respectivamente. Se puede expresar entonces el cambio porcentual en el tipo de cambio real como $\hat q = \alpha(\hat p - \hat p^*)$.
+
+La principal conclusión de la teoría HBS es que países de mayor productividad en bienes transables tendrán precios más altos (en no transables). Teniendo en cuenta \eqref{eq:09-P_prod_salarios} y recordando que $P_T$ es constante, es fácil ver que un aumento de la productividad de los transables aumenta el precio de los no transables por medio del salario. Por otra parte, un aumento de la productividad de los no transables no tiene efecto en el salario, ya que eso aumentaría $P_T$, lo que no es posible. Por tanto el efecto es simplemente un aumento del precio de los no transables.
+
+Denotando con asterisco a las variables internacionales y diferenciado el logaritmo de \eqref{eq:09-p_TvsNT}, se obtiene que el cambio porcentual del TCR es
+
+\begin{equation}
+\hat q = \alpha[(\hat a_N - \hat a_N^*)-(\hat a_T - \hat a_T^*)].
+\label{eq:09-TCR_log}
+\end{equation}
+
+De esta ecuación se concluye que en países con productividad de transables creciendo más rápido que en el resto del mundo ($\hat a_T - \hat a_T^*>0$), el tipo de cambio real se irá apreciando ($\Delta^-\;\hat q$). El mecanismo es que si $a_T$ sube respecto de $a_T^*$ entonces significa que los salarios suben  (ya que el precio local de los transables no puede caer, por la ley de un solo precio). Esta alza de salarios se traduce en un alza en el precio de los no transables.
+
+\subsection{Interpretación de la teoría HBS}
+
+Un punto polémico de la teoría HBS es por qué la productividad de los bienes transables es la que crece rápidamente, mientras que la de los no transables no.
+
+De \eqref{eq:09-TCR_log} sabemos que lo que determina el TCR son las \emph{diferencias} en productividad. Aunque podría pensarse que la productividad del sector de servicios tecnológicos ha crecido mucho, lo ha hecho en igual medida que en el extranjero. Por lo tanto es plausible pensar que $\hat a_N \approx \hat a_N^*$. Es razonable suponer que las diferencias de productividad sea más marcadas en el sector exportador, ya que son éstos los que difieren más entre países. De hecho si pensamos en Chile, tenemos un sector de telecomunicaciones (no exportable) similar al resto del mundo, mientras que la producción de cobre (transable) ha tenido un fuerte aumento.
+
+Suponiendo $\hat a_N = \hat a_N^*$ y que la productividad total de los factores (PTF) crece a una tasa $\hat a = (1-\alpha)\hat a_T + \alpha \hat a_N$, entonces una expresión para el TCR es
+
+\begin{equation}
+\hat q = -\frac{\alpha}{1-\alpha}[\hat a-\hat a^*],
+\end{equation}
+lo que implica que si la PTF nacional crece más rápido que la extranjera ($\hat a-\hat a^*>0$) se genera una apreciación real. Ello ocurre porque la productividad en bienes transables crece más velozmente que e
+\subsection{Más factores y libre movilidad de capitales}
+\subsection{Términos de intercambio}
+\subsection{Efectos de demanda: Gasto de gobierno}
+\subsection{Tasa de interés y tipo de cambio reales}
+\subsection{Dimensión intertemporal de la cuenta corriente}
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

@@ -1,0 +1,365 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\begin{document}
+\setcounter{section}{18}
+\section{El modelo keynesiano de economía cerrada: IS-LM}
+Este modelo tomó la esencia del trabajo de Keynes (1936), la que fue formalizada por Hicks (1937), marcando el inicio del estudio de la macroeconomía. El principal supuesto del modelo es que la oferta agregada es horizontal, lo que significará que cualquier presión de demanda se traducirá en mayor cantidad transada, con precio constante.
+
+\subsection{El modelo keynesiano simple}
+
+Este modelo muestra cómo la demanda agregada determina el producto. Además del supuesto de precios rígidos, se asume aquí que la inversión está dada y no es afectada por la tasa de interés. Dados esos supuestos este modelo es más adecuado para aplicarlo en una economía con alto nivel de desempleo e inversión estancada, donde no es costoso aumentar la producción.
+
+El gasto agregado, también denominado \emph{absorción} $A$, se define como:
+
+\begin{equation*}
+A=C+G+I
+\end{equation*}
+\begin{where}
+\item[I] es inversión y, si bien puede fluctuar, se considera exógena. Se denota como $\bar{I}$.
+\item[G] es gasto del gobierno y también puede fluctuar pero se considera exógeno. Se ignoran, además, implicancias intertemporales del presupuesto.
+\item[C] es consumo de los hogares. Se descompone en consumo autónomo (mínimo) $\overline{C}$ y en un consumo $c=PMgC$ que depende del ingreso disponible:\footnote{Después de impuestos $T$, los que pueden asumirse como una fracción del ingreso:$T=\tau Y$.}
+\begin{align*}
+C &= \overline{C}+c(Y-T) \\
+&= \overline{C}+c(1-\tau)Y
+\end{align*}
+\end{where}
+
+Usando lo anterior podemos escribir la \textbf{demanda agregada} como:
+
+\begin{equation}
+A=\underbrace{\overline{C}+\bar{I}+G}_{\mathclap{\text{gasto autónomo}}}+c(Y-T)
+\label{eq:consumo_keynesiano_IS}
+\end{equation}
+
+En el equilibrio debe satisfacerse que la demanda agregada es igual al producto, esto es, que $A=Y$, ecuación que se grafica en gris en la \autoref{fig19_01-eq_producto_dda_agreg}. Al graficar la ecuación \eqref{eq:consumo_keynesiano_IS} de demanda agregada se puede ver que se genera un equilibrio de nivel de producto $Y^*$ cuando ambas ecuaciones se intersectan. A esto se le llama \textbf{cruz keynesiana}, la que se muestra en la \autoref{fig19_01-eq_producto_dda_agreg}.
+
+\input{monos/fig19_01-eq_producto_dda_agreg}
+
+Cualquier desajuste entre $A$ e $Y$ se traducirá en acumulación (indeseada) o desacumulación de inventarios para mantener el equilibrio. Matemáticamente el producto de equilibrio $Y^*$ que satisface $A=Y$ es:
+
+\begin{equation}
+Y^* = \frac{\overline{C}-cT+\bar{I}+G}{1-c}
+\label{eq:producto_keynesiano}
+\end{equation}
+
+\subsection{Multiplicadores}
+
+Este análisis no incluye consideraciones dinámicas como el presupuesto intertemporal del gobierno o la equivalencia ricardiana, por lo que hay que tener cuidado con la validez de sus conclusiones. Además, se considera  que el nivel de inversión está fijo.
+
+\subsubsection{Multiplicador del gasto autónomo}
+
+La ecuación \eqref{eq:producto_keynesiano} establece que el aumento de cualquier componente del gasto autónomo aumenta más que proporcionalmente el producto agregado. Keynes llamó a esto el \textbf{efecto multiplicador}. En efecto, si $T=\tau Y$ se tiene que:
+
+\begin{enumerate}
+\item Inicialmente, cualquier componente del gasto autónomo aumenta en $\Delta X$.
+\item Inmediatamente el producto $Y$ aumenta en $\Delta X$.
+\item Adicionalmente, debido a que el ingreso aumenta en $\Delta X$, las personas deciden aumentar su consumo en $c(1-\tau)[\Delta X]$.
+\item Este mayor consumo hace que el producto aumente en la misma cantidad, es decir, en $c(1-\tau)\Delta X$.
+\item Adicionalmente, debido a que el ingreso aumenta en $c(1-\tau)\Delta X$, las personas deciden aumentar su consumo en $c(1-\tau)[c(1-\tau)\Delta X]$.
+\item Así sucesivamente hasta que $\Delta Y = \Delta X/[1-c(1-\tau)]$.
+\end{enumerate}
+
+El resultado anterior no es más que el raciocinio detrás de las derivadas del producto con respecto a algún componente del gasto autónomo:
+
+\begin{equation}
+\deriv{Y}{G}=\deriv{Y}{\bar{I}}=\deriv{Y}{\overline{C}} = \frac{1}{1-c(1-\tau)} > 1
+\end{equation}
+
+\subsubsection{Multiplicador de los impuestos}
+
+Analizando el efecto de un cambio en la recaudación tributaria $T$ (no en la tasa $\tau$), se tiene que:
+
+\begin{equation}
+\deriv{Y}{T} = \frac{-c}{1-c} < 0
+\end{equation}
+
+Esta ecuación es interesante porque dice los individuos no consumen todo el ingreso adicional producto de una rebaja de impuestos, si no que ahorran una fracción $(1-c)$ de la rebaja.
+
+Al contrastar cambios en el gasto autónomo (en particular, cambios de $G$) con cambios en los impuestos se puede ver que será mucho más efectivo para el gobierno aumentar el gasto que reducir los impuestos para aumentar el producto de la economía. 
+
+\subsubsection{Multiplicador del presupuesto equilibrado}
+
+Se considera un cambio donde el gobierno aumenta el gasto pero también aumenta los impuestos en la misma cantidad, manteniendo el presupuesto equilibrado. Para analizar el efecto de dicho cambio basta hacer:
+
+\begin{equation}
+\deriv{Y}{G}\bigg |_{\Delta G = \Delta T} = \deriv{Y}{G}+\deriv{Y}{T} = \frac{1}{1-c}-\frac{c}{1-c} = 1
+\end{equation}
+
+Un aumento en el gasto de gobierno acompañado de un aumento de los impuestos en la misma cantidad incrementa el producto en la misma magnitud que se incrementó el gasto del gobierno.
+
+\subsubsection{La paradoja de la frugalidad (o del ahorro)}
+
+Ya se estableció que un aumento en el gasto autónomo ($G, \bar I, \overline C$) aumenta el producto. Por lo mismo, se tiene que si las personas intentan aumentar su ahorro de forma autónoma (no porque haya subido el ingreso), entonces esto provocará una disminución del consumo que reducirá el producto. Esto es paradójico considerando los modelos de desarrollo neoclásicos donde un mayor ahorro trae mayor acumulación de capital y en consecuencia mayores niveles de ingreso en el largo plazo.
+
+Usando que $S=Y-C$ y tomando un consumo keynesiano $C=\overline{C}+cY$ se define al ahorro $S$ como:
+
+\begin{equation*}
+S = (1-c)Y-\overline{C}
+\end{equation*}
+
+El aumento del ahorro autónomo es $\Delta \overline{C}<0$, lo que según los multiplicadores genera una caída del producto de $\Delta \overline{C} /(1-c) $, induciendo una caída del ahorro de $\Delta S = (1-c)[\Delta \overline{C}/(1-c)] $, donde finalmente $\Delta S = \Delta \overline{C}$. El punto es que el ahorro \emph{autónomo} sube, pero el ahorro total se mantiene porque la propensión marginal a ahorrar $s=1-c$ hace que parte de la caída del producto se desahorre, lo que compensa exactamente al aumento de ahorro autónomo.
+
+Más formalmente, si suponemos que el ahorro, análogo al consumo, puede definirse como $S=\bar{S}+s(Y-T)$, hay que demostrar que un cambio en el ahorro autónomo $\bar{S}$ no afecta al ahorro total $S$. Como $S(\bar{S},Y,...)$ y a su vez $Y(\bar{S})$, hay que probar que:
+
+\begin{equation*}
+\frac{\diff S}{\diff \bar{S}}=0
+\end{equation*}
+dicha derivada total puede desarrollarse como:
+\begin{align*}
+\frac{\diff S}{\diff \bar{S}} &= \pder{S}{\bar{S}}+\pder{S}{Y}\cdot \frac{\diff Y}{\diff \bar{S}} \\
+&= 1+s\cdot \frac{-1}{s} \\
+&= 0
+\end{align*}
+lo que prueba que un cambio en el ahorro autónomo no genera un cambio neto en el ahorro. Sumando esto a que el ahorro tiene un efecto perjudicial en el producto, puede verse que no sería recomendable incentivar el ahorro para reactivar esta economía, si no más bien el gasto.
+
+\subsection{La tasa de interés y el mercado de bienes (IS)}
+
+Suponiendo precios fijos, la derivación de la IS sigue el mismo esquema del modelo keynesiano simple, asumiendo que es la demanda agregada la que determina el producto. Denotando por $r$ la tasa de interés real, la IS corresponde al conjunto de puntos $(r,Y)$ que equilibran al mercado de bienes, es decir, donde la producción es igual a la demanda agregada. Considerando que la inversión depende negativamente de la tasa de interés real, la IS está definida por:
+
+\begin{equation}
+Y=\overline{C}+c(Y-T)+I(r)+G
+\label{eq:IS}
+\end{equation}
+de donde se puede obtener la derivada con respecto a la tasa de interés:
+
+\begin{equation*}
+\deriv{Y}{r}=c\cdot \deriv{Y}{r} + I'(r) = \underbrace{\frac{1}{1-c}}_{\mathclap{\text{multiplicador}}}\cdot I'(r)
+\end{equation*}
+y finalmente, considerando que $r$ corresponde al eje de las ordenadas, la pendiente de la IS es:
+
+\begin{equation}
+\deriv{r}{Y}\bigg |_{\text{IS}} = \frac{1-c}{I'(r)} < 0 \qquad \text{si} \quad  c<1 \;\wedge\; I'(r)<0
+\end{equation}
+
+La IS se grafica en la \autoref{fig19_03-IS}, cuya recta representa todos los puntos para los cuales el mercado de bienes se encuentra en equilibrio, dados los valores de $\overline{C}$, $G$ y $T$. Para desplazamientos de la IS, recordar que:
+
+\begin{equation*}
+\text{IS}=f(\underset{(+)}{\overline{C}}, \underset{(+)}{G}, \underset{(-)}{T})
+\end{equation*}
+
+\input{monos/fig19_03-IS}
+
+\subsection{El mercado monetario (LM)}
+
+Se asume aquí que la oferta de dinero $M$ es exógena y el BC puede fijarla en un nivel dado. El nivel de precios es $P$ y por lo tanto la oferta real de dinero es $M/P$. Por otro lado, la demanda de saldos reales depende de la tasa de interés nominal $i$ y del nivel de actividad económica $Y$. Con esto, la demanda por dinero (saldos reales) es:
+
+\begin{equation}
+\frac{M^d}{P}=L(i,Y) \qquad \text{con} \quad  L_Y>0 \;\wedge\; L_i<0
+\label{eq:LM}
+\end{equation}
+La LM corresponde a las combinaciones de $(Y,i)$ que generan un equlibrio en el mercado monetario, es decir, se cumple que:
+
+\begin{equation}
+\frac{\overline{M}}{P} = L(\underset{(-)}{i},\underset{(+)}{Y})
+\label{eq:LM}
+\end{equation}
+
+El mercado monetario se grafica en la \autoref{fig19_06-derivacion_LM}. Para una curva de demanda de dinero dada $L$, la pendiente es negativa porque la demanda de dinero depende negativamente de la tasa nominal, que corresponde al costo de mantener dinero. Por otro lado, un aumento del ingreso $Y_1$ a $Y_2$ desplaza a la demanda a la derecha, de $L_1$ a $L_2$, porque para una tasa de interés dada $i_1$, la gente demanda más dinero para transacciones (exceso de demanda, en el punto $b$). Este exceso de demanda hace que la tasa suba como mecanismo de ajuste, llegándose al equilibrio nuevamente en el punto $c$.
+
+De lo anterior se intuye que la relación entre el producto y la tasa de interés es positiva, lo que se aprecia en la \autoref{fig19_06-derivacion_LM}, que muestra todos los niveles de producto donde el mercado de dinero se encuentra en equilibrio.
+
+\input{monos/fig19_06-derivacion_LM}
+
+Diferenciando la expresión de la LM contenida en \eqref{eq:LM} se puede obtener la pendiente de la LM:
+
+\begin{equation}
+\deriv{i}{Y} \bigg |_{\text{LM}} = -\frac{L_Y}{L_i} > 0
+\end{equation}
+
+Ahora es fácil extender el análisis a cambios en la oferta monetaria $\overline{M}$. Si el BC reduce la oferta de $\overline{M}_1$ a $\overline{M}_2$, la oferta real se contrae ($P$ es constante). Dada la menor cantidad de dinero e ingreso constante $Y$, la tasa de equilibrio del mercado monetario sube de $i_1$ a $i_2$. Como esto ocurre para cualquier nivel de ingreso, la curva LM$_1$ se contrae a LM$_2$.
+
+\input{monos/fig19_08-desplazamiento_LM}
+
+Sin embargo, el efecto final de esta política sobre la tasa de interés y el producto dependerá de su interacción con el mercado de bienes, es decir, en el equilibrio IS-LM.
+
+Incorporando el mercado financiero, se asumen que existen bonos (activos) que pagan una tasa nominal $i$ y cuyo precio es $P_B$, variables que están relacionadas negativamente. Entonces la gente decide tener una combinación de dinero, con demanda $M^d$ y bonos, con demanda $B^d$, ambos expresados en pesos $P$ constantes. Como nadie ahorra en dinero, la demanda de éste representa una \textbf{preferencia por liquidez}. El equilibrio del mercado monetario se alcanza cuando:
+
+\begin{align}
+M^d + B^d &= \overline{M} + \bar{B} \\
+M^d - \overline{M} &= \bar{B} - B^d \notag
+\end{align}
+
+Lo importante de esta ecuación es ver que cualquier exceso de demanda (oferta) de dinero deberá será contrarrestado por un exceso de oferta (demanda) de bonos. Esto hará que se vendan (compren) bonos para equilibrar este mercado, lo que hará bajar (subir) su precio, elevando (reduciendo) la tasa de interés. Es decir, actúan como mecanismo de ajuste del mercado del dinero.
+
+\subsection{Equilibrio y dinámica en el modelo IS-LM}
+
+Tomando entonces las ecuaciones de la IS y la LM se pueden definir las tres variables endógenas de éste modelo: $Y$, $i$ y $r$.
+
+\begin{center}
+\begin{tabular}{llrcl}
+  Ecuación & Mercado & Oferta &$=$& Demanda \\
+  \midrule
+  IS & Bienes & $Y$ &$=$& $A = C(Y-T)+I(r)+G$ \\
+  LM & Dinero & $\frac{\overline{M}}{P}$ &$=$& $L(Y,i)$ \\
+  %\bottomrule
+\end{tabular}
+\end{center}
+
+
+\begin{itemize}
+\item Si bien la IS relaciona producto con $r$ y la LM relaciona producto con $i$, de la ecuación de Fisher se sabe que $i=r+\pi^e$ y se asume que $\pi^e=0$.
+\item Las función de consumo $C(Y-T)$ no es necesariamente lineal, y sólo se asume que $C' \in [0,1]$, donde un caso particular es cuando $C'=c$.
+\item Finalmente, se asume que cuando la economía se encuentra fuera de equilibrio, el mercado del dinero se ajusta ``rápidamente'' y luego el mercado de bienes se ajusta ``lentamente''.
+\end{itemize}
+
+Lo que interesará ver es qué ocurre cuando hay un desequilibrio en la economía, es decir, cuando no se está en equilibrio en los mercados de bienes y/o de dinero ---cuando se está ``fuera'' de las curvas IS y/o LM. Es fácil acordarse que todos los puntos \emph{sobre} una curva (sea IS o LM) implican exceso de oferta en el mercado correspondiente\footnote{Por supuesto, la contrapartida de un exceso de oferta es un exceso de demanda, pero no grafiqué esos opuestos para mantenerlo sencillo.}. Esto se grafica en la \autoref{fig19_09-eq_dinamica_IS-LM_a}.
+
+\input{monos/fig19_09-eq_dinamica_IS-LM}
+
+Tomando en consideración lo anterior es que puede graficarse con más detalle lo que ocurre en cada uno de los cuatro cuadrantes que se forman con la intersección de la IS-LM. Recordando el supuesto de que el mercado del dinero se ajusta rápidamente, se grafican en la \autoref{fig19_09-eq_dinamica_IS-LM_b} las dinámicas de cuatro puntos posibles representando los cuatro casos de desequilibrio. Cualquier desequilibrio genera un rápido ajuste del mercado del dinero (``salto'' a la LM) y luego un ajuste gradual del mercado de bienes (avance por IS). La dinámica del producto está dada por:
+
+\begin{equation*}
+\dot Y = f(A-Y)
+\end{equation*}
+donde $f'>0$ e $\dot Y \equiv \pder{Y}{t}$.
+
+A modo de ejemplo, considérese el caso de un exceso de oferta en el mercado de bienes, mientras que existe un exceso de demanda en el mercado del dinero. Esto es equivalente a decir que $Y>A$ y que $\overline M/P <L$ y, por tanto, en un punto al ``este'' de la \autoref{fig19_09-eq_dinamica_IS-LM_b}. El exceso de demanda de dinero hará que la tasa suba instantáneamente, mientras que el exceso de oferta en el mercado de bienes implica que las empresas acumularán inventarios indeseadamente, para luego disminuir gradualmente la producción. Los otros casos son análogos.
+
+\subsection{Políticas macroeconómicas y expectativas inflacionarias}
+
+Esta sección utiliza el modelo IS-LM para un análisis de corto plazo de políticas y shocks que afectan a la economía. Diferenciando las ecuaciones de IS, LM y Fisher se obtiene:
+
+\begin{align}
+\diff Y &= C'(\diff Y-\diff T)+I'\diff r+\diff G \\
+\diff (\overline M/P) &= L_Y \diff Y + L_i\diff i \\
+\diff i &= \diff r + \diff \pi^e 
+\end{align}
+
+\subsubsection{Política monetaria}
+
+Si el BC decide aumentar la cantidad de dinero entonces estará utilizando una política monetaria expansiva, lo que provoca un desplazamiento a la derecha de la LM (a LM'). Para el análisis que sigue es importante observar la \autoref{fig19_10-politica_monetaria_expan-a}. El aumento de dinero genera un exceso de oferta del mismo, al mismo tiempo que provoca un exceso de demanda por bonos. Esta demanda por bonos genera un alza en su precio, que es equivalente a una reducción de la tasa, desde su nivel original $i_1$ a $i_2$. Es decir, el movimiento desde el punto $A$ a $B$ representa el ajuste instantáneo del mercado del dinero.
+
+\input{monos/fig19_10-politica_monetaria_expan}
+
+En el mercado de bienes la  de la tasa aumentará la demanda por inversión, lo que provoca un exceso de demanda de bienes, lo que hará reducir los inventarios y gradualmente aumentar la producción, es decir, la economía se desplazará gradualmente desde $B$ hasta $C$, aumentando el producto de $Y_1$ a $Y_2$ (porque, como se dijo, aumenta la producción). Este aumento del producto aumenta la cantidad demandada de dinero (desplazamiento sobre la LM'), lo que presiona al alza la tasa de interés, revirtiendo parcialmente el primer efecto, pasando de $i_2$ a $i_3$.
+
+La \autoref{fig19_10-politica_monetaria_expan-b} muestra la evolución de la tasa de interés y del producto en el tiempo.\footnote{Notar que en los diagramas de la \autoref{fig19_10-politica_monetaria_expan} la magnitud del cambio neto de la tasa de interés es igual a la del producto. Esto ocurre así simplemente porque tanto la IS como la LM se graficaron como líneas de $45º$. Sin embargo, este es un caso particular, ya que en general el cambio sobre ambas variables puede diferir y dependerá de las pendientes (relativas) de las curvas.}
+
+Analíticamente, se tiene que el efecto de la política monetaria sobre el producto y la tasa de interés son, respectivamente:\footnote{Para hacerlo, usar que $\diff T = \diff G = 0$ (política fiscal inalterada) y que $\pi^e=0$.}
+
+\begin{align*}
+\deriv{Y}{(\overline M/P)} &= \frac{1}{L_Y + \frac{L_i(1-C')}{I'}}  \geq 0 \\
+\deriv{r}{(\overline M/P)} &= \frac{1}{L_i} \left [1-\frac{L_Y}{L_Y + \frac{L_i(1-C')}{I'}} \right ]  < 0 
+\end{align*}
+
+El término clave en la primera ecuación es $L_i/I'$. Mientras menor sea, mayor será la efectividad de la política monetaria. Por otro lado, mientras mayor sea (lo que ocurrirá cuando $L_i \rightarrow \infty$ o $I' \rightarrow 0$), más inefectiva será la política monetaria.
+
+\subsubsection{Política Fiscal}
+
+El gobierno hace política fiscal \begin{enumerate*}[label=(\roman*)]
+\item variando el gasto o
+\item variando los impuestos.
+\end{enumerate*}
+El análisis ignorará el financiamiento del gasto fiscal y considerará siempre un \emph{aumento} del gasto $G$, lo que provocará un desplazamiento de la IS a la derecha.
+
+Se considera en primer lugar el caso con una LM de pendiente positiva, como aparece en la \autoref{fig19_12-politica_fiscal_expansiva}. La expansión de la IS solo provoca un exceso de demanda por bienes, sin alterar el mercado del dinero. Se produce una desacumulación de inventarios, para que luego las empresas aumenten gradualmente su producción. Este aumento del crecimiento presiona al alza la demanda de dinero, lo que hace que la tasa de interés suba.
+
+\input{monos/fig19_12y13-politica_fiscal}
+
+Si la demanda por dinero es inelástica a la tasa de interés entonces la política fiscal será inefectiva para afectar el crecimiento, como se muestra en la \autoref{fig19_13-politica_fiscal_inefectiva}.  En este caso se produce un \textit{crowding out} total de la inversión privada por el aumento de $G$. El mercado monetario determina el producto, el cual es plenamente flexible, mientras que hay precios fijos.
+
+Analíticamente, el efecto de de una política fiscal sobre el producto y sobre la tasa de interés son, respectivamente:
+
+\begin{align*}
+\deriv{Y}{G} &= \frac{1}{1-C' + \frac{I' L_Y}{L_i}}  \geq 0 \\
+\deriv{r}{G} &= -\frac{L_Y}{L_i} \left [\frac{1}{1-C' + \frac{I' L_Y}{L_i}} \right ]  > 0 
+\end{align*}
+
+Análogo al caso de la política monetaria, ahora el término clave de la primera ecuación es $I'L_Y/L_i$. Si este término es cercano a 0, entonces la política fiscal alcanza su máxima efectividad. A medida que crece, la política fiscal pierde efectividad.
+
+\subsubsection{El \textit{policy mix}}
+
+Es importante notar que la efectividad de una u otra política depende de la elasticidad de la IS y LM. Si bien ambas pueden tener un efecto positivo sobre el producto, una política monetaria expansiva reducirá la tasa de interés, mientras que una política fiscal expansiva aumentará la tasa. Esto tiene un efecto sobre la composición final del gasto, ya que la expansión fiscal genera un aumento de la participación del gasto público.
+
+Empíricamente  no existe evidencia que indique que una política es siempre más efectiva que otra, a menos que se esté lidiando con casos particulares (como trampa de liquidez, ver abajo).
+
+\subsubsection{Efecto riqueza (o efecto Pigou)}
+
+Se argumenta que una política monetaria expansiva no solo afecta al producto a través de la tasa de interés, si no que produce mayor riqueza financiera, lo que estimularía aún más el consumo y constituye un mecanismo adicional a través del cual dicha política expandiría la demanda agregada. Considerando que existen dos activos financieros (dinero y bonos), la riqueza financiera real será:
+
+\begin{equation*}
+	\frac{WF}{P} = \frac{M+B}{P}
+\end{equation*}
+
+Por otro lado, se asume que el consumo no solo dependerá del ingreso disponible si no que además de la riqueza financiera real. Es decir, $C=C(Y-T, WF/P)$, con $\pder{C}{(WF/P)}>0$. En consecuencia, una política monetaria expansiva no solo desplazaría la LM, si no también la IS, como se observa en la \autoref{fig19_14-cambio_precio_efecto_riqueza}. Notar que el efecto final sobre la tasa de interés es incierto, ya que dependerá de cuál desplazamiento predomina (IS o LM). Por otro lado, la expansión ``extra'' de la IS inambiguamente generará un aumento adicional del producto, aunque un análisis empírico indica que en la práctica un aumento de la base monetaria aumenta en un monto casi insignificante el consumo.
+
+\input{monos/fig19_14-cambio_precio_efecto_riqueza}
+
+\subsubsection{Cambio de expectativas inflacionarias}
+
+Se analiza una reducción de la tasa de inflación esperada, asumiendo que por alguna razón exógena el público espera que la inflación baje, esto es, primero espera $\pi^e_1>0$ y luego cambia sus expectativas a $\pi^e_2$, con $\pi^e_1>\pi^e_2$. En el análisis del capítulo 15 siempre se cumplía la ecuación de Fisher:
+
+\[
+i = r + \pi^e
+\]
+esto es, una mayor inflación esperada se traduciría $1:1$ en mayor tasa nominal. Sin embargo ahora, con precios rígidos, la transmisión solo será parcial. Si la LM fuese vertical, entonces se cumpliría la ecuación de Fisher.
+
+El modelo IS-LM con expectativas inflacionarias se grafica en la \autoref{fig19_15-disminuicion_inflacion_esperada}. La IS depende de la tasa real, mientras que la LM depende de la nominal, pero para efectos de obtener un equilibrio se grafica las LM en términos de $r+\pi^e_i$, que es equivalente. El punto $A$ indica la tasa real y nivel de producto de equilibrio. A esa tasa real corresponde una tasa nominal mayor, indicada por $A'$ (la diferencia es $\pi^e_1$).
+
+La caída de $\pi^e$ no altera ni a la IS ni a LM$(i)$. La LM$(r,\pi^e_1)$ se contrae de tal forma que la distancia vertical con la LM$(i)$ sea $\pi^e_2$. El punto de equilibrio $B$ indica tanto una tasa real de equilibrio como un nivel de producto menor, con $B'$ indicando la tasa nominal (también menor). Remarcar que la deflación es contractiva.
+
+\input{monos/fig19_15-disminuicion_inflacion_esperada}
+
+Analíticamente, se pueden usar las ecuaciones diferenciadas del modelo IS-LM para llegar a:\footnote{Tomando en cuenta que las incógnitas son $\diff Y$, $\diff i$ y $\diff r$, del sistema diferenciado IS-LM se obtiene $\diff r$  y luego se reemplaza en la ec. de Fisher diferenciada.}
+
+\begin{align}
+	\deriv{i}{\pi^e} &= \frac{1}{\frac{L_i(1-C')}{L_Y I'}+1} \leq 1 \\
+	\deriv{Y}{\pi^e} &= \frac{1}{\frac{(1+L_Y/L_i)(1-C')}{I'}+1} \leq 1
+\end{align}
+
+\subsection{La trampa de liquidez y el problema de Poole}
+
+\subsubsection{Trampa de liquidez y deflación}
+
+Corresponde al caso donde una política monetaria no es efectiva para expandir el producto porque la elasticidad tasa de interés de la demanda por dinero es muy alta. Es fácil ver esto gráficamente en la \autoref{fig19_16-trampa_liquidez}, donde cualquier aumento de la cantidad de dinero correspondería a un movimiento horizontal de la LM, sin embargo al ser completamente horizontal, no cambia la tasa ni el producto. La intuición detrás es que el aumento de la cantidad de dinero es absorbido inmediatamente por la demanda, sin necesidad de ajustar su precio (la tasa).
+
+\input{monos/fig19_16-trampa_liquidez.tex}
+
+Analíticamente, es necesario recordar que $\deriv{Y}{(\overline M/P)} = \frac{1}{L_Y + \frac{L_i(1-C')}{I'}}$, con $\lim_{L_i \to \infty} = 0$.
+
+El concepto de trampa de liquidez tiene sentido cuando la tasa nominal es cercana a 0 (claramente no podría ser menor), donde el costo de uso del dinero será muy bajo y por lo tanto el público estaría dispuesto a a absorber cualquier incremento de la cantidad de dinero, sin estimular mayor inversión (al no cambiar la tasa real). Si a esto se suma expectativas inflacionarias que van cayendo, se puede generar un espiral deflacionario con una economía en recesión.
+
+\subsubsection{El problema de Poole y la elección del instrumento monetario}
+
+En la práctica, la mayoría de los BC no fijan $M$, sino $i$. Si bien un modelo más realista incluiría una meta inflacionaria, aquí se asume que hay ausencia de inflación y que la meta es la estabilidad del producto.
+
+\scenario{Shocks a la demanda por dinero}
+
+La demanda de dinero se representa con:
+
+\[
+\frac{\overline M}{P} = L(i,Y) + \epsilon
+\]
+donde $\epsilon$ corresponde a los shocks de la demanda por dinero.
+
+Las políticas se grafican en la \autoref{fig19_17-shock_LM}, donde se aprecia que es mejor (en términos de estabilidad del producto) fijar la tasa de interés $i$, ya que así se aísla la inversión (y por tanto, la demanda agregada) de las fluctuaciones del mercado del dinero. En la práctica los shocks monetarios son mucho más frecuentes y difíciles de reconocer, por lo que fijar la tasa de interés resulta una buena práctica para estabilizar el producto.
+
+\input{monos/fig19_17-shock_LM.tex}
+
+\scenario{Shocks a la demanda agregada}
+
+Análogamente, la demanda agregada se representa con:
+
+\[
+Y=C+I+G + \epsilon
+\]
+donde $\epsilon$ corresponde a los shocks de la demanda agregada.
+
+Ante este tipo de shocks resulta más efectivo fijar la demanda por dinero, ya que esto permite que la tasa actúe como ``amortiguador'' frente a las variaciones del producto. Sin embargo, este tipo de shocks son menos frecuentes y más fácilmente reconocibles en los datos. $\blacksquare$
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

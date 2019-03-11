@@ -1,0 +1,191 @@
+\documentclass[11pt,twoside]{article}
+
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{slantsc}
+\usepackage{microtype}
+\usepackage[paper=letterpaper,top=1in,bottom=1in,right=.75in,left=1.25in]{geometry}
+\usepackage{titling}
+    %%% margen superior del título
+    \setlength{\droptitle}{-1in}
+\usepackage{mathtools}
+    %%% paréntesis cuadrados
+    \makeatletter
+      \def\tagform@#1{\maketag@@@{[#1]\@@italiccorr}}
+    \makeatother
+    %%% etiqueta de ecuaciones por sección
+    \numberwithin{equation}{section}
+    %%% comando para valor esperado (esperanza)
+    \DeclarePairedDelimiter{\evdel}{[}{]}
+    \newcommand{\ev}[2][]{\operatorname{E}_{#1}[#2]}
+    \DeclareMathOperator{\evsym}{E}
+    \newcommand\E{\evsym}
+    %%% operadores sin acentos
+    \unaccentedoperators
+    %%% operador de restricción
+    \DeclareMathOperator{\sa}{\qquad s.a.\quad}
+    %%% fraccion con derivadas parciales
+    \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+    %%% fraccion con derivadas totales
+    \newcommand{\deriv}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+    %%% Variables con overset entre paréntesis y \mathstrut para alineamiento vertical
+     \newcommand{\osvar}[2]{\overset{(#1)}{\mathstrut #2}}
+     %%% Comandos para valor absoluto
+     \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+	 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+     \makeatletter
+     \let\oldabs\abs
+     \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+     \let\oldnorm\norm
+     \def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+     \makeatother
+\usepackage{float}
+ %%% símbolo de diferencial
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+    %%% espaciado de los floats
+    %\setlength{\abovecaptionskip}{2pt plus 1pt minus 1pt}
+    \setlength{\belowcaptionskip}{8pt plus 1pt minus 1pt}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage[pdftex,
+    pdfauthor=Alvaro Carril,
+    pdftitle={De Gregorio - Resumen},
+    pdfsubject={Resumen del libro "Macroeconomía", De Gregorio.},
+    pdfkeywords={macroeconomia, economia, de gregorio, teoria, politica, degregorio, alvaro, carril, resumen},
+    pdfproducer=Texpad,
+    pdfcreator=pdflatex,
+    colorlinks,
+    linkcolor=blue]{hyperref}
+    \addto\extrasspanish{%
+      \def\figureautorefname{figura}}
+\usepackage[inline]{enumitem}
+    \newcounter{descriptcount}
+    \SetLabelAlign{myright}{\hss\llap{$#1$}}
+\newlist{where}{description}{1}
+\setlist[where]{labelindent=\parindent,labelwidth=1cm,labelsep=1em,
+                        leftmargin=!,align=myright,font=\normalfont}
+\usepackage{booktabs}
+\usepackage{amsthm}
+    %%% constante de euler
+    \newcommand{\me}{\mathrm{e}}
+    %%% transformar símbolos a operadores
+    \DeclareMathOperator{\Exists}{\exists}
+    \DeclareMathOperator{\Forall}{\forall}
+\usepackage{graphicx,import,color,transparent}
+    %%% etiqueta de figuras por sección
+    \numberwithin{figure}{section}
+    %%% directorio para gráficos
+    \graphicspath{{graficos/}}
+\usepackage{transparent}
+\usepackage[labelformat=simple]{subcaption}
+    \renewcommand\thesubfigure{(\alph{subfigure})}
+\usepackage{subfiles}
+\usepackage{fancybox}
+\usepackage{framed,graphicx,xcolor}
+    \definecolor{shadecolor}{gray}{0.9}
+\usepackage{tocstyle}
+    \usetocstyle{standard}
+    %%%\usetocstyle{nopagecolumn}
+    \settocstylefeature[-1]{pagenumberbox}{\csname @gobble\endcsname}
+\usepackage{framed}
+\usepackage{icomma}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% resetear el contador de pie de página
+\makeatletter
+\@addtoreset{footnote}{section}
+\makeatother
+
+%%% Formato de "scenario" (estática comparativa)
+\newcounter{scenariocount}[subsection]
+\newcommand{\scenario}[1]
+    {
+    \stepcounter{scenariocount}
+    \subsubsection*{\textmd{\textsc{(\Alph{scenariocount}) #1 }}}
+    }
+
+%%% subscript largo
+    \newcommand{\sscript}[2]{{#1}_{#2}}
+
+%%% Ambientes de descripción personalizados (enumitem)
+
+\newlist{enumdescript}{description}{2}
+\setlist[enumdescript,1]{%
+  before={\setcounter{descriptcount}{0}%
+          \renewcommand*\thedescriptcount{\alph{descriptcount})\quad}}
+  ,font=\bfseries\stepcounter{descriptcount}\thedescriptcount~
+}
+\setlist[enumdescript,2]{%
+  before={\setcounter{descriptcount}{0}%
+          \renewcommand*\thedescriptcount{\roman{descriptcount}}}
+  ,font=\bfseries\stepcounter{descriptcount}\thedescriptcount~
+}
+
+%%% Superscript del autor
+\makeatletter
+\renewcommand*{\@fnsymbol}[1]{\ensuremath{\ifcase#1\or \dagger\or \dagger\or \ddagger\or
+   \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+   \or \ddagger\ddagger \else\@ctrerr\fi}}
+\makeatother
+
+%%% Front matter
+\title{\textsf{Macroeconomía} -- De Gregorio \\ \Large{Resumen}}
+\author{Alvaro Carril\thanks{Este resumen fue realizado para estudio del examen de grado y no considera todos los capítulos del libro original. La versión más actualizada puede encontrarse siempre en \url{https://acarril.github.io/resources}. Por cualquier error, comentario o sugerencia escríbeme a \url{acarril@princeton.edu}.}}
+\date{\small Versión Abril 2018 (Borrador)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\setcounter{tocdepth}{1}
+%\tableofcontents
+\makeatletter
+\@starttoc{toc}
+\makeatother
+\newpage
+\subfile{00}
+\newpage
+\setcounter{section}{2}
+\addcontentsline{toc}{part}{\large Macroeconomía I}
+\newpage
+\subfile{03}
+\newpage
+\subfile{04}
+\newpage
+\subfile{05}
+\newpage
+\subfile{06}
+\newpage
+\subfile{07}
+\newpage
+\subfile{08}
+\newpage
+\subfile{09}
+\setcounter{section}{10}
+\newpage
+\subfile{11}
+\subfile{12}
+
+\addcontentsline{toc}{part}{\large Macroeconomía II}
+\setcounter{section}{14}
+\part*{Macroeconomía II}
+\section{Teoría cuantitativa, neutralidad y demanda por dinero}
+\section{Oferta de dinero, política monetaria e inflación}
+\section{Política monetaria y mercados financieros}
+\section{Introducción a las fluctuaciones de corto plazo}
+\newpage
+\subfile{19}
+\newpage
+\subfile{20}
+\newpage
+\subfile{21}
+\newpage
+\section{Oferta, demanda agregada y políticas macroeconómicas}
+\setcounter{section}{24}
+\section{Inconsistencia intertemporal y política monetaria}
+
+\end{document}

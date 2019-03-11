@@ -1,0 +1,228 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{7}
+\begin{document}
+\section{Economía abierta: El tipo de cambio real}
+
+En el capítulo anterior se analizó una economía que producía un solo bien, el que podía ser intercambiado intertemporalmente. Ahora se extiende el análisis a más de un solo bien y por lo tanto tiene sentido hablar del tipo de cambio real (TCR). Además, se comienza suponiendo que el producto está en pleno empleo (supuesto que luego se relaja). El TCR es
+\begin{equation}
+q=\frac{eP^*}{P},
+\end{equation}
+donde $q$ es el TCR y corresponde a la cantidad de bienes nacionales que se requiere para adquirir un bien extranjero, $e$ es el tipo de cambio nominal (TCN) y $P$ es el precio del bien, con el superíndice $^*$ indicando que es extranjero.
+ 
+El tipo de cambio está asociado a la productividad de los sectores que producen bienes (internacionalmente) transables; sin embargo, una mejora en la productividad puede hacer a los bienes más competitivos, a pesar de que el tipo de cambio real se aprecie. Por eso es importante, desde un punto de vista de política económica, saber \emph{qué} puede estar moviendo el tipo de cambio y entender sus determinantes desde una perspectiva de equilibrio de mediano y largo plazo.
+
+\subsection{Paridad de poder de compra (PPP)}
+
+La teoría de PPP sostiene que el valor de los bienes es igual en todas las partes del mundo,
+\begin{equation}
+	P=eP^*,
+\end{equation}
+lo que implica directamente que el TCR sea constante. Esto es lo que se conoce como la PPP ``en niveles'', que es un poco extrema ya que no considera aranceles, costos de transporte, etc. En su versión más débil, PPP ``en tasas de variación'', afirma que el cambio porcentual del precio en un país es igual al cambio porcentual del mismo bien en el extranjero. Usando << $\hat{}$ >> para denotar las tasas de cambio, sería
+\begin{equation}
+	\hat P = \hat e + \hat P^*.
+\end{equation}
+
+Es decir, se reconoce que los precios pueden diferir entre mercados pero se asume que los cambios se transmiten proporcionalmente. Esta teoría tiene un fuerte supuesto de ``neutralidad nominal'', ya que todos los cambios en el TCN se transmiten uno a uno a precios y no se puede alterar el TCR. Esta teoría, además, no ha generado predicciones razonables en el corto o mediano plazo.
+
+Una de las razones por las que PPP no se cumple es porque los bienes producidos por cada país son diferentes, por lo que resulta útil pensar en bienes distintos, como se hace a continuación.
+
+\subsection{Tipo de cambio real, exportaciones e importaciones}
+
+El TCR es determinante en la asignación de recursos productivos entre los sectores transables y no transables de la economía. Si ocurre una expansión del sector transable, se exportará más y esto implicará que el sector no transable reduzca su producción. Más formalmente, la economía nacional produce (y exporta) un bien homogéneo de precio $P$ al mismo tiempo que importa un bien extranjero a un precio (en moneda local) de $eP^*$. En consecuencia, el PIB puede expresarse de las siguientes formas:
+\begin{align}
+	PY &= P(C+I+G+X)-eP^*M \\
+	Y &= C+I+G+X-qM,
+\end{align}
+de donde se infiere que las exportaciones netas, corregidas por la diferencia de precio, son $XN=X-qM$.
+
+\subsubsection{Exportaciones}
+
+Corresponden a la demanda del resto del mundo por bienes nacionales y aquí se modelan como función de precios e ingreso,
+\[
+X = X(\osvar{+}{q}, \osvar{+}{Y^*}, \ldots).
+\]
+
+Al depender del nivel de actividad mundial se está asumiendo implícitamente que los exportadores tienen poder de mercado, ya que enfrentan una demanda de pendiente negativa que aumenta con $Y^*$.
+
+\subsubsection{Importaciones}
+
+Corresponden a la demanda nacional por bienes importados y por lo tanto dependerá del precio relativo $q$, del nivel de ingresos local $Y$ y de un arancel de importaciones $t$, de forma que las importaciones $M$ son
+\[
+M = M(\osvar{-}{q}, \osvar{+}{Y}, \osvar{-}{t}, \ldots).
+\]
+
+Si $q$ sube, se requieren más bienes nacionales para comprar uno extranjero, entonces la demanda por bienes extranjeros se reduce. Si el ingreso $Y$ aumenta, también lo hace la demanda por todo tipo de bienes. Y con un arancel $t$ el costo de un bien importado pasa a ser $eP^*(1+t)$. Por lo tanto cuando los aranceles suben el costo del bien importado sube y su demanda baja.
+
+\subsubsection*{Exportaciones netas}
+
+Combinando lo anterior, se definen las exportaciones netas $XN$ como
+\begin{equation}
+	XN = XN(\osvar{+}{q}, \osvar{+}{Y^*}, \osvar{+}{t}, \osvar{-}{Y}).
+\end{equation}
+
+Ojo con el signo de $\osvar{+}{q}$, que significa que $\pder{XN}{q}>0$. Desglosando $XM$ se tiene que
+\begin{equation}
+  XN = X(\osvar{+}{q}, Y^*) - qM(\osvar{-}{q}, Y, t).
+  \label{eq:XN}
+\end{equation}
+
+Se puede demostrar que suponer $\pder{XN}{q}>0$ es equivalente a
+\[
+\pder{X}{q} + \abs{\pder{M}{q}} \cdot q > M,
+\]
+es decir, en conjunto las magnitudes del alza de $X$ con la de la disminución de $M$ dominan al efecto del aumento del valor de $M$ (vía $qM$). Si $X$ y $M$ no reaccionan lo único que ocurre es que las exportaciones netas en términos de bienes nacionales caen, ya que el costo de las importaciones sube. En la medida en que $X$ y $M$ reaccionan, los efectos de volumen (de bienes transados) comenzarán a dominar.
+
+De hecho, de ese análisis se desprenden las \textbf{condiciones de Marshall-Lerner}, que corresponden a los valores mínimos que deben tener las elasticidades de las importaciones y exportaciones con respecto al TCR para que la balanza comercial mejore cuando este se deprecia, suponiendo que se comienza de una balanza comercial equilibrada. Esto es sencillo de demostrar analíticamente: tomando la última ecuación, basta dividirla por $M$ y usar que $X=qM$ (equilibrio comercial), con lo que la condición es
+\begin{equation}
+  \pder{X}{q}\frac{q}{X} + \abs{\pder{M}{q}} \frac{q}{M} > 1,
+  \label{eq:condiciones_marshall-lerner}
+\end{equation}
+lo que es equivalente a decir que las magnitudes de las elasticidades de importación y exportación deben sumar más que 1. Acá se supondrá que las condiciones de Marshall-Lerner se cumplen.
+
+\subsubsection{El tipo de cambio real de equilibrio}
+
+Hasta el momento se ha asumido $q$ como exógeno, pero ahora se derivará como un resultado del nivel de exportaciones netas, por lo que $q$ será ahora endógeno y no podrá elegirse arbitrariamente. Se sabe que las decisiones de ahorro e inversión locales determinan al nivel de ahorro externo que cierra la brecha. Este ahorro externo es el déficit de la cuenta corriente, que corresponde al negativo de las exportaciones netas más el pago de factores al exterior,
+\[
+S_E = -CC = -XN + F.
+\]
+
+Por lo tanto, si  se conoce el equilibrio ahorro-inversión se podrá calcular el déficit de la cuenta corriente y así finalmente determinar el TCR consistente con dicho déficit. Otra forma de verlo es considerar que la economía produce bienes transables (exportables y sustitutos de importación) y no transables. Un aumento del TCR desvía recursos a la producción de transables desde el sector no transable. En consecuencia, el TCR de equilibrio indica cuántos recursos deben desviarse de dicha forma para generar un nivel dado de déficit en la CC.
+
+\input{monos/fig08_01-tcr}
+
+\subsection{Estática comparativa del tipo de cambio real}
+
+\scenario{Expansión fiscal}
+
+Se asume que los impuestos no suben al financiar este gasto. Esto reduce el ahorro del gobierno sin afectar al ahorro privado o a la inversión, por lo que el saldo en la CC se reduce y sube el ahorro externo, apreciando el TCR ($q$ cae). Esto corresponde al caso de los \textit{twin deficits}, donde el déficit fiscal aumenta el déficit en la CC y aprecia el tipo de cambio. Numéricamente, sin embargo, los efectos de la política fiscal son relativamente bajos para magnitudes razonables. El efecto de esta política puede verse en la \autoref{fig08_02-tcr_expansion_fiscal_nacional}.
+
+\begin{figure}[h]
+\captionsetup[subfigure]{aboveskip=20pt,belowskip=15pt}
+\centering
+\begin{subfigure}{.45\textwidth}
+  \centering
+        \def\svgwidth{\textwidth}
+        \import{monos/}{fig08_02-tcr_expansion_fiscal_nacional.pdf_tex}
+  \caption{Expansión fiscal en bienes nacionales}
+  \label{fig08_02-tcr_expansion_fiscal_nacional}
+\end{subfigure}\hspace{.05\textwidth}
+\begin{subfigure}{.45\textwidth}
+  \centering
+        \def\svgwidth{\textwidth}
+        \import{monos/}{fig08_03-tcr_expansion_fiscal_import.pdf_tex}
+  \caption{Expansión fiscal en bienes importados}
+  \label{fig08_03-tcr_expansion_fiscal_import}
+\end{subfigure}
+\caption{Efectos de una política fiscal expansiva}
+\label{fig08_03-tcr_expansion_fiscal}
+\end{figure}
+
+Si la expansión fiscal es solo en bienes importados entonces el TCR no se altera, ya que la reducción de ahorro del gobierno se compensa perfectamente con el aumento de ahorro externo (son complementarios), tal como muestra la \autoref{fig08_03-tcr_expansion_fiscal_import}. En otras palabras, el aumento de $G$ no requiere reasignación de recursos dentro de la economía, ya que todo el aumento de demanda es por bienes extranjeros.
+
+\scenario{Reducción de aranceles}
+
+La reducción arancelaria puede ser con o sin compensaciones tributarias inmediatas. 
+
+Cuando es con compensación tributaria tiene que subir algún otro tipo de impuesto, entonces el ahorro del gobierno permanece constante y también el ahorro privado (la rebaja es compensada por un alza en otro sector), por lo que el ahorro externo no cambia. Al bajar los aranceles aumenta la demanda por bienes importados, lo que implica que para cada nivel de tipo de cambio, el saldo de la CC es menor ---la CC se desplaza a la izquierda, depreciando el tipo de cambio de $q_1$ a $q_2$, como se muestra en la \autoref{fig08_02-tcr_expansion_fiscal_nacional}.
+
+Cuando la rebaja es sin compensaciones los ingresos y también el ahorro del gobierno se reducen (con $G$ constante), aumentando el ahorro externo (desplazamiento de la $S_E$ a la izquierda). Como el arancel es menor para acda nivel de tipo de cambio, la $CC$ se desplaza a la izquierda, generando un efecto total ambiguo sobre el tipo de cambio: la rebaja en aranceles tiende a depreciar el tipo de cambio real, mientras que la expansión fiscal tiende a apreciarlo. Gráficamente es similar al caso de la \autoref{fig08_03-tcr_expansion_fiscal_import}, solo que en este caso el desplazamiento de $CC$ no tiene que compensar exactamente al de $S_E$.
+
+\scenario{Caída de los términos de intercambio}
+
+Se distingue entre una caída permanente y una transitoria de los términos de intercambio (TI). Los precios de las exportaciones e importaciones son $P_X$ y $P_M$ y la cuenta corriente es $CC=P_X\cdot X - P_M\cdot M$, suponiendo $F=0$. Una caída de los TI implica que $P_X$ cae con respecto a $P_M$, por lo tanto para cada nivel de tipo de cambio el saldo de la CC es menor. Gráficamente, $CC$ se desplaza a la izquierda, depreciando el TCR ($q$ sube).
+
+La diferencia entre una caída permanente y transitoria está en el ahorro. Si la caída es permanente, las personas ajustan su consumo en la misma magnitud que la caída en el ingreso y por lo tanto el ahorro no cambia. Si la caída es transitoria, entonces parte de la caída en ingreso se transforma en reducción en ahorro (para mantener consumo constante), aumentando el déficit en la cuenta corriente y compensando (en parte) la depreciación del TCR. Gráficamente, se desplaza $S_E$ a la izquierda.
+
+\scenario{Aumento de la productividad o descubrimiento de un recurso natural}
+
+Aquí se asume que el descubrimiento de algún recurso natural (ej. petróleo) aumenta la productividad permanentemente, ya que con los mismos factores productivos se produce más. Además, se supone que el aumento en producción se traduce en algún aumento en exportaciones, lo que hace que para cada nivel de tipo de cambio el saldo de la CC es mayor. Gráficamente, la $CC$ se desplaza a la derecha. Por otro lado, al ser permanente el cambio, las personas consumen este mayor ingreso y no hay cambios en el ahorro. El efecto final es que el TCR se aprecia.
+
+\paragraph{Síndrome Holandés} El TCR puede apreciarse porque la economía ahorra menos, lo que puede ser un síntoma de preocupación. Pero en este caso el TCR se aprecia porque la economía es más rica y productiva, lo que debería ser bueno. No obstante esto último, hay mucha evidencia de que el descubrimiento de una nueva riqueza natural impacta negativamente a otros sectores (que pierden competitividad) y esto puede tener un alto costo, a lo que se le ha llamado ``síndrome holandés''.
+
+\scenario{Control de capitales}
+
+Muy simplificadamente, un control de capitales encarece el crédito, lo que puede reducir el déficit de la CC. Esta reducción del ahorro externo ($S_E$ se desplaza a la izquierda) deprecia el TCR ($q$ sube). Por tanto la conclusión sería que una restricción de los movimientos de capitales aumenta el TCR y reduce el déficit. Sin embargo, hay que tener en cuenta una serie de consideraciones:
+
+\begin{itemize}
+	\item Depreciar el TCR en el corto plazo puede terminar en una apreciación de largo plazo.
+	\item Las autoridades se pueden resistir a una apreciación real bajo el supuesto de que afecta al dinamismo de la economía.
+	\item Restringir los movimientos de capital es, teóricamente, subóptimo desde un punto de vista de bienestar. Habría que identificar alguna distorsión a corregir.
+	\item Es necesario justificar un crédito más caro que en el resto del mundo.
+	\item Hasta ahora el producto ha estado en pleno empleo, pero en un modelo más general (siguiente sección) una reducción del gasto puede reducir el producto.
+\end{itemize}
+
+\subsection{Tasa de interés, tipo de cambio y nivel de actividad}
+
+[Intro]
+
+\subsubsection{Paridad de tasas de interés}
+
+Se supone una economía con perfecta movilidad de capitales y se permite que el tipo de cambio se ajuste lentamente. Una persona está analizando la posibilidad de invertir \$1 de moneda local en un instrumento de inversión en el mercado doméstico u otro en el exterior, desde $t$ a $t + 1$. La tasa de interés nominal de Estados Unidos es $i^*$ y la tasa de interés nacional es $i$. Ambas tasas se refieren a retornos en moneda local. El tipo de cambio (pesos por dólar) en el período $t$ es $e_t$ y es conocido, mientras que el valor esperado del tipo de cambio en $t+1$ es $E_t e_{t+1}$.
+
+Entonces, en $t+1$ la persona puede tener $(1+i)$, mientras que si invierte en el extranjero tendrá $(1+i^*)\cdot E_t e_{t+1}/e_t$. Al haber perfecta movilidad de capitales, el retorno del inversionista debería ser igual en el país local o en el extranjero, por lo que debe cumplirse que
+\[
+1+i = (1+i^*)\frac{E_t e_{t+1}}{e_t}.
+\]
+
+Luego, usando $\Delta e^e_{t+1}/e_t \equiv (E_t e_{t+1}-e_t)/e_t $ y aproximando los términos de segundo orden se obtiene la ecuación de \textbf{paridad descubierta de tasas},
+\begin{equation}
+	i = i^* + \frac{\Delta e^e_{t+1}}{e_t}.
+	\label{eq:paridad_descubierta}
+\end{equation}
+Esta indica simplemente que la diferencia entre tasas de interés tienen que reflejar expectativas cambiarias, ya que si (por ejemplo) $i>i^*$ el retorno en pesos es mayor al retorno en dólares, por lo que es de esperar que el peso pierda valor respecto del dólar para que no exista arbitraje indefinidamente.
+
+Ahora puede pensarse en una operación que será libre de riesgo usando los mercados futuros. Es decir, contrario a usar la esperanza del tipo de cambio, una persona podría vender hoy los dólares a futuro por pesos a un valor $f_{t+1}$ y habrá certeza de que en $t+1$ se pagarán $f_{t+1}$ pesos por dólar al precio convenido en $t$. Análogo al caso anterior puede aproximarse una ecuación de \textbf{paridad de intereses cubierta},
+\begin{equation}
+	i = i^* + \frac{f_{t+1}-e_t}{e_t}.
+\end{equation}
+
+Volviendo a la ecuación \eqref{eq:paridad_descubierta} de paridad descubierta, puede verse que el mecanismo de ajuste para equilibrar las tasas puede ser tanto $e_t$ como $E_t e_{t+1}$ (contenido en $\Delta e^e_{t+1}$). Se hace el supuesto ahora de que en el largo plazo se esperaría que el tipo de cambio de equilibrio $\bar e$ no varíe, por lo que se define $\Delta e^e_{t+1}=\bar e$, el cual se asume constante. Así, la relación entre el tipo de cambio y las tasas de interés es
+\begin{equation}
+	e = \frac{\bar e}{1+i-i^*}.
+	\label{eq:TCN}
+\end{equation}
+
+Ahora se incorporan al análisis las tasas reales, $r$ y $r^*$. Usando la identidad de Fisher, la ecuación \eqref{eq:paridad_descubierta} y que $\Delta q^e / q_t = \Delta e^e/e_t + \pi^{e*}-\pi^e$, se llega a la ecuación de \textbf{paridad real de intereses},
+\begin{equation}
+	r = r^* + \frac{\Delta q^e}{q_t}.
+\end{equation}
+
+Esta ecuación contradice (en apariencia) el supuesto inicial donde $r=r^*$, pero es que eso consideraba implícitamente un ajuste instantáneo del TCR, mientras que en esa última sección se permite que los precios se ajusten lentamente.
+
+Análogamente al tipo de cambio nominal $e$ definido en \eqref{eq:TCN}, se puede asumir que el valor de largo plazo del tipo de cambio real es $\bar q = E_tq_{t+1}$ y, usando la ecuación anterior, llegar a que
+\begin{equation}
+	q = \frac{\bar q}{1-r^*+r}.
+\end{equation}
+
+\subsubsection{Determinación del producto y la cuenta corriente}
+
+Ya quedó determinado que existe una relación negativa entre tasas de interés y tipo de cambio real, es decir, que $q=q(r)$ con $q'<0$. Se hace el supuesto ahora que dada la tasa de interés y el TCR, el producto queda determinado por la demanda agregada
+\begin{equation}
+	Y = A(\osvar{-}{r}, Y) + XN (\osvar{+}{q(r)}, Y)
+\end{equation}
+y el déficit en la cuenta corriente ($DCC=-CC$) está dado por 
+\begin{equation}
+DCC = S_E = -XN(q, Y)+F=A(r, Y)-Y-F.
+\end{equation}
+
+Por lo tanto un aumento de la tasa de interés real baja el TCR (se aprecia). Esta disminución de $q$ reduce las exportaciones netas $XN$, al tiempo que el alza de la tasa real reduce el gasto $A$ mediante una baja en la inversión y el consumo. Ambos efectos contribuyen a reducir la demanda agregada y el producto.
+
+De la ecuación $DCC$ puede verse que si $A$ cae menos que $Y$ podría ser que el aumento de $r$ aumenta además el déficit de CC. La caída de $q$ genera un aumento del déficit comercial ($XN$ cae), pero la caída del producto genera un efecto compensatorio debido a la caída de la demanda por importaciones ---el efecto total es ambiguo, ya que las exportaciones netas pueden subir o bajar. Se puede argumentar que el alza de $r$ tiene un efecto directo y más fuerte sobre el gasto $A$, por lo que el déficit se \emph{reduciría}. $\blacksquare$
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

@@ -1,0 +1,307 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{5}
+\begin{document}
+\section{La economía cerrada}
+Los supuestos más importantes de este capítulo son:
+\begin{itemize}
+\item Todos los factores se usan a plena capacidad (pleno empleo). Esto puede no ser socialmente óptimo.
+\item El análisis es de largo plazo (pero sin considerar desarrollo económico).
+\end{itemize}
+
+\subsection{Equilibrio de economía cerrada}
+En equilibrio\footnote{Se destaca la diferencia con la expresión $\overline{Y}\equiv C+I+G$, donde se cumple la identidad pero con ajustes no deseados. Al referirse a equilibrio se supone que la identidad se satisface con cantidades deseadas.} el ingreso de los residentes es igual al gasto:
+
+\begin{equation}
+\overline{Y}=C(\overline{Y}-T, r)+I(r)+G,
+\label{eq:eq_econ_cerrada}
+\end{equation}
+
+donde
+\begin{where}
+\item[G] es el gasto de gobierno (exógeno). Su efecto sobre el producto es complejo (ver Capítulo 5).
+\item[r] es la única variable endógena del modelo. Consumo e inversión dependen negativamente de la tasa la tasa de interés real y ésta será el único mecanismo de ajuste.
+\end{where}
+
+La ecuación de equilibrio puede interpretarse como una restricción presupuestaria donde la inversión es igual al ahorro (ingreso disponible menos el gasto público y privado), es decir,
+\begin{equation}
+\underbrace{\overline{Y}-C(\overline{Y}-T, r)-G}_{S(r)}=I(r).
+\end{equation}
+
+El ahorro nacional $S(r)$ corresponde al ahorro del gobierno $S_g$ más el ahorro privado $S_p$:
+\begin{align*}
+S(r)&=S_g+S_p \\
+S_g&=T-G \\
+S_p&=\overline{Y}-T-C.
+\end{align*}
+
+\begin{figure}[h]
+\centering
+\subcaptionbox{Equilibrio oferta-demanda\label{subfig:06_eq_econ_cerrada}}
+[.5\linewidth]{\def\svgwidth{0.45\textwidth}
+\import{monos/}{fig06_01-eq_econ_cerrada.pdf_tex}}%
+\subcaptionbox{Equilibrio ahorro-inversión\label{subfig:06_eq_S-I_econ_cerrada}}
+[.5\linewidth]{\def\svgwidth{0.45\textwidth}
+\import{monos/}{fig06_02-eq_SI_cerrada.pdf_tex}}
+\caption{Equilibrio en economía cerrada}\label{fig:06_eq_econ_cerrada}
+\label{fig06_02-eq_econ_cerrada_both}
+\end{figure}
+
+Se asume una oferta agregada vertical, es decir, independiente de la tasa de interés. Podría asumirse una función de utilidad que incluya al ocio, en cuyo caso la oferta de trabajo presente dependería positivamente de la tasa de interés y en consecuencia la oferta agregada tendría una pendiente positiva. Sin embargo, las conclusiones generales no cambian. El equilibrio de economía cerrada se grafica en la \autoref{fig06_02-eq_econ_cerrada_both}.
+
+\subsection{Política fiscal}
+
+\scenario{Aumento transitorio del gasto de gobierno financiado por impuestos}
+
+Se asume que el gasto está plenamente financiado por impuestos y por lo tanto $\Delta G =\Delta T $. Esto implica que el ahorro de gobierno $S_g$ no se altera y que si los impuestos no distorsionan las decisiones de inversión, la curva $I(r)$ será la misma. Por otro lado, el cambio en ahorro privado es
+\begin{equation*}
+\Delta S_p = - \Delta T - \Delta C.
+\end{equation*}
+
+Si el consumo se mantuviera constante entonces el aumento de $T$ sería compensado exactamente por una caída en $S_p$, sin embargo, el consumo caerá en una proporción tal que $\Delta C = -c_{cp}\Delta T $, donde $c_{cp}$ es la propensión marginal a consumir de corto plazo. Por lo tanto el cambio (caída, en este caso) del ahorro total está dado por
+\begin{equation*}
+\Delta S = \Delta S_g + \Delta S_p = -(1-c_{cp}) \Delta G.
+\end{equation*}
+
+\input{monos/fig06_03-aumento_G}
+
+Aumentar el gasto significa que la economía tenga mayor inversión que ahorro, lo que presiona la tasa de interés al alza. Esta subida de la tasa aumenta el ahorro y como consecuencia la inversión cae en una cantidad menor que el ahorro nacional, ya que parte de la caída del ahorro público se ve compensada por el aumento del ahorro de las personas.
+
+En el nuevo equilibrio está graficado en la \autoref{fig06_03-aumento_G} y determina una tasa de interés $r_2^A > r_1^A$. Como la economía se encuentra siempre en pleno empleo, lo único que produce el mayor gasto de gobierno es una recomposición del gasto: de privado a público, lo que se denomina \emph{crowding out}. Si, por el contrario, el gasto de gobierno fuera acompañado de un aumento del gasto privado (dado que son complementarios), entonces habría \emph{crowding in}. Sin embargo esto último no puede ocurrir bajo el supuesto de producto constante.
+
+\scenario{Aumento transitorio del gasto de gobierno financiado por deuda}
+
+Se asume ahora que el gasto de gobierno está plenamente financiado por deuda. El efecto de esta política dependerá de si se cumple la equivalencia ricardiana:
+
+\begin{itemize}
+\item Con equivalencia ricardiana los hogares actuarán como si los impuestos hubieran sido aumentados en $\Delta G$ y dado que sus ingresos no cambian, internalizarán ese mayor gasto aumentando su ahorro en $-C_{cp}\Delta G$. La compensación no es total porque el gasto del gobierno varió y la equivalencia ricardiana se refiere a un cambio en el timing de los impuestos. La tasa de interés subirá, permitiendo que la producción total de la economía se acomode para un mayor gasto público. Ver nuevamente \autoref{fig06_03-aumento_G}.
+
+\item Sin equivalencia ricardiana se tendrá el caso extremo donde el consumo y el ahorro privados no cambian, de modo que la caída del ahorro global es de $\Delta G $.
+
+\item De acuerdo a la evidencia empírica la equivalencia ricardiana se cumple en una fracción de entre 30 y $60\%$, la que se denota como $\alpha$. Entonces un cumplimiento ``mixto'' de la equivalencia ricardiana predeciría que el aumento del gasto solo repercutirá en $\alpha \Delta G$ de impuestos, por lo que $\Delta S_g = -\Delta G $ y $\Delta S_p = c_{cp}\alpha \Delta G $.
+\end{itemize}
+
+\scenario{Aumento permanente del gasto de gobierno}
+
+En este caso resulta obvio que el gobierno debe (eventualmente) aumentar los impuestos para financiar su gasto y se asume que ambos aumentan en la misma medida, por lo que el ahorro público no cambia. Por el lado privado se asume que la caída de ingreso es compensada en igual medida\footnote{Porque se espera una propensión a consumir del ingreso permanente cercana a 1, es decir, $c_{lp}\approx 1$.} con una caída en consumo $-c_{lp}\Delta G$, por lo que el ahorro privado $(1-c_{lp})\Delta G$ tampoco cambiaría.
+
+Por lo tanto se produce un \textit{crowding out} de gasto público por gasto privado y, al no cambiar la tasa de interés, éste solo ocurre por el lado del consumo (y no de la inversión).
+
+\scenario{Aumento transitorio de los impuestos}
+
+Se supone un aumento de los impuestos $\Delta T$ que es percibido como transitorio y que el gobierno usará para aumentar el ahorro nacional (en lugar de aumentar el gasto). Nuevamente, el efecto final dependerá de si se cumple la equivalencia ricardiana.
+
+\begin{itemize}
+\item Si hay equivalencia ricardiana entonces el ahorro público subirá en $\Delta T$. El público esperará que le devuelvan este monto, ya que el gasto del gobierno no cambia. Por tanto el público disminuirá su ahorro en exactamente $\Delta T$ mientras dure el alza de impuesto y mantendrá su consumo inalterado. No se afecta el equilibrio de la economía.
+
+\item Si no hay equivalencia ricardiana entonces las personas pagarán los mayores impuestos disminuyendo tanto el ahorro como el consumo. Si el público cree que no le devolverán los impuestos (o no puede endeudarse), entonces su consumo se reducirá en $c_{cp}\Delta T$ y el efecto total sobre el ahorro nacional será
+\begin{equation*}
+\Delta S = \Delta S_g + \Delta S_p = \Delta T - (1-c_{cp})\Delta T = c_{cp}\Delta T
+\end{equation*}
+\end{itemize}
+
+
+\subsection{Otros ejercicios de estática comparativa}
+
+\scenario{Aumento de la demanda por inversión}
+
+Suponiendo que se descubren más proyectos rentables y las empresas deciden invertir más, esto significará que a una misma tasa de interés habrán más proyectos deseables, desplazando la inversión de $I_1$ a $I_2$. Al haber más proyectos compitiendo por fondos disponibles, la tasa sube de $r_1^A$ a $r_2^A$, como muestra la \autoref{fig06_04-aumento_I}.
+
+\input{monos/fig06_04-aumento_I}
+
+El aumento de demanda por inversión podría ser por parte del gobierno. En este caso, al elevarse la tasa de interés, la inversión privada caería. Para que el ahorro no cambie se debería pensar en un aumento permanente de la inversión, financiado por impuestos. En caso contrario el ahorro privado debería caer (recordar sección anterior), lo que aumentaría aún más la tasa y frenaría la expansión de la inversión agregada.
+
+\scenario{Aumento de la productividad}
+
+Un aumento de la productividad, en este modelo, se traduce en un aumento de $\bar Y$. Si el aumento es transitorio, el ahorro privado subirá, ya que los hogares usarán parte de este aumento de ingreso en suavizar consumo. El desplazamiento del ahorro reducirá la tasa de interés, lo que trae un aumento de la demanda por inversión que compensa en parte el efecto del mayor ahorro sobre la tasa. En todo caso, al ser transitorio el aumento de productividad, se esperaría que el efecto sobre inversión no sea demasiado grande.
+
+Si el aumento de la productividad es permanente se esperaría que el ahorro no cambie, ya que la mayor productividad es capaz de sostener permanentemente el aumento en consumo. Por su parte las empresas querrán mantener un mayor stock de capital, lo que las llevará a aumentar aún más la demanda por inversión. Con ahorro estable esto llevará a un aumento de la tasa de interés de equilibrio.
+
+\subsection{Modelo de dos períodos}
+\subsubsection{La economía sin producción ni inversión}
+
+Se asume una economía con un agente (o puros agentes idénticos) que nace en el período 1 y muere en el 2. En el período 1 recibe una cantidad $Y_1$ del único bien que hay en la economía, el que es perecible. En el período 2 recibe $Y_2$. El agente consume $C_1$ y $C_2$ en cada período, respectivamente.
+
+Como la economía es cerrada, no hay producción y además el bien es perecible, no hay posibilidad de trasladar bienes del primer período al segundo. Se cumplirá entonces que $C_t = Y_t  \quad \forall \; t $. Para cumplir esto se requerirá que el ahorro sea igual a la inversión y como se supone que no hay inversión, el ahorro neto debe ser cero.
+
+Analíticamente, se supone una función de utilidad aditivamente separable en el tiempo y que cumple con ser creciente y cóncava, es decir, más consumo provee más utilidad pero la utilidad marginal de dicho consumo decrece a medida que el consumo aumenta ($u'>0$ y $u''<0$). El problema a resolver será
+\begin{equation*}
+\max_{C_1,C_2} u(C_1)+\frac{1}{1+\rho} u(C_2) \sa Y_1+\frac{Y_2}{1+r}=C_1+\frac{C_2}{1+r}.
+\end{equation*}
+
+Al resolver dicho problema se llega a la siguiente condición de optimalidad definida por la ecuación de Euler--Lagrange,
+\begin{equation}
+	\frac{u'(C_1)}{u'(C_2)} = \frac{1+r}{1+\rho}.
+	\label{eq:06-euler_lagrange}
+\end{equation}
+
+Esta ecuación representa la pendiente de la función de consumo y, en equilibrio, deberá ser igual a la pendiente de la restricción presupuestaria. Este equilibrio se grafica en \autoref{fig06_05-eq_econ_cerrada}.
+
+\begin{figure}[h]
+\captionsetup[subfigure]{aboveskip=20pt,belowskip=15pt}
+\centering
+\begin{subfigure}{.45\textwidth}
+  \centering
+        \def\svgwidth{\textwidth}
+        \import{monos/}{fig06_05-eq_econ_cerrada.pdf_tex}
+  \caption{Equilibrio intertemporal}
+  \label{fig06_05-eq_econ_cerrada}
+\end{subfigure}\hspace{.05\textwidth}
+\begin{subfigure}{.45\textwidth}
+  \centering
+        \def\svgwidth{\textwidth}
+        \import{monos/}{fig06_06-eq_SI_cerrada.pdf_tex}
+  \caption{Equilibrio ahorro-inversión}
+  \label{fig06_06-eq_SI_cerrada}
+\end{subfigure}
+\caption{Equilibrio en economía cerrada}
+\label{fig06-equilibrio_economia_cerrada}
+\end{figure}
+
+El equilibrio recién mencionado es parcial. Para resolver el modelo de equilibrio general debe cumplirse, además, que 
+\begin{enumerate*}[label=(\roman*)]
+\item los consumidores maximizan utilidad,
+\item los productores maximizan utilidades y
+\item los mercados están en equilibrio de oferta y demanda.
+\end{enumerate*}
+Dadas estas condiciones y agregando que $Y_1=C_1$ e $Y_2=C_2$, se pueden reordenar los términos de la condición de óptimo para obtener la ecuación para la tasa de interés:
+\begin{equation}
+	1+r = \frac{u'(Y_1)}{u'(Y_2)}\cdot (1+\rho).
+\end{equation}
+
+Este equilibrio ahorro-inversión se grafica en la \autoref{fig06_06-eq_SI_cerrada}. La curva de inversión es vertical y coincide con el eje de las ordenadas porque se supuso que no había inversión. El equilibrio se produce cuando $S$ corta a dicho eje y corresponde al punto donde $r=\rho $. Cuando $Y_1>Y_2$, $r$ debe ser bajo para que el precio del primer período sea relativamente bajo, lo que implica una trayectoria de consumo decreciente. El individuo tendrá mayor incentivo a ahorrar para cada nivel de tasa de interés, por lo que $S$ se desplaza a la derecha. Esto hace que la tasa de interés caiga.
+
+Este aumento de  $Y_1$ por sobre $Y_2$ puede interpretarse como un aumento transitorio en la productividad. El modelo concluye que los individuos ahorrarán parte de este aumento de productividad para gastarlo en el período 2. Al no subir la inversión, la mayor disponibilidad de ahorro reduce la tasa de interés. Si ocurriera que tanto $Y_1$ como $Y_2$ subieran (aumento permanente del ingreso), entonces la tasa no cambiaría.
+
+\subsubsection*{Política fiscal}
+
+La política fiscal puede incorporarse al modelo asumiendo que este tiene un \textbf{presupuesto equilibrado} en cada período y que financia con impuestos sus gastos, de manera que $G_t=T_t \quad \forall \; t$. Por lo tanto, las nuevas restricción presupuestaria y condición para la tasa de interés de equilibrio son
+\begin{align*}
+	Y_1-G_1 + \frac{Y_2-G_2}{1+r} &= C_1 + \frac{C_2}{1+r} \\
+	1+r &= \frac{u'(Y_1-G_1)}{u'(Y_2-G_2)} \cdot (1+\rho).
+\end{align*}
+
+Si se piensa en un aumento transitorio del gasto fiscal ($ G_1>G_2$), entonces la tasa de interés subirá, ya que se reduce el consumo presente, por lo que el precio del presente debe subir (y el del futuro bajar) para mantener una trayectoria creciente de consumo.
+
+Un aumento permanente del gasto de gobierno tendrá un efecto ambiguo sobre la tasa, ya que dependerán del nivel del ingreso y del gasto, además de $\rho$.
+
+Ahora, si se permite que el \textbf{presupuesto no esté equilibrado}, entonces el gasto puede financiarse vía deuda (de gobierno), la que se denomina $B_1$. Con esto pueden plantearse a la siguientes restricciones presupuestarias para las personas y el gobierno:
+\begin{align*}
+	Y_1-T_1 + \frac{Y_2-T_2}{1+r} &= C_1 + \frac{C_2}{1+r} \\
+	G_1 + \frac{G_2}{1+r}& = T_1 + \frac{T_2}{1+r}.
+\end{align*}
+
+Sin embargo, al reemplazar esta restricción presupuestaria de gobierno en la restricción de consumo de las personas se llega nuevamente a la restricción planteada para el presupuesto \textit{equilibrado}. Por tanto, al ser equivalentes ambos problemas, se demuestra que en este modelo se cumple la equivalencia ricardiana.
+
+\subsubsection{La economía con producción e inversión}
+
+Se considera ahora un modelo donde el individuo, aún en economía cerrada, puede sacrificar consumo presente para usarlos en producción de bienes de consumo futuro, permitiendo que exista un equilibrio con ahorro distinto de 0. Se comienza analizando una economía donde hay empresas que producen bienes y consumidores (u hogares) todos idénticos que son los dueños de las empresas y trabajan para recibir ingresos.
+
+\paragraph{Hogares}
+Los individuos maximizan una utilidad separable en el tiempo, en dos períodos. La restricción presupuestaria para el período $t$ es
+\begin{equation}
+	\overbrace{(1+r_t)A_t}^{\mathclap{\text{ingresos financieros}}} + \underbrace{w_tL_t}_{\mathclap{\text{ingresos laborales}}} = C_t + A_{t+1}.
+	\label{eq:06-restriccion_presup_indiv}
+\end{equation}
+
+Suponiendo que $L_t$ es constante (oferta laboral inelástica) y que los individuos comienzan y terminan con 0 activos, la CPO para el individuo es
+\[
+	\frac{u'(C_1)}{u'(C_2)} = \frac{1+r}{1+\rho}.
+\]
+
+\paragraph{Empresas}
+Las empresas producen bienes con la función de producción:
+\[
+	Y_t = F(K_t, L_t),
+\]
+la que satisface $F_K>0$, $F_{KK}<0$ y $F(0, L_t)=0 \quad \forall \; t$. Se produce un solo bien y su precio es normalizado a 1. Las empresas arriendan el capital a una tasa $R$ y este se deprecia a una tasa $\delta$. Por otro lado, pagan $w$ por unidad de trabajo. Por lo tanto, las empresas resuelven
+\[
+\max_{K_t, L_t} F(K_t, L_t) - R_tK_t -w_tL_t.
+\]
+
+Al resolver este problema se llega a las clásicas condiciones de uso de los factores hasta que igualen a su costo unitario, esto es, $F_K=R$ y $F_L = w$. Además, el costo de uso del capital es igual a la tasa de interés real más depreciación, en competencia perfecta las utilidades son 0 y como hay retornos constantes a escala, se tiene que
+\begin{align}
+	F_k = R_t &= r_t + \delta \nonumber \\ 
+	w_tL_t &= F(K_t, L_t) - (r_t+\delta)K_t.
+	\label{eq:06-rest_empresas}
+\end{align}
+
+\paragraph{Equilibrio general}
+Como el único activo de esta economía es el capital, debe cumplirse $A_t=K_t \quad \forall \; t$. Combinando esto con \eqref{eq:06-restriccion_presup_indiv} y \eqref{eq:06-rest_empresas} se tiene que
+\begin{equation}
+	F(K_t, L_t) + K_t = C_t + K_{t+1} + \delta K_t.
+\end{equation}
+
+Ahora, para una economía de solo dos períodos y con oferta laboral constante se cumple que
+\begin{align*}
+	F(K_1, L) + (1-\delta)K_1 &= C_1 + K_2 \\
+	F(K_2, L) + (1-\delta)K_2 &= C_2.
+\end{align*}
+
+Con esto puede definirse la \textbf{frontera de posibilidades de producción} (FPP) de esta economía: dado $K_1$, para cada valor de $C_1$, cuál es el máximo $C_2$ que se puede alcanzar. Para expresar entonces la FPP se igualan las dos ecuaciones anteriores en $K_2$ y se obtiene
+\begin{equation}
+	C_2 = F[F(K_1, L) + (1-\delta)K_1 - C_1, L] + (1-\delta)[F(K_1, L)+(1-\delta)K_1-C_1].
+\end{equation}
+
+Diferenciando implícitamente la FPP se llega a una expresión para la pendiente y, usando que en el óptimo para las empresas debe cumplirse que $F_K=r+\delta$, se tiene que
+\begin{align*}
+	\deriv{C_2}{C_1} = -F_K - (1-\delta) = -(1+r).
+\end{align*}
+
+Esta expresión es igual a la pendiente de la restricción presupuestaria del individuo y en el óptimo es tangente a las curvas de isoutilidad. No es sorpresa que en el óptimo las curvas de isoutilidad y la FPP deben ser tangentes y la pendiente de esa tangente es la que determina la tasa de interés real de equilibrio, como se grafica en la \autoref{fig06_07-eq_econ_cerrada_prod}. $K_1$ determina la posición de la FPP ---si fuera muy bajo, la FPP se trasladaría al origen.
+
+\input{monos/fig06_07-eq_econ_cerrada_prod}
+
+Sin inversión y todo el consumo trasladado al primer período se alcanzaría un consumo de $C_1^M$, sin embargo, dado que la producción en $A$ involucra capital para el período 2 es que habrá inversión por un monto $C_1^M-C_1^A$.
+
+Ahora, en este modelo no es necesario que la inversión sea igual al ahorro e igual a 0. De hecho, se puede mostrar que $K_2 = F_K^{-1}(r+\delta)$ y en consecuencia la inversión está dada por\footnote{Usando que $F_K=r_t+\delta$ y que $F_K^{-1}$ corresponde a la función inversa del producto marginal.}
+\begin{equation}
+%	I_1(\underset{\mathclap{-}}{r}) = F_K^{-1}(r+\delta) - (1-\delta)K_1
+	I_1(r) = F_K^{-1}(r+\delta) - (1-\delta)K_1,
+	\label{eq:06-ecuacion_inversion}
+\end{equation}
+la que es decreciente en $r$, mientras que el ahorro será creciente en $r$, desplazando consumo al segundo período\footnote{Suponiendo que $\text{ES}>\text{EI}$.}.
+
+\paragraph{Consumidores-Productores: Teorema de separación de Fisher}
+Aquí se supone un caso más simple donde quien consume es también quien produce, demostrándose que la solución es idéntica a la anterior. El individuo tendrá dos activos al inicio de $t$: $A_t$, que es un activo financiero que rinde $r_t$ y capital $K_t$, que se usa para producir. Por lo tanto su restricción presupuestaria es
+
+\[
+(1+r_t)A_t + F(K_t) + K_t(1-\delta) = C_t + K_{t+1} + A_{t+1} \quad \forall \; t.
+\]
+
+Nuevamente se asume un modelo de dos períodos donde el individuo no tiene activos financieros en el primero; solo tiene stock de capital inicial, además de que no deja activos y se ignora $L$ en la función de producción, ya que la oferta de trabajo es fija. Ahora, planteando las restricciones para $t_1$ y $t_2$, usando que $K_2=I_1+K_1(1-\delta)$ e igualando en $A_2$ se tiene que la restricción intertemporal es
+\[
+	F(K_1) + \frac{F(K_1(1-\delta)+I_1)+K_1(1-\delta)^2}{1+r} = C_1 + I_1 + \frac{C_2-I_1(1-\delta)}{1+r}.
+\]
+
+Al maximizar una utilidad separable en el tiempo (de la misma forma que el resto del capítulo) sujeta a esa restricción presupuestaria se llegará a las siguientes CPO:
+
+\begin{align*}
+	u'(C_1) &= \lambda \\
+	u'(C_2) &= \lambda \frac{1+\rho}{1+r} \\
+	F_K(K_2) &= r+\delta.
+\end{align*}
+
+Al combinar las dos primeras ecuaciones se obtiene la condición de Euler-Lagrange definida en \eqref{eq:06-euler_lagrange} mientras que la última, despejada para $I_1$, corresponde a la ecuación de inversión definida en \eqref{eq:06-ecuacion_inversion}. Imponiendo que $A_2=0$ se llega a un equilibrio general idéntico al caso de cuando las empresas y los individuos eran entidades separadas, graficado en la \autoref{fig06-equilibrio_economia_cerrada}. Como el equilibrio es independiente del arreglo insitucional, se pueden separar las decisiones de consumo de las de inversión, lo que se conoce como \textbf{teorema de separación de Fisher}. Para que se cumpla, debe ocurrir que las decisiones de ahorro de los individuos no afecten las decisiones de inversión. $\blacksquare$
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%

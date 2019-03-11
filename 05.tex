@@ -1,0 +1,144 @@
+\documentclass[DeGregorioResumen]{subfiles}
+\setcounter{section}{4}
+\begin{document}
+\section{El gobierno y la política fiscal}
+
+Este capítulo se centra en las restricciones presupuestarias que enfrenta el gobierno central, que corresponde a la unidad encargada de la administración central del Estado, los ministerios y todas las reparticiones directamente dependientes.
+
+\subsection{Definiciones}
+
+El gasto total del gobierno corresponde a
+\begin{equation*}
+\underbrace{G+TR}_{\mathclap{\text{gasto corriente}}}+I_g,
+\end{equation*}
+donde
+\begin{where}
+\item[G] gasto final en consumo de bienes y servicios.
+\item[TR] transferencias, que incluyen pagos de seguridad social (pago de pensiones).
+\item[I_g] inversión pública, que es parte de la inversión total $I$.
+\end{where}
+
+Se define al \textbf{déficit fiscal global} ($DF$) como
+\begin{equation}
+DF_t=B_{t+1}-B_t = G_t+iB_t-T_t,
+\label{eq:deficit_fiscal_global}
+\end{equation}
+donde $G_t$ es el gasto total del gobierno\footnote{Ojo que \emph{no} es lo mismo que el gasto final en consumo, si no que este nuevo $G$ equivale a la suma de dicho gasto en consumo más $TR+I_g$.}, $i$ es la tasa de interés nominal, $B_t$ es una deuda neta (nominal) a comienzos de $t$ y $T_t$ son ingresos del gobierno (impuestos). El déficit fiscal también puede ser visto como todo lo que se endeuda el gobierno, es decir, lo que aumenta su stock de pasivos.
+
+Hay que destacar que en muchos países la deuda neta está en términos reales, lo que genera grandes diferencias con una deuda nominal en casos donde la inflación es elevada y, por lo tanto, la diferencia entre $i$ y $r$ no es despreciable.
+
+De la ecuación \eqref{eq:deficit_fiscal_global} de déficit fiscal global  se definen en letras minúsculas a los valores reales\footnote{Notación muy utilizada en el libro.} (ej: $x_t=X_t/P_t$). Usando que $\pi_t=P_{t+1}/P_t $ y que $B_{t+1}/P_t = b_{t+1}(1+\pi_t)$, se divide dicha ecuación por $P_t$ para obtener
+\begin{equation*}
+\sscript{b}{t+1} = \frac{g_t-t_t}{1+\pi_t}+\frac{1+i}{1+\pi_t}b_t.
+\end{equation*}
+
+Luego, usando que $(1+a_1)/(1+a_2) \approx 1+a_1-a_2 $ y que $r=i-\pi $, se puede reescribir la restricción presupuestaria como
+\begin{equation}
+\sscript{b}{t+1}-b_t = \frac{g_t-t_t}{1+\pi_t}+rb_t,
+\end{equation}
+sin embargo, para efectos de este capítulo se usa que $r=i$ (inflación cero).
+
+Finalmente, otro concepto importante es el \textbf{déficit primario} o déficit operacional $D$ que excluye el pago de intereses. En términos reales es $d_t = g_t-t_t$.
+
+\subsection{Restricción presupuestaria intertemporal}
+
+Si la inflación es cero, se puede escribir una restricción presupuestaria para cada período, válida tanto en términos nominales como reales, como
+\begin{equation}
+\sscript{B}{t+1}-B_t = G_t + rB_t - T_t.
+\end{equation}
+
+Integrando dicha ecuación hacia adelante (en $\sscript{B}{t+1}$, $\sscript{B}{t+2}$, etc.) se llega a que
+\begin{equation}
+(1+r)B_t = \sum_{s=0}^{\infty}{\frac{\sscript{T}{t+s}-\sscript{G}{t+s}}{(1+r)^s}+\lim_{N\rightarrow\infty}{\frac{\sscript{B}{t+N+1}}{(1+r)^N}}}.
+\label{eq:solvencia}
+\end{equation}
+
+De \eqref{eq:solvencia} se desprende que para que el fisco sea solvente el último término debe ser igual a cero, es decir, que en el largo plazo la deuda pública debe crecer más lentamente que la tasa de interés. Matemáticamente, si la deuda crece con una tasa $\theta $ entonces el último término es el límite de $\sscript{B}{t+1}\cdot[(1+\theta)/(1+r)]$, cuya condición de convergencia es que $\theta < r$. A esta se le llama \textbf{condición de solvencia} o condición de no-Ponzi. Si dicha condición se cumple, entonces ocurre que
+\begin{equation}
+(1+r)B_t = -\sum_{s=0}^{\infty}{\frac{\sscript{D}{t+s}}{(1+r)^s}} = VP(\text{superávit primario}),
+\label{eq:restriccion_superavit_primario}
+\end{equation}
+es decir que el valor presente del superávit fiscal primario debe ser igual a la deuda neta. Por lo tanto, en una economía donde el gobierno tiene una deuda neta positiva no podrá haber permanentemente un déficit primario, o incluso equilibrio, ya que deberá generar eventualmente superávits primarios para pagar la deuda.
+
+Para analizar qué ocurre con el déficit global (es decir, agregando el pago de intereses al déficit primario)  se asume que la autoridad quiere un déficit primario constante e igual a $D$ (es decir, ya no está indexado). Luego, la sumatoria de \eqref{eq:restriccion_superavit_primario} es igual a $D(1+r)/r$, lo que implica que
+\begin{equation*}
+D=rB_t,
+\end{equation*}
+es decir que el superávit primario debe ser igual al pago de intereses de la deuda. Si se agrega crecimiento económico, es posible que en el largo plazo haya superávit primario pero déficit global. Entonces, la restricción presupuestaria intertemporal establece que no existe una política fiscal gratis (subir gastos o bajar impuestos) sin que haya un movimiento compensatorio en el futuro.
+
+Usando estas ecuaciones pueden analizarse las privatizaciones, que no son más que una parte de $B$ y por tanto su valor debiera estar descontado de la deuda bruta. Si el fisco vende una empresa para financiar un programa de gasto, \eqref{eq:restriccion_superavit_primario} establece que tarde o temprano tendrá que subir los impuestos o bajar el gasto. Bajo este contexto existen dos casos donde, sin embargo, estaría justificado el privatizar por motivos macrofiscales:
+
+\begin{enumerate}
+\item Si es muy caro (o imposible) para el fisco endeudarse en los mercados internacionales, el privatizar una empresa constituye una forma de financiamiento más barato.
+\item Si el privado asigna un mayor valor a la empresa que el fisco, deberá ser porque estima que puede sacar más rentabilidad de la misma. Por lo tanto, al vender la empresa por sobre su valor ``de libro'', el estado estará ganando ingresos que van por sobre la recaudación por privatización. 
+\end{enumerate}
+
+\subsection{La dinámica de la deuda pública y los efectos del crecimiento}
+
+En materia de dinámica de deuda ---y, más, en general, en temas de solvencia y sostenibilidad--- el foco de análisis es el nivel de deuda pública respecto del PIB. Para analizarla se reescribe \eqref{eq:deficit_fiscal_global} la restricción presupuestaria de cada período (déficit fiscal global) como porcentaje del PIB $Y_t$ y se usa que $\tau_t $ son los impuestos como porcentaje del PIB, de forma que
+\begin{equation*}
+\frac{\sscript{B}{t+1}}{Y_t}-b_t = g_t - \tau_t + rb_t.
+\end{equation*}
+
+Luego, denotando como $\gamma $ a la tasa de crecimiento del PIB\footnote{Por lo tanto se cumple que $\sscript{Y}{t+1}/Y_t = 1+\gamma$.} se tiene que
+\begin{equation}
+\sscript{b}{t+1}-b_t = \frac{d_t}{1+\gamma}+\frac{r-\gamma}{1+\gamma}b_t.
+\label{eq:sostenibilidad_deuda}
+\end{equation}
+ 
+La ecuación \eqref{eq:sostenibilidad_deuda} permite analizar la \textbf{sostenibilidad} de la posición fiscal, es decir, que éste converja a un estado estacionario. Se asume que en el largo plazo $r>\gamma $, ya que de otra forma cualquier evolución del déficit primario dará solvencia (porque $d_t $ desaparecerá con el crecimiento acelerado). Dicho estado estacionario está dado por la razón $b$ que cumple que $b_{t+1}=b_t$, esto es,
+\begin{equation}
+d=-(r-\gamma)b,
+\end{equation}
+recordando que $d$ es el déficit (o superávit si es negativo) primario y $b$ es el nivel de deuda. Todos los términos están expresados como porcentajes del PIB.\footnote{Otra manera que yo prefiero para ver la misma expresión es $b=-d/(r-\gamma)$.}
+
+\begin{itemize}
+\item Dado un nivel de deuda positivo es necesario generar un superávit primario en estado estacionario para financiar la deuda. Sin embargo, puede haber déficit global (que es $b\gamma$).\footnote{Si $b>0$ entonces $d<0$ (recordar que $r-\gamma>0$). Sin embargo esto igual permite que $b\gamma$ sea positivo; lo importante es que $b\gamma-br$ sea negativo.}
+\item Dado un nivel de deuda $b>0$, el requerimiento de superávit primario para garantizar sostenibilidad es creciente con el nivel inicial de dicha deuda y la tasa de interés, y decreciente con el crecimiento del PIB.\footnote{Es equivalente a decir $\pder{d}{b}<0$, $\pder{d}{r}<0$ y $\pder{d}{\gamma}>0$ (recordar que el superávit primario implica $d<0$).}
+\item Dado un superávit primario, las economías que crecen más convergerán a una mayor relación dedua-PIB como resultado de que el crecimiento permite ``pagar'' parte del servicio de dicha deuda mayor.
+\end{itemize}
+
+\subsection{Equivalencia ricardiana}
+
+La equivalencia ricardiana establece que cualquier cambio en el \textit{timing} de los impuestos (ej. bajarlos transitoriamente hoy, financiar con deuda y repagarla en el futuro) no tiene efectos sobre la economía. A partir de esta idea se argumenta que la deuda pública no es riqueza agregada, ya que al final habrá que pagarla con impuestos.
+
+De la ecuación \eqref{eq:rest_intertemp_gral} de restricción presupuestaria intertemporal de los consumidores y la ecuación \eqref{eq:restriccion_superavit_primario} del gobierno, se supone un individuo que vive hasta el infinito (supuesto heroico) y que sus activos $A$ están divididos entre deuda pública $B$ y otros activos $AA$. Combinando ambas ecuaciones y despejando los impuestos y la deuda, se tiene que
+\begin{equation}
+\sum_{s=0}^{\infty}\frac{C_{t+s}}{(1+r)^s}=\sum_{s=0}^{\infty}\frac{Y_{l,t+s}-G_{t+s}}{(1+r)^s}+(1+r)AA_t.
+\end{equation}
+
+Notar entonces que el consumo depende negativamente del gasto público y que además la política tributaria (impuestos) no afecta a la restricción presupuestaria del individuo. Solo la política fiscal (cambios en gasto) afectará a las decisiones de consumo.
+
+Sin embargo la equivalencia ricardiana tiene una validez muy discutible, especialmente en economías en desarrollo, por las siguientes razones:
+
+\begin{itemize}
+\item Pueden existir restricciones de liquidez que impidan a las personas endeudarse para neutralizar los efectos de un alza impositiva.
+\item La gente no vive infinitamente (!). Esto es especialmente relevante cuando se analiza el largo plazo.
+\item Existen incertidumbres y distorsiones.
+\item Algunos individuos son miopes y no hacen una planificación de largo plazo, asimilándose más a un consumidor keynesiano.
+\end{itemize}
+
+\subsection{Ciclo económico y balance estructural}
+
+El PIB fluctúa en el tiempo alrededor de su tendencia de largo plazo, la que es conocida como PIB potencial o PIB de pleno empleo. Por su parte, a las fluctuaciones se les denomina \textbf{ciclo económico}. El ciclo económico afecta tanto al gasto $G$ como a la recaudación tributaria $T$, produciendo efectos en el balance fiscal.
+
+Se definen dos conceptos importantes:
+
+\begin{enumdescript}
+\item[Estabilizadores automáticos:] componentes de las finanzas públicas que se ajustan automáticamente a los cambios en la actividad económica, generando un comportamiento contracíclico. Ejemplos son los impuestos al ingreso y al consumo, mientras que por el lado del gasto están los programas sociales ligados al desempleo.
+\item[Balance estructural:] es el balance del presupuesto público que corrige por los efectos cíclicos sobre ingresos y gastos. Se usan variables de mediano y largo plazo para medir los principales componentes del gasto y los impuestos. Los estabilizadores automáticos estarán en su nivel de tendencia y los impuestos deben medirse asumiendo que el producto está en pleno empleo.
+\end{enumdescript}
+
+Notar que una reducción del precio de los recursos naturales no es un estabilizador, si no más bien un \emph{desestabilizador}, ya que los menores precios son un beneficio para el mundo, pues son ellos quienes pagan un menor precio por el recurso. Esto termina por poner presión sobre el presupuesto en períodos de malos términos de intercambio.
+
+Desde el año 2000 en Chile los objetivos de política fiscal se han fijado sobre la base de una \textbf{regla para el balance estructural}, la que corresponde a un superávit estructural del $1\%$ del PIB anual. Una regla fiscal basada en el balance estructural permite que operen los estabilizadores automáticos sin necesidad de forzar la política fiscal a tener que compensar las caídas del ingreso, que es lo que ocurriría con una regla que no se ajustara al ciclo.
+
+\subsection{Financiamiento, inversión pública y contabilidad fiscal}
+
+Cuando se habla de gasto de gobierno este se denomina $G$. Sin embargo, dependendiendo de si se habla de gasto \emph{total} o gasto \emph{corriente} se estará incluyendo o excluyendo la inversión (del gobierno) respectivamente. No existe consenso sobre cuál definición es la correcta: si bien es cierto que la inversión es un gasto, por otro lado genera ingresos futuros y aumenta el patrimonio del Estado. La jerga utilizada es que como gasto se anota ``sobre la línea'', mientras que como aumento del patrimonio del gobierno iría ``bajo la línea''.
+
+Para ilustrar la diferencia se toman dos ejemplos. En el primero se considera una inversión del gobierno en compra de acciones a una empresa. Es fácil argumentar que dicha inversión aumenta el patrimonio del gobierno y por lo tanto va bajo la línea. Por otro lado, si se piensa en el caso donde el gobierno compra un colegio, cabría cuestionar si es posible (o deseable) que el gobierno venda dicho colegio para financiar presupuesto futuro. Por lo tanto, en este caso la inversión sería similar a un gasto corriente y debería ir sobre la línea. Casos ambiguos también ocurren al analizar la inflación (pago real de intereses vs. amortización) o el de hacer un \textit{leasing} por un bien de capital (valor total del bien vs. costo de arriendo).
+
+En cualquier caso, lo esencial es destacar que hay muchas partidas del presupuesto cuya clasificación en el balance presupuestario no es simple. La clasificación dependerá del caso y de características institucionales y específicas de los países. Una autoridad que quiera maquillar el balance tendrá incentivos a poner sobre la línea el máximo de ingresos (incluso producto de deuda) y, por el contrario, querrá poner la mayoría de los gastos como aumento del patrimonio en lugar de como gasto corriente. Lo contrario hará quien quiera demostrar una situación precaria y promover un ajuste fiscal. $\blacksquare$
+
+\end{document}
