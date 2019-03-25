@@ -1,0 +1,215 @@
+\documentclass{article}
+
+% Paquetes preliminares:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[math]{blindtext}
+\usepackage{hyperref}
+\usepackage[margin=2cm]{geometry}
+\usepackage[section]{placeins}
+
+% Paquetes necesarios:
+\usepackage{graphicx,import,color,transparent}
+\usepackage{subcaption}
+\usepackage[aboveskip=10pt,belowskip=10pt]{caption}
+    \intextsep=30pt
+\usepackage{mathtools} % También puede ser amsmath u otro similar.
+
+% Otros comandos necesarios:
+\numberwithin{figure}{section}
+\makeatletter
+\let\old@xfloat\@xfloat
+\def\@xfloat#1[#2]{\old@xfloat{#1}[h]}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Monos De Gregorio}
+\author{Alvaro Carril \and Mohit Karnani}
+
+\begin{document}
+\maketitle \newpage
+
+\section{Introducción}
+
+\section{Los datos}
+
+\section{Consumo}
+    \input{monos/fig03_01-consumo_keynesiano}
+    %\input{monos/fig03_02-consumo_keynesiano_estimado}
+    \input{monos/fig03_03-maxU_2t}
+    \input{monos/fig03_04-rest_liquid}
+    \input{monos/fig03_05-ciclo_vida}
+
+\section{Inversión}
+    \input{monos/fig04_01-decision_inversion}
+    \input{monos/fig04_02-ajuste_capital}
+    \input{monos/fig04_03-volatilidad}
+    \input{monos/fig04_04-alternativas_inversion}
+    \input{monos/fig04_05-inversion_impuestos}
+
+\section{El gobierno y la política fiscal} % No tiene figuras teóricas.
+
+\section{La economía cerrada} % listeilor.
+    \input{monos/fig06_01-eq_econ_cerrada}
+    \input{monos/fig06_02-eq_SI_cerrada}
+    \input{monos/fig06_03-aumento_G}
+    \input{monos/fig06_04-aumento_I}
+    \input{monos/fig06_05-eq_econ_cerrada}
+    \input{monos/fig06_06-eq_SI_cerrada}
+    \input{monos/fig06_07-eq_econ_cerrada_prod}
+
+\section{Economía abierta: La cuenta corriente}
+    \input{monos/fig07_01-deficit_CC}
+    \input{monos/fig07_02-riesgo_soberano}
+    \input{monos/fig07_03-CC_control_capitales}
+    \input{monos/fig07_04-CC_reduc_ahorro}
+    \input{monos/fig07_05-CC_aumento_dda_inversion}
+    % Figura 7.6 es de datos.
+    \input{monos/fig07_07-feldstein_horioka}
+    \input{monos/fig07_08-eq_eco_abierta_sin_prod}
+    \input{monos/fig07_09-eq_S_I_econ_abierta}
+    \input{monos/fig07_10-equilibrio_econ_abierta}
+    
+\section{Economía abierta: El tipo de cambio real}
+    \input{monos/fig08_01-tcr}
+    \input{monos/fig08_02-tcr_expansion_fiscal_nacional}
+    \input{monos/fig08_03-tcr_expansion_fiscal_import}
+    \input{monos/fig08_04-tcr_rebaja_arancel_comp}
+    \input{monos/fig08_05-tcr_caida_perm_TI}
+    \input{monos/fig08_06-tcr_aumento_perm_prod}
+    
+\section{Más sobre el tipo de cambio real y cuenta corriente} % No tiene figuras teóricas.
+
+\section{Introducción al crecimiento económico} % No tiene figuras teóricas.
+    
+\section{El modelo neoclásico de crecimiento}
+    \input{monos/fig11_01-solow}
+    \input{monos/fig11_02-solow_crecimiento_pob}
+    \input{monos/fig11_03-solow_crecimiento_k}
+    \input{monos/fig11_04-convergencia_condicional}
+    \input{monos/fig11_05-regla_dorada}
+    \input{monos/fig11_06-progreso_tecnico}
+    \input{monos/fig11_07-progreso_tecnico_aumento_n}
+    \input{monos/fig11_08-aumento_s}
+    \input{monos/fig11_09-aumento_tasa_crecimiento_prod}
+    
+\section{Modelos de crecimiento: Extensiones}
+    \input{monos/fig12_01-trampa_pobreza}
+    \input{monos/fig12_02-modelo_AK}
+    \input{monos/fig12_03-modelo_AK_extendido}
+
+\section{Evidencia empírica}
+    % Figura 13.1 (datos)
+    % Figura 13.2 (datos)
+    \input{monos/fig13_03-convergencia}
+
+\section{Crecimiento económico con ahorro óptimo}
+    \input{monos/fig14_01-estado_estacionario}
+    \input{monos/fig14_02-dinamica}
+    \input{monos/fig14_03-ee_gob}
+    \input{monos/fig14_04-impuestos_distorsionadores}
+
+\section{Teoría cuantitativa, neutralidad y demanda por dinero}
+    % Figura 15.1 (datos)
+    % Figura 15.2 (datos)
+    % Figura 15.3 (datos)
+    % Figura 15.4 (datos)
+    \input{monos/fig15_05-dda_dinero}
+    \input{monos/fig15_06-dda_dinero_baumol_tobin}
+
+\section{Oferta de dinero, política monetaria e inflación}
+    \input{monos/fig16_01-eq_monetario}
+    \input{monos/fig16_02-impuesto_inflacion}
+    \input{monos/fig16_03-inflacion_senoreaje}
+    \input{monos/fig16_04-dinamica_hiperinflacion}
+    
+\section{Política monetaria y mercados financieros}
+    % Figura 17.1 (datos)
+    % Figura 17.2 (datos)
+    % Figura 17.3 (datos)
+    % Figura 17.4 (datos)
+    % Figura 17.5 (datos)
+
+\section{Introducción a las fluctuaciones de corto plazo}
+    \input{monos/fig18_01-OS_agregada}
+    \input{monos/fig18_02-dda_trabajo}
+    \input{monos/fig18_03-eq_trabajo}
+    \input{monos/fig18_04-cambios_producto_pleno_empleo}
+    \input{monos/fig18_05-rigidez_salario_real}
+    \input{monos/fig18_06-ofta_agreg_rigideces_reales}
+    \input{monos/fig18_07-rigideces_nominales}
+    \input{monos/fig18_08-O_agregada_rigideces_nominales}
+    \input{monos/fig18_09-decision_prod_mercado_compet}
+    \input{monos/fig18_09-determinacion_p_monopolio}
+
+\section{El modelo keynesiano de economía cerrada: IS-LM}
+    \input{monos/fig19_01-eq_producto_dda_agreg}
+    \input{monos/fig19_02-efecto_multiplicador_polit_fisc}
+    \input{monos/fig19_03-IS}
+    \input{monos/fig19_04-desplazamiento_IS}
+    \input{monos/fig19_05-pendiente_IS}
+    \input{monos/fig19_06-derivacion_LM}
+    \input{monos/fig19_07-pendiente_LM}
+    \input{monos/fig19_08-desplazamiento_LM}
+    \input{monos/fig19_09-eq_dinamica_IS-LM}
+    \input{monos/fig19_10-politica_monetaria_expan}
+    \input{monos/fig19_11-politica_monetaria_inefectiva}
+    \input{monos/fig19_12y13-politica_fiscal}
+    \input{monos/fig19_14-cambio_precio_efecto_riqueza}
+    \input{monos/fig19_15-disminuicion_inflacion_esperada}
+    \input{monos/fig19_16-trampa_liquidez}
+    \input{monos/fig19_17-shock_LM}
+    \input{monos/fig19_18-shock_IS}
+    
+\section{El modelo de Mundell-Fleming}
+    \input{monos/fig20_01-IS_LM_econ_abierta_perfecta_movilidad_K}
+    \input{monos/fig20_02-politica_fiscal_expansiva}
+    \input{monos/fig20_03-politica_monetaria_expansiva}
+    \input{monos/fig20_04-rebaja_arancel}
+    \input{monos/fig20_05-alza_tasa_internacional}
+    \input{monos/fig20_06-politica_monetaria_expansiva_TCfijo}
+    \input{monos/fig20_07-politica_fiscal_expansiva_TCfijo}
+    \input{monos/fig20_08-devaluacion_nominal}
+	\input{monos/fig20_09-equilibrio_tasas_tipo_cambio_producto}
+    % Figura 20.10 (datos)
+	\input{monos/fig20_11-equilibrio_tasas_tipo_cambio_producto}
+	\input{monos/fig20_12-expansion_monetaria_overshooting_dornbusch}
+	\input{monos/fig20_13-pendiente_IS_economias_cerradas_abiertas}
+	\input{monos/fig20_14-disminucion_riesgo_pais_movilidad_imperfecta_capitales}
+	\input{monos/fig20_15-crisis_cambiaria}
+	\input{monos/fig20_16-shock_monetarios}
+	\input{monos/fig20_17-shock_dda_agregada}
+
+
+\section{La oferta agregada y la curva de Phillips}
+    % Figura 21.01 (datos)
+	\input{monos/fig21_02-mercado_trabajo_rigidez_nominal_expectativas}
+
+\section{Oferta, demanda agregada y políticas macroeconómicas}
+	\input{monos/fig22_01-oferta_Agregada_RPM}
+	\input{monos/fig22_02-politica_fiscal_expansiva_shocks_demanda_transitorios}
+	\input{monos/fig22_03-shock_inflacionario}
+	\input{monos/fig22_04-caida_expectativas_inflacion}
+	\input{monos/fig22_05-reduccion_meta_inflacion}
+
+\section{Fluctuaciones en modelos del ciclo económico real}
+    % Figura 23.01 (datos)
+
+\section{Los mercados del trabajo y del crédito en el ciclo económico}
+	\input{monos/fig24_01-salarios_eficiencia_rigidos}
+	\input{monos/fig24_02-salarios_eficiencia_esfuerzo_imperfectamente_monitoreable}
+    % Figura 24.03 (datos)
+    % Figura 24.04 (datos)
+	\input{monos/fig24_05-curva_beveridge}
+	\input{monos/fig24_06-salario_estrechez_mercado_laboral}
+	\input{monos/fig24_07-efecto_aumento_probabilidad_dejar_empleo}
+	\input{monos/fig24_08-efectos_aumento_productividad}
+	\input{monos/fig24_09-efecto_caida_productividad_salarios_rigidos}
+    % Figura 24.10 (datos)
+	\input{monos/fig24_11-efecto_credito_islm}
+	\input{monos/fig24_12-canal_credito_colaterales}
+	\input{monos/fig24_13-aumento_interes_reduccion_credito}    
+	\input{monos/fig24_14-colateral_internacional_y_financiamiento_externo}
+\end{document} 
