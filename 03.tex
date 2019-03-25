@@ -10,13 +10,13 @@ C_t=\overline{C}+c\underbrace{(Y_t-T_t)}_{Y^d_t}.
 \label{eq:consumo_keynesiano}
 \end{equation}
 \begin{where}
-\item[C] es consumo y $\overline{C}$ es consumo autónomo, correspondiente a un consumo ``basal'' de cada período, el cual es independiente de las condiciones económicas o de los ingresos.
-\item[Y^d] es el ingreso disponible después de pagar impuestos.
-\item[c] es la propensión marginal a consumir ($PMgC $) con respecto del ingreso disponible.
+\item[C_t] es consumo en el período $t$ y $\overline{C}$ es consumo autónomo, un consumo ``basal'' en cada período que es independiente de las condiciones económicas o de los ingresos.
+\item[Y^d_t] es el ingreso disponible en $t$ después de pagar impuestos.
+\item[c] es la propensión marginal a consumir ($\PMg C $) con respecto del ingreso disponible.
 \begin{equation*}
-c=PMgC=\frac{\partial C}{ \partial (Y-T)} < 1,
+c \equiv \PMg C=\frac{\partial C}{ \partial (Y-T)} < 1,
 \end{equation*}
-donde $c \in [0,1]$ y puede interpretarse como el complemento de la propensión marginal al ahorro: $s=1-c$.
+donde $c \in [0,1]$ y puede interpretarse como el complemento de la propensión marginal al ahorro: $s \equiv 1-c$.
 \end{where}
 
 El consumo keynesiano expresado en \eqref{eq:consumo_keynesiano} se grafica en la \autoref{fig03_01-consumo_keynesiano}. La propensión media a consumir se obtiene al dividir dicha ecuación de consumo por $Y^d$,
@@ -207,8 +207,8 @@ Y^p_t &= \theta Y_t+(1-\theta)Y_{t-1} \\
 Entonces,
 
 \begin{align*}
-PMgC^{CP} &= c\cdot\theta \\
-PMgC^{LP} &= c.
+\PMg C^{CP} &= c\cdot\theta \\
+\PMg C^{LP} &= c.
 \end{align*}
 
 Sofisticando un poco más la teoría del ingreso permanente, se supone un individuo que no tiene activos hasta el tiempo $t$, tiene horizonte infinito e ingreso constante $Y$. Ahora, si repentinamente recibe un ingreso $\overline{Y}>Y$ y cree que se mantendrá así con probabilidad $p$, entonces se puede denotar el valor presente de sus ingresos en caso de que el cambio sea permanente como $V_a$, mientras que el valor presente de un cambio transitorio será $V_b$, de forma que
@@ -218,20 +218,20 @@ V_a &= \frac{1+r}{r}\overline{Y} \\
 V_b &= \overline{Y}+\frac{Y}{r}.
 \end{align*}
 
-Luego, usando la ecuación de consumo recién definida pero reemplazando $\theta=p$, $Y_t=V_a$ y $Y_{t-1}=V_b$ ($c=1$) y tomando su valor presente, se tiene que
+Luego, usando la ecuación de consumo recién definida pero reemplazando $\theta=p$, $Y_t=V_a$ y $Y_{t-1}=V_b$ (ie. $c=1$) y tomando su valor presente, se tiene que
 \begin{align*}
 C_t &= \frac{r}{1+r}\left[pV_a+(1-p)V_b\right] \\
 %&= \frac{r}{1+r}\left[p\frac{1+r}{r}\overline{Y}+(1-p)\overline{Y}+(1-p)\frac{Y}{r}\right] \\
 %&= p\overline{Y}+\frac{r}{1+r}(1-p)\overline{Y}+\frac{Y(1+r)(1-p)}{r} \\
 %&= p\overline{Y}+\frac{r}{1+r}(1-p)\overline{Y} + \frac{Y(1-p+r-rp)}{r} \\
-C_t &= \frac{p+r}{1+r}\overline{Y}+\frac{1-p}{1+r}Y.
+&= \frac{p+r}{1+r}\overline{Y}+\frac{1-p}{1+r}Y.
 \end{align*}
 
 Ahora se puede definir la propensión marginal a consumir como la razón del cambio en consumo sobre el cambio en ingreso, $	\Delta C/\Delta Y$. Usando la expresión recién calculada para $C_t$ y usando el hecho de que $C_{t-1}=Y$ (porque en $t-1$ no había habido shock de ingreso) es fácil calcular que
 \begin{equation}
-PMgC \approx \frac{C_t-C_{t-1}}{\overline{Y}-Y} = \frac{p+r}{1+r},
+\PMg C \approx \frac{C_t-C_{t-1}}{\overline{Y}-Y} = \frac{p+r}{1+r},
 \end{equation}
-donde $PMgC$ es creciente en $p$ y, además, es igual a 1 cuando $p=1$.
+donde $\PMg C$ es creciente en $p$ y, además, es igual a 1 cuando $p=1$.
 
 Un análisis interesante que es propuesto es ver qué ocurriría si la alternativa a $\overline{Y}$ fuese un ingreso $\breve{Y}$ aún mayor, es decir, $\breve{Y}>\overline{Y}$. En este caso, se observará que
 \begin{equation*}
@@ -239,15 +239,15 @@ C'_t=\frac{p+r}{1+r}\overline{Y}+\frac{1-p}{1+r}\breve{Y}.
 \end{equation*}
 de donde se desprende que $C'_{t}>C_{t} \quad \forall \; p<1$. Dado que  $C_{t-1}$ no cambia, es lógico decir que $C_t-C_{t-1}<C'_t-C_{t-1}$. Además se tiene que el cambio en ingreso $\overline{Y}-Y$ sigue siendo el mismo, por lo que se puede asegurar que la nueva propensión marginal a consumir es superior a la del caso anterior. Esto porque cambió el consumo presente en mayor proporción que el ingreso.
 
-Mas interesante aún es demostrar no solo que la nueva $PMgC'$ es mayor a la anterior, si no además que es mayor que 1. Yo lo hice de la siguiente forma:
+Mas interesante aún es demostrar no solo que la nueva $\PMg C'$ es mayor a la anterior, si no además que es mayor que 1. Yo lo hice de la siguiente forma:
 
 \begin{align*}
 C'_t-C_{t-1} &= \left[\frac{p+r}{1+r}\overline{Y}-Y\right]+\frac{1-p}{1+r}\breve{Y} \\
  &= \left[C_t-C_{t-1}-\frac{1-p}{1+r}\overline{Y}\right]+\frac{1-p}{1+r}\breve{Y} \quad \bigg|\cdot \frac{1}{\overline{Y}-Y} \\
-PMgC'=\frac{C'_t-C_{t-1}}{\overline{Y}-Y}&= \frac{p+r}{1+r} + \frac{1-p}{1+r}\cdot\frac{\breve{Y}-Y}{\overline{Y}-Y}.
+\PMg C'=\frac{C'_t-C_{t-1}}{\overline{Y}-Y}&= \frac{p+r}{1+r} + \frac{1-p}{1+r}\cdot\frac{\breve{Y}-Y}{\overline{Y}-Y}.
 \end{align*}
 
-Esta es la expresión a probar que sea mayor que 1 ($PMgC'>1$), es decir,
+Esta es la expresión a probar que sea mayor que 1 ($\PMg C'>1$), es decir,
 \begin{equation*}
 \frac{p+r}{1+r} + \frac{1-p}{1+r}\cdot\frac{\breve{Y}-Y}{\overline{Y}-Y} > 1.
 \end{equation*}
@@ -279,7 +279,7 @@ es decir, el valor esperado del consumo en $t+1 $ es igual al consumo de $t $. E
 \end{equation}
 donde $\xi$ es un shock inesperado al consumo con $\E_{t}[\sscript{\xi}{t+1}]=0$.
 
-De aquí se deriva el resultado de Hall (1978), en donde demostró que bajo las condiciones recién descritas la teoría del CV/IP implica que el consumo sigue un \textit{random walk} o camino aleatorio. Notar que todos los shocks al consumo son permanentes en este caso particular. De hecho si $\sscript{C}{t+1}=\delta C+\xi_{t+1}$ con  $\delta=1$, es decir, un camino aleatorio, un shock unitario al consumo elevará este shock en 1 permanentemente.\footnote{Si $\delta<1$ entonces es un proceso autoregresivo de orden 1 y por lo tanto el efecto del shock será transitorio, ya que los consumos futuros ($C_t$ con $t>1$) serán ponderados por $\delta^{t-2}$.} Este resultado es generalizable más allá de las funciones de consumo cuadráticas. Sin embargo, la evidencia empírica sugiere que el consumo no sigue un camino aleatorio.
+De aquí se deriva el resultado de Hall (1978), en donde demostró que bajo las condiciones recién descritas la teoría del CV/IP implica que el consumo sigue un \textit{random walk} o camino aleatorio. Notar que todos los shocks al consumo son permanentes en este caso particular. De hecho si $\sscript{C}{t+1}=\delta C+\xi_{t+1}$ con  $\delta=1$, es decir, un camino aleatorio, un shock unitario al consumo elevará este shock en 1 permanentemente.\footnote{Si $\delta<1$ entonces es un proceso autoregresivo de orden 1 (AR(1)) y por lo tanto el efecto del shock será transitorio, ya que los consumos futuros ($C_t$ con $t>1$) serán ponderados por $\delta^{t-2}$.} Este resultado es generalizable más allá de las funciones de consumo cuadráticas. Sin embargo, la evidencia empírica sugiere que el consumo no sigue un camino aleatorio.
 
 \subsubsection{Precios de activos, el modelo CAPM y el puzzle de premio de las acciones}
 
