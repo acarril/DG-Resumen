@@ -95,9 +95,9 @@ donde $\lambda=\frac{\epsilon}{1+\epsilon}$, es decir, la fracción de lo que se
 
 Se argumenta que una manera más realista de modelar la inversión de las firmas es establecer que éstas toman sus decisiones de inversión evaluando proyectos. Una empresa decide si invertir o no en capital de precio $P_k$, el cual le reportará flujos $z_j$ para todo $j>t$ en adelante. No hay incertidumbre, por lo que el valor presente de las utilidades netas es
 \begin{equation*}
-VP=\frac{\sscript{z}{t+1}}{1+r_t}+\frac{\sscript{z}{t+2}}{(1+r_t)(1+r_t+1)}+\ldots \;,
+VP=\frac{\sscript{z}{t+1}}{1+r_t}+\frac{\sscript{z}{t+2}}{(1+r_t)(1+r_{t+1})}+\ldots \;,
 \end{equation*}
-donde la empresa solo invertirá si se cumple que $VP \geq P_k$, que es equivalente a decir que el proyecto tenga un VAN positivo.
+donde la empresa solo invertirá si se cumple que $VP \geq P_k$, que es equivalente a decir que el proyecto tiene un VAN positivo.
 
 Al arrendar o comprar capital la empresa puede endeudarse y, si no hay costos de transacción y las tasas de interés a las que se presta o pide prestado son iguales, debería dar lo mismo arrendar o comprar, ya que $P_k$ debería ser igual al valor presente de arrendar capital más su valor residual.
 
@@ -138,7 +138,8 @@ que es equivalente a la condición de optimalidad del problema genérico (record
 
 \subsection{Incertidumbre e inversión}
 
-Si bien uno pensaría que la incertidumbre disminuye la inversión, tanto Hartman (1972) como Abel (1983) predicen lo contrario. La razón es que las razones de utilidad se asumen convexas y por lo tanto mayor varianza es preferida a menos. Se explican aquí las respuestas que ha dado la teoría para explicar que efectivamente la incertidumbre genera \emph{menor} inversión, como muestran los datos.
+Si bien uno pensaría que la incertidumbre disminuye la inversión, tanto Hartman (1972) como Abel (1983) predicen lo contrario.
+La razón es que las funciones de utilidad se asumen convexas y por lo tanto mayor varianza es preferida a menos. Se explican aquí las respuestas que ha dado la teoría para explicar que efectivamente la incertidumbre genera \emph{menor} inversión, como muestran los datos.
 
 Bajo incertidumbre, la empresa invertirá si se cumple que
 \begin{equation*}
@@ -171,7 +172,7 @@ Por lo tanto un aumento de la incertidumbre (volatilidad) de $A$ y $P$ aumentar�
 
 \begin{itemize}
 \item \textbf{Empresarios aversos al riesgo}: si los inversionistas son aversos al riesgo su función de utilidad es cóncava y por lo tanto invertirán cuando $U(VP)>P_k$, revirtiendo la convexidad de la función de producción.
-\item \textbf{Irreversibilidad de la inversión}: la teoría asume que el costo de hacer y de deshacer inversión es el mismo, pero en realidad existe una gran asimetría entre ambos; en muchos casos, deshacerse del capital es imposible. 
+\item \textbf{Irreversibilidad de la inversión}: la teoría asume que el costo de hacer y de deshacer inversión es el mismo, pero en realidad existe una gran asimetría entre ambos; en muchos casos, deshacerse del capital es imposible.
 \item \textbf{Tecnología}: si la tecnología $A$ tiene retornos decrecientes a escala (no constantes), un aumento del uso de factores eleva la producción menos que proporcionalmente.
 \item \textbf{Competencia imperfecta}: en competencia perfecta una firma se beneficia del alza de precios tanto por el aumento del ingreso por unidad vendida como por un aumento en la cantidad ofrecida. Sin embargo, el aumento en cantidad ofrecida no será tan significativo cuando las empresas enfrenten una demanda de pendiente negativa (poder de mercado).
 \item \textbf{Restricciones de liquidez}: si existen restricciones al endeudamiento las firmas podrían no poder realizar planes de inversión de larga maduración.
@@ -270,13 +271,13 @@ Las firmas deben aumentar precio de arriendo del capital $R$ a medida que los im
 
 Analizando el efecto de $\tau$ sobre el stock de capital, se puede decir \textit{a priori} que el impuesto no afecta al VAN de un proyecto, ya que $VAN/(1+\tau)>0 \iff VAN>0 $. Lo que puede ocurrir es que las utilidades económicas de las empresas difieren de sus utilidades contables, lo que genera distorsiones. Suponiendo una función de producción creciente con rendimientos decrecientes $f(K)$ donde el capital se deprecia completamente en un período, si la tasa de interés es $r$ y el precio del capital es 1, el costo del capital es $1+r$. Las utilidades económicas $\Pi_E$ de la empresa son
 \begin{equation*}
-\Pi_E = f(K) - (1+r)f(K)
+\Pi_E = f(K) - (1+r)K
 \end{equation*}
 y si se pusiera un impuesto $\tau$ a las utilidades económicas las empresas maximizarían $(1-\tau)\Pi_E$, que es lo mismo que maximizar $\Pi_E$ solo, donde el capital óptimo estaría dado por
 \begin{equation}
 f'(K)=1+r.
 \end{equation}
- 
+
 Si bien a los ingresos se les descuenta el pago de intereses de la deuda, no se descuenta el costo de oportunidad cuando las empresas usan fondos propios para financiar inversión. Si la deuda de la empresa es una fracción $b$ del capital total, el costo imputable será $b\cdot rK$ ($0\leq b \leq 1 $). Por otro lado, a las firmas normalmente se les permite depreciar una fracción $d$ del capital invertido ($d>0$). Entonces el descuento por la depreciación y/o la compra del capital será $dK$ y las utilidades contables serán
 \begin{equation*}
 \Pi_C=f(K)-(rb+d)K.

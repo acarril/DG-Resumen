@@ -27,7 +27,7 @@ donde $G_t$ es el gasto total del gobierno\footnote{Ojo que \emph{no} es lo mism
 
 Hay que destacar que en muchos países la deuda neta está en términos reales, lo que genera grandes diferencias con una deuda nominal en casos donde la inflación es elevada y, por lo tanto, la diferencia entre $i$ y $r$ no es despreciable.
 
-De la ecuación \eqref{eq:deficit_fiscal_global} de déficit fiscal global  se definen en letras minúsculas a los valores reales\footnote{Notación muy utilizada en el libro.} (ej: $x_t=X_t/P_t$). Usando que $\pi_t=P_{t+1}/P_t $ y que $B_{t+1}/P_t = b_{t+1}(1+\pi_t)$, se divide dicha ecuación por $P_t$ para obtener
+De la ecuación \eqref{eq:deficit_fiscal_global} de déficit fiscal global  se definen en letras minúsculas a los valores reales\footnote{Notación muy utilizada en el libro.} (ej: $x_t=X_t/P_t$). Usando que $1+\pi_t=P_{t+1}/P_t $ y que $B_{t+1}/P_t = b_{t+1}(1+\pi_t)$, se divide dicha ecuación por $P_t$ para obtener
 \begin{equation*}
 \sscript{b}{t+1} = \frac{g_t-t_t}{1+\pi_t}+\frac{1+i}{1+\pi_t}b_t.
 \end{equation*}
@@ -53,14 +53,14 @@ Integrando dicha ecuación hacia adelante (en $\sscript{B}{t+1}$, $\sscript{B}{t
 \label{eq:solvencia}
 \end{equation}
 
-De \eqref{eq:solvencia} se desprende que para que el fisco sea solvente el último término debe ser igual a cero, es decir, que en el largo plazo la deuda pública debe crecer más lentamente que la tasa de interés. Matemáticamente, si la deuda crece con una tasa $\theta $ entonces el último término es el límite de $\sscript{B}{t+1}\cdot[(1+\theta)/(1+r)]$, cuya condición de convergencia es que $\theta < r$. A esta se le llama \textbf{condición de solvencia} o condición de no-Ponzi. Si dicha condición se cumple, entonces ocurre que
+De \eqref{eq:solvencia} se desprende que para que el fisco sea solvente el último término debe ser igual a cero, es decir, que en el largo plazo la deuda pública debe crecer más lentamente que la tasa de interés. Matemáticamente, si la deuda crece con una tasa $\theta $ entonces el último término es el límite de $\sscript{B}{t+1}\cdot\left[(1+\theta)/(1+r)\right]^N$, cuya condición de convergencia es que $\theta < r$. A esta se le llama \textbf{condición de solvencia}, o condición de no-Ponzi. Si dicha condición se cumple, entonces ocurre que
 \begin{equation}
 (1+r)B_t = -\sum_{s=0}^{\infty}{\frac{\sscript{D}{t+s}}{(1+r)^s}} = VP(\text{superávit primario}),
 \label{eq:restriccion_superavit_primario}
 \end{equation}
 es decir que el valor presente del superávit fiscal primario debe ser igual a la deuda neta. Por lo tanto, en una economía donde el gobierno tiene una deuda neta positiva no podrá haber permanentemente un déficit primario, o incluso equilibrio, ya que deberá generar eventualmente superávits primarios para pagar la deuda.
 
-Para analizar qué ocurre con el déficit global (es decir, agregando el pago de intereses al déficit primario)  se asume que la autoridad quiere un déficit primario constante e igual a $D$ (es decir, ya no está indexado). Luego, la sumatoria de \eqref{eq:restriccion_superavit_primario} es igual a $D(1+r)/r$, lo que implica que
+Para analizar qué ocurre con el déficit global (es decir, agregando el pago de intereses al déficit primario)  se asume que la autoridad quiere un déficit primario constante e igual a $D$ (es decir, ya no está indexado). Entonces la sumatoria en \eqref{eq:restriccion_superavit_primario} es igual a $D(1+r)/r$, lo que implica que
 \begin{equation*}
 D=rB_t,
 \end{equation*}
@@ -70,7 +70,7 @@ Usando estas ecuaciones pueden analizarse las privatizaciones, que no son más q
 
 \begin{enumerate}
 \item Si es muy caro (o imposible) para el fisco endeudarse en los mercados internacionales, el privatizar una empresa constituye una forma de financiamiento más barato.
-\item Si el privado asigna un mayor valor a la empresa que el fisco, deberá ser porque estima que puede sacar más rentabilidad de la misma. Por lo tanto, al vender la empresa por sobre su valor ``de libro'', el estado estará ganando ingresos que van por sobre la recaudación por privatización. 
+\item Si el privado asigna un mayor valor a la empresa que el fisco, deberá ser porque estima que puede sacar más rentabilidad de la misma. Por lo tanto, al vender la empresa por sobre su valor ``de libro'', el estado estará ganando ingresos que van por sobre la recaudación por privatización.
 \end{enumerate}
 
 \subsection{La dinámica de la deuda pública y los efectos del crecimiento}
@@ -85,7 +85,7 @@ Luego, denotando como $\gamma $ a la tasa de crecimiento del PIB\footnote{Por lo
 \sscript{b}{t+1}-b_t = \frac{d_t}{1+\gamma}+\frac{r-\gamma}{1+\gamma}b_t.
 \label{eq:sostenibilidad_deuda}
 \end{equation}
- 
+
 La ecuación \eqref{eq:sostenibilidad_deuda} permite analizar la \textbf{sostenibilidad} de la posición fiscal, es decir, que éste converja a un estado estacionario. Se asume que en el largo plazo $r>\gamma $, ya que de otra forma cualquier evolución del déficit primario dará solvencia (porque $d_t $ desaparecerá con el crecimiento acelerado). Dicho estado estacionario está dado por la razón $b$ que cumple que $b_{t+1}=b_t$, esto es,
 \begin{equation}
 d=-(r-\gamma)b,
