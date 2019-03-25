@@ -15,7 +15,7 @@ C_t=\overline{C}+c\underbrace{(Y_t-T_t)}_{Y^d_t}.
 \item[c] es la propensión marginal a consumir ($PMgC $) con respecto del ingreso disponible.
 \begin{equation*}
 c=PMgC=\frac{\partial C}{ \partial (Y-T)} < 1,
-\end{equation*} 
+\end{equation*}
 donde $c \in [0,1]$ y puede interpretarse como el complemento de la propensión marginal al ahorro: $s=1-c$.
 \end{where}
 
@@ -49,7 +49,7 @@ Esta ecuación puede resolverse recursivamente para $N$ períodos, asumiendo que
 Notar que el último término se cancela porque se supone que no se dejan activos acumulados para un período superior a $N$, es decir, se supone que que no hay herencias. Despejando el valor presente del consumo se tiene que
 \begin{align}
 \sum_{s=0}^N\frac{C_{t+s}}{(1+r)^s}&=\sum_{s=0}^N\frac{Y_{l,t+s}-T_{t+s}}{(1+r)^s}+(1+r)A_t \label{eq:rest_intertemp_gral} \\
-\text{VP(Consumo)}&=\text{VP(Ingresos netos del trabajo)}+\text{Riqueza física} \nonumber 
+\text{VP(Consumo)}&=\text{VP(Ingresos netos del trabajo)}+\text{Riqueza física} \nonumber
 \end{align}
 
 \subsection{Modelo de consumo y ahorro en dos períodos}
@@ -119,7 +119,7 @@ La trayectoria de ingresos disponibles corresponde a $Y_l-T$ y el consumo promed
 \overline{C}\cdot\sum_{s=0}^{N}{\frac{1}{(1+r)^s}} = (1+r)A_t + \sum_{s=0}^{N}{\frac{Y_{l,t+s}-T_{t+s}}{(1+r)^s}}-
 \end{equation*}
 
-Luego, asumiendo\footnote{La manera de hacer esto sin asumir $N\rightarrow\infty$ desde un comienzo es usar $\sum_{j=0}^{N}{1/(1+r)^j} = [(1+r)/r]-[1/r(1+r)^N]$, lo que entrega la fórmula general de $\overline{C} = r\left[A_t+\sum_{s=t}^{N}{\frac{Y_{l,s}-T_s}{(1+r)^{s+1}}}\right]\left[\frac{(1+r)^N}{(1+r)^N-1}\right]$, donde el último término es igual a 1 cuando $N\rightarrow\infty$, llegando al mismo resultado de la ecuación \eqref{eq:consumo_permanente}.} que $N\rightarrow\infty$ y usando que $\sum_{j=0}^{N=\infty}{1/(1+r)^j}= (1+r)/r$, es fácil ver que
+Luego, asumiendo\footnote{La manera de hacer esto sin asumir $N\rightarrow\infty$ desde un comienzo es usar $\sum_{j=0}^{N}{1/(1+r)^j} = [(1+r)/r]-[1/r(1+r)^N]$, lo que entrega la fórmula general de $\overline{C} = r\left[A_t+\sum_{s=t}^{N}{\frac{Y_{l,s}-T_s}{(1+r)^{s+1}}}\right]\left[\frac{(1+r)^N}{(1+r)^N-1}\right]$, donde el último término es igual a 1 cuando $N\rightarrow\infty$, llegando al mismo resultado de la ecuación \eqref{eq:consumo_permanente}.} que $N\rightarrow\infty$ y usando que $\sum_{j=0}^{\infty}{1/(1+r)^j} = (1+r)/r$, es fácil ver que
 \begin{equation}
 \overline{C} = r\left[A_t+\sum_{s=t}^{N}{\frac{Y_{l,s}-T_s}{(1+r)^{s+1}}}\right],
 \label{eq:consumo_permanente}
@@ -173,7 +173,7 @@ Notar que el retorno en SCI corresponde a la tasa de interés de mercado, mientr
 \item [Inconsistencia intertemporal:] las personas saben que si no ahorran, el gobierno no los dejará pasar pobreza en la vejez y por lo tanto sub-ahorran. Los jóvenes terminan pagando estas pensiones y por eso el estado obliga a aquellos que no ahorraron a hacerlo desde jóvenes.
 \item [Mercado del trabajo:] como retirarse del mercado del trabajo es condición necesaria para recibir pensión, se plantea que ésta sería una manera ``más humana'' de retirar a aquellos con baja productividad.
 \item [Miopía:] una fracción de la población sería miope y no planifica consumo y ahorro tal como predice la teoría.
-\item [Economía política:] los ancianos podrían ser poderosos en el sistema político y presionan por un sistema que redistribuya de los jóvenes a ellos (o vice versa).
+\item [Economía política:] los ancianos podrían ser poderosos en el sistema político y presionan por un sistema que redistribuya de los jóvenes a ellos (o viceversa).
 \end{enumdescript}
 
 Se argumenta que el SCI tiene una serie de ventajas por sobre SR: libera de influencia de grupos de presión (economía política), sus retornos dependen en menor medida de variaciones demográficas e incentivan la inversión, desarrollando aún más el mercado de capitales.
@@ -220,7 +220,7 @@ V_b &= \overline{Y}+\frac{Y}{r}.
 
 Luego, usando la ecuación de consumo recién definida pero reemplazando $\theta=p$, $Y_t=V_a$ y $Y_{t-1}=V_b$ ($c=1$) y tomando su valor presente, se tiene que
 \begin{align*}
-C_t &= \frac{r}{1+r}[pV_a+(1-p)V_b] \\
+C_t &= \frac{r}{1+r}\left[pV_a+(1-p)V_b\right] \\
 %&= \frac{r}{1+r}\left[p\frac{1+r}{r}\overline{Y}+(1-p)\overline{Y}+(1-p)\frac{Y}{r}\right] \\
 %&= p\overline{Y}+\frac{r}{1+r}(1-p)\overline{Y}+\frac{Y(1+r)(1-p)}{r} \\
 %&= p\overline{Y}+\frac{r}{1+r}(1-p)\overline{Y} + \frac{Y(1-p+r-rp)}{r} \\
@@ -315,7 +315,7 @@ Combinando las últimas dos ecuaciones y recordando que $1+\rho$ y $u'(C_t)$ no 
 
 Esta expresión muestra el premio de un activo riesgoso por sobre uno libre de riesgo. Asumiendo que la covarianza del retorno y la utilidad marginal del consumo son negativas, entonces la prima del activo será positiva. De esto se concluye que cuando el retorno de un activo covaría positivamente con el consumo, requerirá pagar un premio positivo.
 
-Ahora se puede econtrar cuánto debería ser el precio de un activo cualquiera respecto de la tasa libre de riesgo, cuya relación en finanzas es el \textbf{modelo CAPM}. Se supone un activo cuyo retorno $r^m$ está perfecta y negativamente correlacionado con la utilidad marginal del consumo, es decir,
+Ahora se puede encontrar cuánto debería ser el precio de un activo cualquiera respecto de la tasa libre de riesgo, cuya relación en finanzas es el \textbf{modelo CAPM}. Se supone un activo cuyo retorno $r^m$ está perfecta y negativamente correlacionado con la utilidad marginal del consumo, es decir,
 \[
 r^m = -\theta u' (C_{t+1}).
 \]
